@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=north": [{ "model": "jitl:block/fungal_shelf_large" },
+                         { "model": "jitl:block/fungal_shelf_med_large" }],
+
+        "facing=south": [{ "model": "jitl:block/fungal_shelf_large", "y": 180 },
+                         { "model": "jitl:block/fungal_shelf_med_large", "y": 180 }],
+
+        "facing=west":  [{ "model": "jitl:block/fungal_shelf_large", "y": 270 },
+                         { "model": "jitl:block/fungal_shelf_med_large", "y": 270 }],
+
+        "facing=east":  [{ "model": "jitl:block/fungal_shelf_large", "y": 90 },
+                         { "model": "jitl:block/fungal_shelf_med_large", "y": 90 }
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "jitl:highest_ground",
+  "start_pool": "jitl:euca/euca_village/starting_well",
+  "biomes": "#jitl:has_structure/goldite_grains",
+  "max_distance_from_center": 80,
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "min_height": 10,
+  "max_height": 255,
+  "bury": 0,
+  "size": 5,
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "jitl:crypian",
+          "weight": 10,
+          "minCount": 3,
+          "maxCount": 7
+        }
+      ]
+    }
+  }
+}

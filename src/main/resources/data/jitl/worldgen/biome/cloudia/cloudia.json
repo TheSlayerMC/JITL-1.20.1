@@ -1,0 +1,71 @@
+{
+  "temperature": 0.8,
+  "downfall": 0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 61183,
+    "fog_color": 61183,
+    "water_color": 61183,
+    "water_fog_color": 61183,
+    "grass_color": 61183,
+    "foliage_color": 61183,
+    "grass_color_modifier": "none",
+    "particle": {
+      "options": {
+        "type": "jitl:cloudia"
+      },
+      "probability": 0.001428
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "jitl:cloud_ghost",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "jitl:sky_eel",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "jitl:starlight_golem",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "jitl:starlight_transporter",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "jitl:starlight_walker",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "jitl:aero_lotus",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [
+      "jitl:blue_cloudia_clouds",
+      "jitl:light_blue_cloudia_clouds",
+      "jitl:pink_cloudia_clouds",
+      "jitl:cloudia_island",
+      "jitl:cloudia_terrain"
+    ]
+  ]
+}

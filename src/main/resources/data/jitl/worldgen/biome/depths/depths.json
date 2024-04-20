@@ -1,0 +1,66 @@
+{
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 7907327,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 4159204,
+    "foliage_color": 4159204
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "jitl:darkener",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "jitl:darkness_crawler",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 5
+      },
+      {
+        "type": "jitl:depths_beast",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 5
+      },
+      {
+        "type": "jitl:spiked_beast",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 5
+      },
+      {
+        "type": "jitl:depths_hunter",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 5
+      },
+      {
+        "type": "jitl:roc",
+        "weight": 5,
+        "minCount": 2,
+        "maxCount": 5
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [
+      "jitl:flairium_ore",
+      "jitl:des_ore",
+      "jitl:depths_lamp_floor",
+      "jitl:depths_lamp_roof",
+      "jitl:depths_tree",
+      "jitl:depths_crystal",
+      "jitl:depths_veg"
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "jitl:alloy_mender_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 164213647154,
+    "locate_offset": [
+      0,
+      5,
+      0
+    ],
+    "spread_type": "linear",
+    "spacing": 20,
+    "separation": 6
+  }
+}

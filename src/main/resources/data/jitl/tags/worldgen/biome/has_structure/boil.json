@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "jitl:boil/boil",
+    "jitl:boil/boiling_sands",
+    "jitl:boil/charred_fields",
+    "jitl:boil/scorched_wastelands"
+  ]
+}

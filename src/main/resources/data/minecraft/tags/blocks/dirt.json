@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "jitl:crumbled_permafrost",
+    "jitl:grassy_permafrost",
+    "jitl:goldite_grass",
+    "jitl:euca_gold_grass",
+    "jitl:goldite_dirt",
+    "jitl:rubble",
+    "jitl:scorched_rubble",
+    "jitl:volcanic_sand",
+    "jitl:volcanic_soil",
+    "jitl:hot_ground",
+    "jitl:charred_grass",
+    "jitl:depths_grass",
+    "jitl:depths_dirt",
+    "jitl:corba_grass",
+    "jitl:corba_dirt",
+    "jitl:dried_mud",
+    "jitl:tainted_mud",
+    "jitl:terranian_grass",
+    "jitl:terranian_dirt"
+  ]
+}

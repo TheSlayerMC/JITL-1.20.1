@@ -1,0 +1,19 @@
+{
+  "feature": "jitl:desert_overworld_ruins",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 35
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

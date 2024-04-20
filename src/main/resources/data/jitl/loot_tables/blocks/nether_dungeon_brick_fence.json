@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "jitl:nether_dungeon_brick_fence"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "jitl:blocks/nether_dungeon_brick_fence"
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "jitl:block/euca_green_leaves"
+      },
+      {
+        "model": "jitl:block/euca_green_leaves_alt"
+      }
+    ]
+  }
+}

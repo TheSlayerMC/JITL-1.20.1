@@ -1,0 +1,60 @@
+{
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 763904,
+    "fog_color": 1524224,
+    "water_color": 3496974,
+    "water_fog_color": 3496974,
+    "grass_color": 800768,
+    "foliage_color": 800768
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "jitl:leaf_blower",
+        "weight": 7,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "jitl:surface_seer",
+        "weight": 9,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "jitl:wood_creature",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "jitl:corbanian_mollusk",
+        "weight": 15,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "jitl:smelly",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [
+      "jitl:orbadite_ore",
+      "jitl:gorbite_ore",
+      "jitl:corba_tall_grass",
+      "jitl:corba_veg",
+      "jitl:corba_tree_small",
+      "jitl:corba_tree_medium",
+      "jitl:corba_tree_large"
+    ]
+  ]
+}

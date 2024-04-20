@@ -1,0 +1,893 @@
+{
+  "block.mud.break": {
+    "sounds": [
+      "jitl:blocks/break/mud_1",
+      "jitl:blocks/break/mud_2",
+      "jitl:blocks/break/mud_3",
+      "jitl:blocks/break/mud_4",
+      "jitl:blocks/break/mud_5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.mud.dig": {
+    "sounds": [
+      "jitl:blocks/dig/mud_1",
+      "jitl:blocks/dig/mud_2",
+      "jitl:blocks/dig/mud_3",
+      "jitl:blocks/dig/mud_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "misc.epic_sound_0": {
+    "sounds": [
+      "jitl:misc/epic_sound_0"
+    ]
+  },
+  "misc.dialog_basic": {
+    "sounds": [
+      "jitl:misc/dialog_basic"
+    ]
+  },
+  "block.icicle.break": {
+    "sounds": [
+      "jitl:blocks/break/icicle_1",
+      "jitl:blocks/break/icicle_2",
+      "jitl:blocks/break/icicle_3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.icicle.dig": {
+    "sounds": [
+      "jitl:blocks/dig/icicle_1",
+      "jitl:blocks/dig/icicle_2",
+      "jitl:blocks/dig/icicle_3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.pottery.break": {
+    "sounds": [
+      "jitl:blocks/break/pottery_1",
+      "jitl:blocks/break/pottery_2",
+      "jitl:blocks/break/pottery_3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.pottery.dig": {
+    "sounds": [
+      "jitl:blocks/dig/pottery_1",
+      "jitl:blocks/dig/pottery_2",
+      "jitl:blocks/dig/pottery_3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "items.bottle_plug": {
+    "sounds": [
+      "jitl:items/bottle_plug"
+    ]
+  },
+  "music.toast": {
+    "sounds": [
+      "jitl:music/toast"
+    ]
+  },
+  "music.toast_special": {
+    "sounds": [
+      "jitl:music/toast_special"
+    ]
+  },
+  "block.grassy_permafrost.break": {
+    "sounds": [
+      "jitl:blocks/break/grassy_permafrost_1",
+      "jitl:blocks/break/grassy_permafrost_2",
+      "jitl:blocks/break/grassy_permafrost_3",
+      "jitl:blocks/break/grassy_permafrost_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.grassy_permafrost.dig": {
+    "sounds": [
+      "jitl:blocks/dig/grassy_permafrost_1",
+      "jitl:blocks/dig/grassy_permafrost_2",
+      "jitl:blocks/dig/grassy_permafrost_3",
+      "jitl:blocks/dig/grassy_permafrost_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.crumbled_permafrost.break": {
+    "sounds": [
+      "jitl:blocks/break/crumbled_permafrost_1",
+      "jitl:blocks/break/crumbled_permafrost_2",
+      "jitl:blocks/break/crumbled_permafrost_3",
+      "jitl:blocks/break/crumbled_permafrost_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.crumbled_permafrost.dig": {
+    "sounds": [
+      "jitl:blocks/dig/crumbled_permafrost_1",
+      "jitl:blocks/dig/crumbled_permafrost_2",
+      "jitl:blocks/dig/crumbled_permafrost_3",
+      "jitl:blocks/dig/crumbled_permafrost_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.permafrost.break": {
+    "sounds": [
+      "jitl:blocks/break/permafrost_1",
+      "jitl:blocks/break/permafrost_2",
+      "jitl:blocks/break/permafrost_3",
+      "jitl:blocks/break/permafrost_4",
+      "jitl:blocks/break/permafrost_5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.permafrost.dig": {
+    "sounds": [
+      "jitl:blocks/dig/permafrost_1",
+      "jitl:blocks/dig/permafrost_2",
+      "jitl:blocks/dig/permafrost_3",
+      "jitl:blocks/dig/permafrost_4",
+      "jitl:blocks/dig/permafrost_5",
+      "jitl:blocks/dig/permafrost_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.brick.break": {
+    "sounds": [
+      "jitl:blocks/break/brick_1",
+      "jitl:blocks/break/brick_2",
+      "jitl:blocks/break/brick_3",
+      "jitl:blocks/break/brick_4",
+      "jitl:blocks/break/brick_5",
+      "jitl:blocks/break/brick_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.brick.dig": {
+    "sounds": [
+      "jitl:blocks/dig/brick_1",
+      "jitl:blocks/dig/brick_2",
+      "jitl:blocks/dig/brick_3",
+      "jitl:blocks/dig/brick_4",
+      "jitl:blocks/dig/brick_5",
+      "jitl:blocks/dig/brick_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.fumice.break": {
+    "sounds": [
+      "jitl:blocks/break/fumice_1",
+      "jitl:blocks/break/fumice_2",
+      "jitl:blocks/break/fumice_3",
+      "jitl:blocks/break/fumice_4",
+      "jitl:blocks/break/fumice_5",
+      "jitl:blocks/break/fumice_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.fumice.dig": {
+    "sounds": [
+      "jitl:blocks/dig/fumice_1",
+      "jitl:blocks/dig/fumice_2",
+      "jitl:blocks/dig/fumice_3",
+      "jitl:blocks/dig/fumice_4",
+      "jitl:blocks/dig/fumice_5",
+      "jitl:blocks/dig/fumice_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.lunium_ore.break": {
+    "sounds": [
+      "jitl:blocks/break/lunium_ore_1",
+      "jitl:blocks/break/lunium_ore_2",
+      "jitl:blocks/break/lunium_ore_3",
+      "jitl:blocks/break/lunium_ore_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.lunium_block.break": {
+    "sounds": [
+      "jitl:blocks/break/lunium_block_1",
+      "jitl:blocks/break/lunium_block_2",
+      "jitl:blocks/break/lunium_block_3",
+      "jitl:blocks/break/lunium_block_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.lunium_block.dig": {
+    "sounds": [
+      "jitl:blocks/dig/lunium_block_1",
+      "jitl:blocks/dig/lunium_block_2",
+      "jitl:blocks/dig/lunium_block_3",
+      "jitl:blocks/dig/lunium_block_4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.shadium_ore.break": {
+    "sounds": [
+      "jitl:blocks/break/shadium_ore_1",
+      "jitl:blocks/break/shadium_ore_2",
+      "jitl:blocks/break/shadium_ore_3",
+      "jitl:blocks/break/shadium_ore_4",
+      "jitl:blocks/break/shadium_ore_5",
+      "jitl:blocks/break/shadium_ore_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.shadium_block.break": {
+    "sounds": [
+      "jitl:blocks/break/shadium_block_1",
+      "jitl:blocks/break/shadium_block_2",
+      "jitl:blocks/break/shadium_block_3",
+      "jitl:blocks/break/shadium_block_4",
+      "jitl:blocks/break/shadium_block_5",
+      "jitl:blocks/break/shadium_block_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.shadium_block.dig": {
+    "sounds": [
+      "jitl:blocks/dig/shadium_block_1",
+      "jitl:blocks/dig/shadium_block_2",
+      "jitl:blocks/dig/shadium_block_3",
+      "jitl:blocks/dig/shadium_block_4",
+      "jitl:blocks/dig/shadium_block_5",
+      "jitl:blocks/dig/shadium_block_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.ice_crystal.break": {
+    "sounds": [
+      "jitl:blocks/break/ice_crystal_1",
+      "jitl:blocks/break/ice_crystal_2",
+      "jitl:blocks/break/ice_crystal_3",
+      "jitl:blocks/break/ice_crystal_4",
+      "jitl:blocks/break/ice_crystal_5",
+      "jitl:blocks/break/ice_crystal_6"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rune.activate": {
+    "sounds": [
+      "jitl:blocks/activate/rune_activate"
+    ]
+  },
+  "block.essencia_altar.activate": {
+    "sounds": [
+      "jitl:blocks/activate/essencia_altar_activate"
+    ]
+  },
+  "items.staff.staff_0": {
+    "sounds": [
+      "jitl:items/staff/staff_0"
+    ]
+  },
+  "items.crystal_apple.freeze": {
+    "sounds": [
+      "jitl:items/crystal_apple_freeze"
+    ]
+  },
+  "items.crystal_apple.unfreeze": {
+    "sounds": [
+      "jitl:items/crystal_apple_unfreeze"
+    ]
+  },
+  "items.loot": {
+    "sounds": [
+      "jitl:items/loot"
+    ]
+  },
+  "items.miners_pearl": {
+    "sounds": [
+      "jitl:items/miners_pearl"
+    ]
+  },
+  "entities.hongo_ambient": {
+    "sounds": [
+      "jitl:entities/hongo_ambient"
+    ]
+  },
+  "entities.hongo_hurt": {
+    "sounds": [
+      "jitl:entities/hongo_hurt"
+    ]
+  },
+  "entities.small_hongo": {
+    "sounds": [
+      "jitl:entities/small_hongo"
+    ]
+  },
+  "entities.small_hongo_hurt": {
+    "sounds": [
+      "jitl:entities/small_hongo_hurt"
+    ]
+  },
+  "entities.hongo_death": {
+    "sounds": [
+      "jitl:entities/hongo_death"
+    ]
+  },
+  "entities.hongo_spore_release": {
+    "sounds": [
+      "jitl:entities/hongo_spore_release"
+    ]
+  },
+
+  "entities.terraslug": {
+    "sounds": [
+      "jitl:entities/terraslug"
+    ]
+  },
+  "entities.terraslug_hurt": {
+    "sounds": [
+      "jitl:entities/terraslug_hurt"
+    ]
+  },
+  "entities.terraslug_death": {
+    "sounds": [
+      "jitl:entities/terraslug_death"
+    ]
+  },
+
+  "entities.sorcerer_death": {
+    "sounds": [
+      "jitl:entities/sorcerer_death"
+    ]
+  },
+  "entities.sorcerer_hurt": {
+    "sounds": [
+      "jitl:entities/sorcerer_hurt"
+    ]
+  },
+  "entities.sorcerer": {
+    "sounds": [
+      "jitl:entities/sorcerer"
+    ]
+  },
+
+  "entities.robot": {
+    "sounds": [
+      "jitl:entities/robot"
+    ]
+  },
+  "entities.robot_hurt": {
+    "sounds": [
+      "jitl:entities/robot_hurt"
+    ]
+  },
+  "entities.robot_death": {
+    "sounds": [
+      "jitl:entities/robot_death"
+    ]
+  },
+
+  "entities.spiked_beast": {
+    "sounds": [
+      "jitl:entities/spiked_beast"
+    ]
+  },
+  "entities.spiked_beast_hurt": {
+    "sounds": [
+      "jitl:entities/spiked_beast_hurt"
+    ]
+  },
+
+  "entities.spyclops": {
+    "sounds": [
+      "jitl:entities/spyclops"
+    ]
+  },
+  "entities.spyclops_hurt": {
+    "sounds": [
+      "jitl:entities/spyclops_hurt"
+    ]
+  },
+
+  "entities.turtle": {
+    "sounds": [
+      "jitl:entities/turtle"
+    ]
+  },
+  "entities.turtle_hurt": {
+    "sounds": [
+      "jitl:entities/turtle_hurt"
+    ]
+  },
+
+  "entities.reaper": {
+    "sounds": [
+      "jitl:entities/reaper"
+    ]
+  },
+  "entities.reaper_hurt": {
+    "sounds": [
+      "jitl:entities/reaper_hurt"
+    ]
+  },
+
+
+  "entities.sand_crawler": {
+    "sounds": [
+      "jitl:entities/sand_crawler"
+    ]
+  },
+  "entities.depths_hunter": {
+    "sounds": [
+      "jitl:entities/depths_hunter"
+    ]
+  },
+  "entities.depths_hunter_hurt": {
+    "sounds": [
+      "jitl:entities/depths_hunter_hurt"
+    ]
+  },
+  "entities.okoloo_hurt": {
+    "sounds": [
+      "jitl:entities/okoloo_hurt"
+    ]
+  },
+  "entities.okoloo": {
+    "sounds": [
+      "jitl:entities/okoloo"
+    ]
+  },
+
+  "entities.calcia": {
+    "sounds": [
+      "jitl:entities/calcia"
+    ]
+  },
+  "entities.dynaster": {
+    "sounds": [
+      "jitl:entities/dynaster"
+    ]
+  },
+
+  "entities.dynaster_hurt": {
+    "sounds": [
+      "jitl:entities/dynaster_hurt"
+    ]
+  },
+
+  "entities.dynaster_death": {
+    "sounds": [
+      "jitl:entities/dynaster_death"
+    ]
+  },
+  "entities.shimmerer": {
+    "sounds": [
+      "jitl:entities/shimmerer"
+    ]
+  },
+
+  "entities.shimmerer_hurt": {
+    "sounds": [
+      "jitl:entities/shimmerer_hurt"
+    ]
+  },
+
+  "entities.shimmerer_death": {
+    "sounds": [
+      "jitl:entities/shimmerer_death"
+    ]
+  },
+  "entities.bush": {
+    "sounds": [
+      "jitl:entities/bush"
+    ]
+  },
+
+  "entities.bush_hurt": {
+    "sounds": [
+      "jitl:entities/bush_hurt"
+    ]
+  },
+  "entities.bush_death": {
+    "sounds": [
+      "jitl:entities/bush_death"
+    ]
+  },
+
+  "entities.wraith": {
+    "sounds": [
+      "jitl:entities/wraith"
+    ]
+  },
+
+  "entities.wraith_death": {
+    "sounds": [
+      "jitl:entities/wraith_death"
+    ]
+  },
+  "entities.wraith_hurt": {
+    "sounds": [
+      "jitl:entities/wraith_hurt"
+    ]
+  },
+
+  "entities.overseer": {
+    "sounds": [
+      "jitl:entities/overseer"
+    ]
+  },
+
+  "entities.overseer_hurt": {
+    "sounds": [
+      "jitl:entities/overseer_hurt"
+    ]
+  },
+  "entities.overseer_death": {
+    "sounds": [
+      "jitl:entities/overseer_death"
+    ]
+  },
+
+  "entities.stinky": {
+    "sounds": [
+      "jitl:entities/stinky"
+    ]
+  },
+
+  "entities.stinky_hurt": {
+    "sounds": [
+      "jitl:entities/stinky_hurt"
+    ]
+  },
+  "entities.stinky_death": {
+    "sounds": [
+      "jitl:entities/stinky_death"
+    ]
+  },
+
+  "entities.bird": {
+    "sounds": [
+      "jitl:entities/bird"
+    ]
+  },
+
+  "entities.bird_hurt": {
+    "sounds": [
+      "jitl:entities/bird_hurt"
+    ]
+  },
+  "entities.bird_death": {
+    "sounds": [
+      "jitl:entities/bird_death"
+    ]
+  },
+
+  "entities.rock": {
+    "sounds": [
+      "jitl:entities/rock"
+    ]
+  },
+
+  "entities.cave_mob": {
+    "sounds": [
+      "jitl:entities/cave_mob"
+    ]
+  },
+  "entities.base_mob_hurt": {
+    "sounds": [
+      "jitl:entities/base_mob_hurt"
+    ]
+  },
+
+  "entities.lavasnake_idle": {
+    "sounds": [
+      "jitl:entities/lavasnake_idle"
+    ]
+  },
+
+  "entities.lavasnake_hurt": {
+    "sounds": [
+      "jitl:entities/lavasnake_hurt"
+    ]
+  },
+
+  "entities.calcia_idle": {
+    "sounds": [
+      "jitl:entities/calcia"
+    ]
+  },
+  "entities.calcia_hurt": {
+    "sounds": [
+      "jitl:entities/calcia_hurt"
+    ]
+  },
+  "entities.blazier_idle":{
+    "sounds": [
+      "jitl:blazier_idle_0",
+      "jitl:blazier_idle_1",
+      "jitl:blazier_idle_2"
+    ]},
+  "entities.blazier_hurt":{
+    "sounds": [
+      "jitl:entities/blazier_hit_0",
+      "jitl:entities/blazier_hit_1",
+      "jitl:entities/blazier_hit_2",
+      "jitl:entities/blazier_hit_3"
+    ]},
+  "entities.sentry_ambient":{
+    "sounds": [
+      "jitl:entities/sentry_ambient_1",
+      "jitl:entities/sentry_ambient_2",
+      "jitl:entities/sentry_ambient_3"
+    ]},
+  "entities.blazier_death":{
+    "sounds": [
+      "jitl:entities/blazier_death"
+    ]},
+  "entities.glump_ambient": {
+    "sounds": [
+      "jitl:entities/glump_ambient_0",
+      "jitl:entities/glump_ambient_1"
+    ]
+  },
+  "entities.glump_hurt": {
+    "sounds": [
+      "jitl:entities/glump_hurt"
+    ]
+  },
+  "entities.glump_death": {
+    "sounds": [
+      "jitl:entities/glump_death"
+    ]
+  },
+  "entities.frozen_guardian_death": {
+    "sounds": [
+      "jitl:entities/frozen_guardian_death"
+    ]
+  },
+  "entities.frozen_troll_ambient": {
+    "sounds": [
+      "jitl:entities/frozen_troll_ambient_0",
+      "jitl:entities/frozen_troll_ambient_1",
+      "jitl:entities/frozen_troll_ambient_2"
+    ]
+  },
+  "entities.frozen_troll_hurt": {
+    "sounds": [
+      "jitl:entities/frozen_troll_hurt_0",
+      "jitl:entities/frozen_troll_hurt_1"
+    ]
+  },
+  "entities.frozen_troll_death": {
+    "sounds": [
+      "jitl:entities/frozen_troll_death_0"
+    ]
+  },
+  "entities.frozen_troll_intrigued": {
+    "sounds": [
+      "jitl:entities/frozen_troll_intrigued_0",
+      "jitl:entities/frozen_troll_intrigued_1",
+      "jitl:entities/frozen_troll_intrigued_2"
+    ]
+  },
+  "entities.rockite_smasher_hurt": {
+    "sounds": [
+      "jitl:entities/rockite_smasher_hurt_0",
+      "jitl:entities/rockite_smasher_hurt_1",
+	   "jitl:entities/rockite_smasher_hurt_2"
+    ]
+  },
+    "entities.rockite_smasher_death": {
+    "sounds": [
+      "jitl:entities/rockite_smasher_death"
+    ]
+  },
+  "entities.illager_mech_step": {
+    "sounds": [
+      "jitl:entities/illager_mech_step_1",
+      "jitl:entities/illager_mech_step_2",
+      "jitl:entities/illager_mech_step_3",
+      "jitl:entities/illager_mech_step_4"
+    ]
+  },
+  "entities.illager_mech_hurt": {
+    "sounds": [
+      "jitl:entities/illager_mech_hurt_1",
+      "jitl:entities/illager_mech_hurt_2",
+      "jitl:entities/illager_mech_hurt_3",
+      "jitl:entities/illager_mech_hurt_4"
+    ]
+  },
+  "entities.illager_mech_death": {
+    "sounds": [
+      "jitl:entities/illager_mech_death"
+    ]
+  },
+  "entities.illager_mech_throw": {
+    "sounds": [
+      "jitl:entities/illager_mech_throw"
+    ]
+  },
+  "entities.piercer": {
+    "sounds": [
+      "jitl:entities/piercer_0",
+      "jitl:entities/piercer_1",
+      "jitl:entities/piercer_2",
+      "jitl:entities/piercer_3",
+      "jitl:entities/piercer_4",
+      "jitl:entities/piercer_5",
+      "jitl:entities/piercer_6"
+    ]
+  },
+  "entities.piercer_return": {
+    "sounds": [
+      "jitl:entities/piercer_return"
+    ]
+  },
+  "misc.coin_pickup": {
+    "sounds": [
+      "jitl:misc/coin_pickup"
+    ]
+  },
+  "entities.knife": {
+    "sounds": [
+      "jitl:entities/knife"
+    ]
+  },
+  "misc.crystal_pickup": {
+    "sounds": [
+      "jitl:misc/crystal_pickup"
+    ]
+  },
+  "misc.crystal_error": {
+    "sounds": [
+      "jitl:misc/crystal_error"
+    ]
+  },
+
+  "misc.sentry_altar_activate": {
+    "sounds": [
+      "jitl:misc/sentry_altar_activate"
+    ]
+  },
+
+  "misc.sentry_altar_deactivate": {
+    "sounds": [
+      "jitl:misc/sentry_altar_deactivate"
+    ]
+  },
+
+  "misc.obelisk_idle": {
+    "sounds": [
+      "jitl:misc/obelisk_idle"
+    ]
+  },
+
+  "misc.obelisk_open": {
+    "sounds": [
+      "jitl:misc/obelisk_open"
+    ]
+  },
+
+  "music.menu": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/menu",
+        "stream": true
+      }
+    ]
+  },
+  "music.haunt_muskie_2": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/haunt_muskie_2",
+        "stream": true
+      }
+    ]
+  },
+  "music.snowflakesss": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/snowflakesss",
+        "stream": true
+      }
+    ]
+  },
+  "music.guardian_tower": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/guardian_tower",
+        "stream": true
+      }
+    ]
+  },
+  "music.temple_guardian": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/temple_guardian",
+        "stream": true
+      }
+    ]
+  },
+  "music.euca.ambience": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/ambience/euca",
+        "stream": true
+      }
+    ]
+  },
+  "music.frozen.ambience": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/ambience/frozen",
+        "stream": true
+      }
+    ]
+  },
+  "music.biome.gold_plains": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/biome/gold_plains",
+        "stream": true
+      }
+    ]
+  },
+  "music.record.underwater_world": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/underwater_world",
+        "stream": true
+      }
+    ]
+  },
+
+  "music.record.euca_1": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/euca_1",
+        "stream": true
+      }
+    ]
+  },
+  "music.record.euca_2": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/euca_2",
+        "stream": true
+      }
+    ]
+  },
+  "music.record.euca_3": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/euca_3",
+        "stream": true
+      }
+    ]
+  },
+  "music.record.frozen_1": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/frozen_1",
+        "stream": true
+      }
+    ]
+  },
+  "music.record.boil_1": {
+    "replace": false,
+    "sounds": [
+      {
+        "name": "jitl:music/record/boil_1",
+        "stream": true
+      }
+    ]
+  }
+}

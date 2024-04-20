@@ -1,0 +1,25 @@
+{
+  "type": "jitl:highest_ground",
+  "start_pool": "jitl:euca/euca_palace/start_pool",
+  "biomes": "#jitl:has_structure/euca_gold",
+  "max_distance_from_center": 80,
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "min_height": 10,
+  "max_height": 255,
+  "bury": 0,
+  "size": 4,
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "jitl:alloy_mender",
+          "weight": 10,
+          "minCount": 3,
+          "maxCount": 10
+        }
+      ]
+    }
+  }
+}

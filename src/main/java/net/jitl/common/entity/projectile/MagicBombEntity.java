@@ -17,6 +17,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class MagicBombEntity extends AbstractArrow implements ItemSupplier {
 
+    private static final ItemStack DEFAULT_ARROW_STACK = new ItemStack(JItems.MAGIC_BOMB.get());
+
 
     public MagicBombEntity(EntityType<? extends AbstractArrow> type, Level world) {
         super(type, world);

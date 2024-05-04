@@ -1,6 +1,7 @@
 package net.jitl.core.init;
 
 import net.jitl.client.ClientEventHandler;
+import net.jitl.client.gui.BossBarRenderer;
 import net.jitl.client.render.ModelPropertyRegistry;
 import net.jitl.client.render.RenderEntitys;
 import net.jitl.common.world.ModEvents;
@@ -34,9 +35,9 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(JITL.MODID)
 public class JITL {
-    public static final String MODID = "jitl", PREFIX = MODID + ":";
+    public static final String MODID = "jitl", PREFIX = MODID + ":", MOD_VERSION = "2.1.4", MOD_NAME = "Journey Into the Light";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
-    public static final boolean DEV_MODE = true;
+    public static final boolean DEV_MODE = false;
 
     public JITL() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -105,14 +106,13 @@ public class JITL {
             new JBlockEndPortalGenerator().generate();
             new JBlockEndFrameGenerator().generate();
             new JBlockMushroomGenerator().generate();
+            new BlockTotemGenerator().generate();
             new LangRegistry().generate();
         }
 
         modEventBus.addListener(this::commonInit);
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::enqueue);
-
-
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, JClientConfig.SPEC, "jitl-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, JCommonConfig.SPEC, "jitl-common.toml");
@@ -128,6 +128,8 @@ public class JITL {
         RenderEntitys.registerAnimationRenderers();
         ModelPropertyRegistry.init();
         JContainers.register();
+        BossBarRenderer.init();
+        LogStripper.init();
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
         ClientEventHandler.regToBus(forgeEventBus);
     }

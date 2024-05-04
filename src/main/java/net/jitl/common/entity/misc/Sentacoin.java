@@ -38,8 +38,8 @@ public class Sentacoin extends Entity {
     }
 
     @Override
-    protected Entity.@NotNull MovementEmission getMovementEmission() {
-        return Entity.MovementEmission.NONE;
+    protected @NotNull MovementEmission getMovementEmission() {
+        return MovementEmission.NONE;
     }
 
     @Override
@@ -112,11 +112,11 @@ public class Sentacoin extends Entity {
                 case COIN -> amount = 1 + coinRand;
             }
             final int finalAmount = amount;
-            player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> {
                 player.take(this, 1);
+            player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> {
                 stats.addSentacoins(finalAmount);
-                if(this.type == Type.BAG) {
-                    for(int i = 0; i < 5; i++) {
+                if (this.type == Type.BAG) {
+                    for (int i = 0; i < 5; i++) {
                         this.playSound(JSounds.COIN_PICKUP.get(), 1.0F, 1.0F + random.nextFloat());
                     }
                 } else {

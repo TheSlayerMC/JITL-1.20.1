@@ -1,5 +1,6 @@
 package net.jitl.common.entity.terrania;
 
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.base.JMonsterEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.minecraft.core.BlockPos;
@@ -26,6 +27,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WallClimberNavigation;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Skeleton;
+import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -33,6 +35,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import org.joml.Vector3f;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
@@ -45,18 +48,19 @@ public class AranaKing extends JMonsterEntity {
 
     public AranaKing(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        setKnowledge(EnumKnowledge.TERRANIA, 5F);
     }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, 0.4F));
-        this.goalSelector.addGoal(4, new AranaKing.AranaAttackGoal(this));
+        this.goalSelector.addGoal(4, new AranaAttackGoal(this));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(2, new AranaKing.AranaTargetGoal<>(this, Player.class));
+        this.targetSelector.addGoal(2, new AranaTargetGoal<>(this, Player.class));
     }
 
     @Override
@@ -167,13 +171,13 @@ public class AranaKing extends JMonsterEntity {
         }
 
         if (pSpawnData == null) {
-            pSpawnData = new AranaKing.AranaEffectsGroupData();
+            pSpawnData = new AranaEffectsGroupData();
             if (pLevel.getDifficulty() == Difficulty.HARD && randomsource.nextFloat() < 0.1F * pDifficulty.getSpecialMultiplier()) {
-                ((AranaKing.AranaEffectsGroupData)pSpawnData).setRandomEffect(randomsource);
+                ((AranaEffectsGroupData)pSpawnData).setRandomEffect(randomsource);
             }
         }
 
-        if(pSpawnData instanceof AranaKing.AranaEffectsGroupData e) {
+        if(pSpawnData instanceof AranaEffectsGroupData e) {
             MobEffect mobeffect = e.effect;
             if(mobeffect != null) {
                 this.addEffect(new MobEffectInstance(mobeffect, -1));
@@ -181,6 +185,10 @@ public class AranaKing extends JMonsterEntity {
         }
 
         return pSpawnData;
+    }
+
+    public double getPassengersRidingOffset() {
+        return (double)(this.getBbHeight() * 0.5F);
     }
 
     static class AranaAttackGoal extends MeleeAttackGoal {

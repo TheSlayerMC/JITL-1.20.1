@@ -18,7 +18,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class FireballEntity extends ThrowableProjectile {
 
-
     public FireballEntity(EntityType<FireballEntity> type, Level world) {
         super(type, world);
     }

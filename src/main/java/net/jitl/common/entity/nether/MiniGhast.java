@@ -1,5 +1,6 @@
 package net.jitl.common.entity.nether;
 
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.base.JFlyingEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.minecraft.core.BlockPos;
@@ -39,6 +40,7 @@ public class MiniGhast extends JFlyingEntity {
 
     public MiniGhast(EntityType<? extends JFlyingEntity> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        setKnowledge(EnumKnowledge.NETHER, 5F);
     }
 
     @Override
@@ -46,7 +48,7 @@ public class MiniGhast extends JFlyingEntity {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(7, new MiniGhast.MiniGhastShootFireballGoal(this));
+        this.goalSelector.addGoal(7, new MiniGhastShootFireballGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, (e) -> Math.abs(e.getY() - this.getY()) <= 4.0D));
     }
 

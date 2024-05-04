@@ -3,7 +3,6 @@ package net.jitl.common.entity.goal;
 import net.jitl.common.entity.base.IDontAttackWhenPeaceful;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.target.TargetGoal;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 
@@ -20,7 +19,7 @@ public class AttackWhenDifficultGoal extends TargetGoal {
         super(entity, false);
         this.entity = entity;
         this.mob = mob;
-        this.setFlags(EnumSet.of(Goal.Flag.TARGET));
+        this.setFlags(EnumSet.of(Flag.TARGET));
     }
 
     @Override

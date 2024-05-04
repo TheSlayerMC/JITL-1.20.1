@@ -115,6 +115,8 @@ public class JBlocks {
     public static final ArrayList<String> slimeLangName = new ArrayList<>();
     public static final ArrayList<String> trophyBlockName = new ArrayList<>();
     public static final ArrayList<String> trophyLangName = new ArrayList<>();
+    public static final ArrayList<String> totemBlockName = new ArrayList<>();
+    public static final ArrayList<String> totemLangName = new ArrayList<>();
 
     public static final ArrayList<String> PICKAXE_BLOCKS = new ArrayList<>();
     public static final ArrayList<String> AXE_BLOCKS = new ArrayList<>();
@@ -335,6 +337,7 @@ public class JBlocks {
     public static final RegistryObject<Block> EUCA_GOLD_GRASS = registerGrassBlock("euca_gold_grass", "Euca Gold Grass", JGrassBlock::new);
     public static final RegistryObject<Block> GOLDITE_GRASS = registerGrassBlock("goldite_grass", "Goldite Grass", JGrassBlock::new);
     public static final RegistryObject<RotatedPillarBlock> EUCA_GOLD_LOG = registerPillar("euca_gold_log", "Euca Gold Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_EUCA_GOLD_LOG = registerPillar("stripped_euca_gold_log", "Stripped Euca Gold Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> EUCA_GOLD_LEAVES = registerTerrainBlock("euca_gold_leaves", "Euca Gold Leaves", JBlockProperties.LEAVES);//JLeavesBlock::new);
     public static final RegistryObject<Block> EUCA_GOLD_SAPLING = registerCrossBlock("euca_gold_sapling", "Euca Gold Sapling", () -> new JSaplingBlock(JTreeGrower.EUCA_GOLD_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<Block> EUCA_GOLD_PLANKS = registerFuelBlock("euca_gold_planks", "Euca Gold Planks", JBlockProperties.WOOD, 300);
@@ -348,6 +351,7 @@ public class JBlocks {
     public static final RegistryObject<JFenceBlock> EUCA_GOLD_FENCE = registerFence("euca_gold_fence", "Euca Gold Fence", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> GOLDITE_PATH = registerPathBlock("goldite_path", "Goldite Path", () -> new JDirtPathBlock(JBlockProperties.PATH));
     public static final RegistryObject<RotatedPillarBlock> EUCA_BROWN_LOG = registerPillar("euca_brown_log", "Euca Brown Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_EUCA_BROWN_LOG = registerPillar("stripped_euca_brown_log", "Stripped Euca Brown Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> EUCA_GREEN_LEAVES = registerAltTexBlock("euca_green_leaves", "Euca Green Leaves", JBlockProperties.LEAVES);// JLeavesBlock::new);
     public static final RegistryObject<Block> EUCA_GREEN_SAPLING = registerCrossBlock("euca_green_sapling", "Euca Green Sapling", () -> new JSaplingBlock(JTreeGrower.EUCA_GREEN_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<Block> EUCA_BROWN_PLANKS = registerFuelBlock("euca_brown_planks", "Euca Brown Planks", JBlockProperties.WOOD, 300);
@@ -367,6 +371,7 @@ public class JBlocks {
     public static final RegistryObject<Block> PERMAFROST = registerTerrainBlock("permafrost", "Permafrost", JBlockProperties.STONE);
     public static final RegistryObject<Block> CRUMBLED_PERMAFROST = registerTerrainBlock("crumbled_permafrost", "Crumbled Permafrost", JDirt::new);
     public static final RegistryObject<RotatedPillarBlock> FROZEN_LOG = registerPillar("frozen_log", "Frozen Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_FROZEN_LOG = registerPillar("stripped_frozen_log", "Stripped Frozen Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> FROZEN_LEAVES = registerTerrainBlock("frozen_leaves", "Frozen Leaves", JBlockProperties.LEAVES);
     public static final RegistryObject<Block> FROSTWOOD_SAPLING = registerCrossBlock("frostwood_sapling", "Frostwood Sapling", () -> new JSaplingBlock(JTreeGrower.EUCA_GREEN_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<Block> FROZEN_PLANKS = registerFuelBlock("frozen_planks", "Frostwood Planks", JBlockProperties.WOOD, 300);
@@ -436,6 +441,7 @@ public class JBlocks {
     public static final RegistryObject<Block> SCORCHED_CACTUS = registerModeledBlock("scorched_cactus", "Scorched Cactus", JBlockCactus::new);
     public static final RegistryObject<Block> CHARRED_LEAVES = registerTerrainBlock("charred_leaves", "Charred Leaves", JBlockProperties.LEAVES);
     public static final RegistryObject<RotatedPillarBlock> BURNED_BARK = registerPillar("burned_bark", "Burned Bark", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BURNED_BARK = registerPillar("stripped_burned_bark", "Stripped Burned Bark", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> BURNED_SAPLING = registerCrossBlock("burned_sapling", "Burned Sapling", () -> new TallGrassBlock(JBlockProperties.FLOWER));
     public static final RegistryObject<Block> CHARRED_SAPLING = registerCrossBlock("charred_sapling", "Charred Sapling", () -> new TallGrassBlock(JBlockProperties.FLOWER));
     public static final RegistryObject<Block> BURNED_PLANKS = registerFuelBlock("burned_bark_planks", "Burned Planks", JBlockProperties.WOOD, 300);
@@ -462,6 +468,7 @@ public class JBlocks {
     public static final RegistryObject<Block> DEPTHS_DIRT = registerTerrainBlock("depths_dirt", "Depths Soil", JDirt::new);
     public static final RegistryObject<Block> DEPTHS_STONE = registerTerrainBlock("depths_stone", "Depths Stone", JBlockProperties.STONE);
     public static final RegistryObject<RotatedPillarBlock> DEPTHS_LOG = registerPillar("depths_log", "Depths Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_DEPTHS_LOG = registerPillar("stripped_depths_log", "Stripped Depths Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> DEPTHS_LEAVES = registerTerrainBlock("depths_leaves", "Depths Leaves", JBlockProperties.LUMINESCENT_LEAVES);
     public static final RegistryObject<Block> DEPTHS_SAPLING = registerCrossBlock("depths_sapling", "Depths Sapling", () -> new JSaplingBlock(JTreeGrower.DEPTHS_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<Block> DEPTHS_PLANKS = registerFuelBlock("depths_planks", "Depths Planks", JBlockProperties.WOOD, 300);
@@ -505,9 +512,11 @@ public class JBlocks {
     public static final RegistryObject<Block> TAINTED_MUD = registerTerrainBlock("tainted_mud", "Tainted Mud", JBlockProperties.DIRT);
     public static final RegistryObject<Block> DRIED_MUD = registerTerrainBlock("dried_mud", "Dried Mud", JBlockProperties.DIRT);
     public static final RegistryObject<RotatedPillarBlock> BOGWOOD_LOG = registerPillar("bogwood_log", "Bogwood Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_BOGWOOD_LOG = registerPillar("stripped_bogwood_log", "Stripped Bogwood Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> BOGWOOD_LEAVES = registerTintedLeavesBlock("bogwood_leaves", "Bogwood Leaves", JBlockProperties.LEAVES);
     public static final RegistryObject<Block> BOGWOOD_SAPLING = registerCrossBlock("bogwood_sapling", "Bogwood Sapling", () -> new JSaplingBlock(JTreeGrower.BOGWOOD_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<RotatedPillarBlock> CORBA_LOG = registerPillar("corba_log", "Corba Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_CORBA_LOG = registerPillar("stripped_corba_log", "Stripped Corba Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> CORBA_LEAVES = registerTintedLeavesBlock("corba_leaves", "Corba Leaves", JBlockProperties.LEAVES);
     public static final RegistryObject<Block> CORBA_SAPLING = registerCrossBlock("corba_sapling", "Corba Sapling", () -> new JSaplingBlock(JTreeGrower.CORBA_TREE_GROWER, JBlockProperties.FLOWER));
     public static final RegistryObject<Block> CORBA_PLANKS = registerFuelBlock("corba_planks", "Corba Planks", JBlockProperties.WOOD, 300);
@@ -554,6 +563,7 @@ public class JBlocks {
     public static final RegistryObject<Block> TERRANIAN_LEAVES = registerTopBottomBlock("terranian_leaves", "Terrania Leaves", () -> new Block(JBlockProperties.LEAVES));
     public static final RegistryObject<Block> TERRANIAN_VINE = registerVineBlock("terranian_vine", "Terrania Vine", () -> new JVineBlock(JBlockProperties.VINE));
     public static final RegistryObject<RotatedPillarBlock> TERRANIAN_LOG = registerPillar("terranian_log", "Terranian Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_TERRANIAN_LOG = registerPillar("stripped_terranian_log", "Stripped Terranian Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<IronBarsBlock> TERRANIAN_BARS = registerPaneBlock("terranian_bars", "Terranian Bars", JBlockProperties.STONE);
     public static final RegistryObject<Block> TERRANIAN_DARK_PANELS = register("terranian_dark_panels", "Terranian Dark Panels", JBlockProperties.STONE);
     public static final RegistryObject<Block> TERRANIAN_PANELS = register("terranian_panels", "Terranian Panels", JBlockProperties.STONE);
@@ -574,6 +584,7 @@ public class JBlocks {
     public static final RegistryObject<Block> CLOUDIA_DIRT = registerTerrainBlock("cloudia_dirt", "Cloudia Dirt", JDirt::new);
     public static final RegistryObject<Block> CLOUDIA_GRASS = registerGrassBlock("cloudia_grass", "Cloudia Grass", JGrassBlock::new);
     public static final RegistryObject<RotatedPillarBlock> CLOUDIA_LOG = registerPillar("cloudia_log", "Cloudia Log", true, JBlockProperties.WOOD);
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_CLOUDIA_LOG = registerPillar("stripped_cloudia_log", "Stripped Cloudia Log", true, JBlockProperties.WOOD);
     public static final RegistryObject<Block> CLOUDIA_ROCK = register("cloudia_rock", "Cloudia Rock", JBlockProperties.STONE);
     public static final RegistryObject<RotatedPillarBlock> CLOUDIA_PILLAR = registerPillar("cloudia_pillar", "Cloudia Pillar", false, JBlockProperties.STONE);
     public static final RegistryObject<Block> CLOUDIA_PLANKS = register("cloudia_planks", "Cloudia Planks", JBlockProperties.WOOD);
@@ -656,6 +667,12 @@ public class JBlocks {
     public static final RegistryObject<RotatedPillarBlock> ANCIENT_RUNIC_STONE_2 = registerPillar("ancient_stone_runic_2", "Ancient Runic Stone", false, JBlockProperties.ANCIENT_STONE);
     public static final RegistryObject<RotatedPillarBlock> ANCIENT_RUNIC_STONE_3 = registerPillar("ancient_stone_runic_3", "Ancient Runic Stone", false, JBlockProperties.ANCIENT_STONE);
 
+    public static final RegistryObject<Block> TOTEM_BASE = registerTotemBlock("totem_base", "Totem");
+    public static final RegistryObject<Block> TOTEM_ANGRY = registerTotemBlock("totem_angry", "Angry Totem");
+    public static final RegistryObject<Block> TOTEM_HAPPY = registerTotemBlock("totem_happy", "Happy Totem");
+    public static final RegistryObject<Block> TOTEM_SAD = registerTotemBlock("totem_sad", "Sad Totem");
+    public static final RegistryObject<Block> TOTEM_SCARED = registerTotemBlock("totem_scared", "Scared Totem");
+    
     //OVERWORLD
     public static final RegistryObject<Block> TOMATO_CROP = registerCropBlock("tomato_crop", "Tomato", 8, TomatoCropBlock::new);
     public static final RegistryObject<Block> FLORO_PEDAL_CROP = registerCropBlock("floro_pedal_crop", "Floro Pedal", 8, FloroCropBlock::new);
@@ -1018,6 +1035,15 @@ public class JBlocks {
                 return wood ? 300 : -1;
             }
         });
+        return block1;
+    }
+
+    public static RegistryObject<Block> registerTotemBlock(String name, String translatedName) {
+        addPickaxeableBlocks(name);
+        totemBlockName.add(name);
+        totemLangName.add(translatedName);
+        RegistryObject<Block> block1 = BLOCKS.register(name, TotemBlock::new);
+        JItems.registerBlockItem(name, () -> new BlockItem(block1.get(), new Item.Properties()));
         return block1;
     }
 

@@ -23,6 +23,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.npc.Npc;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -34,7 +35,7 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class OverworldSentryStalker extends PathfinderMob implements GeoEntity {
+public class OverworldSentryStalker extends PathfinderMob implements GeoEntity, Npc{
 
     private static final EntityDataAccessor<Boolean> DATA_IS_ACTIVATED = SynchedEntityData.defineId(OverworldSentryStalker.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> DATA_HAS_KEY = SynchedEntityData.defineId(OverworldSentryStalker.class, EntityDataSerializers.BOOLEAN);
@@ -53,7 +54,6 @@ public class OverworldSentryStalker extends PathfinderMob implements GeoEntity {
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
     }
 
-
     private final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.neutral_sentry_stalker.idle");
     private final RawAnimation MOVING = RawAnimation.begin().thenLoop("animation.neutral_sentry_stalker.walk");
 
@@ -66,6 +66,10 @@ public class OverworldSentryStalker extends PathfinderMob implements GeoEntity {
                 return state.setAndContinue(IDLE);
             }
         }));
+    }
+
+    public boolean isClientSide() {
+        return this.level().isClientSide();
     }
 
     public static AttributeSupplier createAttributes() {
@@ -143,23 +147,24 @@ public class OverworldSentryStalker extends PathfinderMob implements GeoEntity {
     }
 
     @Override
-    public boolean hurt(DamageSource pSource, float pAmount) {
+    public boolean hurt(@NotNull DamageSource pSource, float pAmount) {
         return false;
     }
 
     @Override
     protected @NotNull InteractionResult mobInteract(Player player, @NotNull InteractionHand hand) {
         player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> {
-            if(stats.getLevel(EnumKnowledge.OVERWORLD) >= 75)
+            if (stats.getLevel(EnumKnowledge.OVERWORLD) >= 75)
                 setActivated(true);
 
-            if(hasKey())
+            if (hasKey())
                 ChatUtils.addDialogStyleChat(player, "jitl.sen.knowledge_1");
 
-            if(!hasKey())
+            if (!hasKey()) {
                 ChatUtils.addDialogStyleChat(player, "jitl.sen.unlocked");
-
+            }
         });
         return super.mobInteract(player, hand);
     }
+
 }

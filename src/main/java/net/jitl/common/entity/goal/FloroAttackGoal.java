@@ -5,8 +5,6 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
@@ -40,7 +38,7 @@ public class FloroAttackGoal extends Goal {
             this.attackIntervalMax = pAttackIntervalMax;
             this.attackRadius = pAttackRadius;
             this.attackRadiusSqr = pAttackRadius * pAttackRadius;
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
+            this.setFlags(EnumSet.of(Flag.MOVE, Flag.LOOK));
         }
     }
 

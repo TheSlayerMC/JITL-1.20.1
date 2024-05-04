@@ -160,8 +160,8 @@ dependencies {
 
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${buildProps["gekolib.version"]}")
 //
-//    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${buildProps["patchouli.version"]}:api")
-//    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${buildProps["patchouli.version"]}")
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${buildProps["patchouli.version"]}:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${buildProps["patchouli.version"]}")
 
 }
 

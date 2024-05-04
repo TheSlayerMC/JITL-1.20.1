@@ -2,7 +2,9 @@ package net.jitl.common.entity.frozen;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Dynamic;
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.JEntityAction;
+import net.jitl.common.entity.base.JMonsterEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.jitl.common.entity.frozen.tasks.FrozenTrollTasks;
 import net.jitl.core.init.internal.JItems;
@@ -19,7 +21,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.Brain;
 import net.minecraft.world.entity.ai.Brain.Provider;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -33,12 +38,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.NotNull;
+import software.bernie.geckolib.core.animation.AnimatableManager;
 
 import javax.annotation.Nullable;
 
-public class FrozenTrollEntity extends Monster {
+public class FrozenTrollEntity extends JMonsterEntity {
 
     private static final EntityDataAccessor<Boolean> IS_ANGRY_ID = SynchedEntityData.defineId(FrozenTrollEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -79,6 +84,7 @@ public class FrozenTrollEntity extends Monster {
     public FrozenTrollEntity(EntityType<? extends FrozenTrollEntity> entityType, Level world) {
         super(entityType, world);
         this.setCanPickUpLoot(true);
+        setKnowledge(EnumKnowledge.FROZEN, 5F);
     }
 
     public static AttributeSupplier createAttributes() {
@@ -100,6 +106,11 @@ public class FrozenTrollEntity extends Monster {
         super.readAdditionalSaveData(compound);
         this.inventory.fromTag(compound.getList("Inventory", 10));
         setAngry(compound.getBoolean("angry"));
+    }
+
+    @Override
+    protected void controller(AnimatableManager.ControllerRegistrar controllers) {
+
     }
 
     @Override
@@ -156,11 +167,6 @@ public class FrozenTrollEntity extends Monster {
         } else {
             return false;
         }
-    }
-
-    @Override
-    public boolean wantsToPickUp(ItemStack itemStack_) {
-        return ForgeEventFactory.getMobGriefingEvent(this.level(), this) && this.canPickUpLoot() && FrozenTrollTasks.wantsToPickup(this, itemStack_);
     }
 
     @Override

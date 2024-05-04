@@ -1,21 +1,17 @@
 package net.jitl.common.entity.boss;
 
-import net.jitl.client.gui.BossBarRenderer;
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.base.JFlyingBossEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.jitl.common.entity.goal.AttackWhenDifficultGoal;
-import net.jitl.core.init.JITL;
 import net.jitl.core.init.internal.JLootTables;
 import net.jitl.core.init.internal.JParticleManager;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
@@ -38,23 +34,20 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 
-import java.util.Objects;
-
 public class Scale extends JFlyingBossEntity {
 
-    private final ServerBossEvent BOSS_INFO = new ServerBossEvent(Objects.requireNonNull(this.getDisplayName()), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_6);
-    private final BossBarRenderer BOSS_BAR = new BossBarRenderer(this, JITL.rl("textures/gui/bossbars/scale.png"));
     private static final EntityDataAccessor<Boolean> DATA_IS_CHARGING = SynchedEntityData.defineId(Scale.class, EntityDataSerializers.BOOLEAN);
 
     public Scale(EntityType<? extends Scale> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setFlyingSpeed(0.2D);
+        setKnowledge(EnumKnowledge.DEPTHS, 10);
     }
 
     @Override
     public void addGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(7, new Scale.ShootFireballGoal(this));
+        this.goalSelector.addGoal(7, new ShootFireballGoal(this));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new AttackWhenDifficultGoal(this, this));
@@ -77,17 +70,6 @@ public class Scale extends JFlyingBossEntity {
         return false;
     }
 
-    @Override
-    public void stopSeenByPlayer(ServerPlayer player) {
-        this.BOSS_INFO.removePlayer(player);
-    }
-
-    @Override
-    public void startSeenByPlayer(@NotNull ServerPlayer player) {
-        if(showBarWhenSpawned())
-            this.BOSS_INFO.addPlayer(player);
-    }
-
     public static AttributeSupplier createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, MobStats.SCALE_HEALTH)
@@ -104,16 +86,6 @@ public class Scale extends JFlyingBossEntity {
             for (int i = 0; i < 6; i++)
                 this.level().addParticle(JParticleManager.CRYSTAL_FRUIT.get(), this.position().x + (this.random.nextDouble() - 0.5D), this.position().y + this.random.nextDouble(), this.position().z + (this.random.nextDouble() - 0.5D), (this.random.nextDouble() - 0.5D) * 2.0D, -this.random.nextDouble(), (this.random.nextDouble() - 0.5D) * 2.0D);
         }
-    }
-
-    @Override
-    public BossBarRenderer getBossBar() {
-        return BOSS_BAR;
-    }
-
-    @Override
-    public ServerBossEvent getEvent() {
-        return BOSS_INFO;
     }
 
     private final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.scale.idle");
@@ -140,7 +112,7 @@ public class Scale extends JFlyingBossEntity {
 
     @Override
     public boolean showBarWhenSpawned() {
-        return false;
+        return true;
     }
 
 

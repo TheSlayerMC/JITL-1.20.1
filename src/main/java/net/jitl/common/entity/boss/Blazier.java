@@ -1,20 +1,16 @@
 package net.jitl.common.entity.boss;
 
-import net.jitl.client.gui.BossBarRenderer;
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.base.JBossEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.jitl.common.entity.goal.AttackWhenDifficultGoal;
 import net.jitl.common.entity.goal.IdleHealGoal;
 import net.jitl.common.entity.nether.InfernoBlaze;
-import net.jitl.core.init.JITL;
 import net.jitl.core.init.internal.JEntities;
 import net.jitl.core.init.internal.JLootTables;
 import net.jitl.core.init.internal.JSounds;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
@@ -35,12 +31,9 @@ import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 
 import java.util.EnumSet;
-import java.util.Objects;
 
 public class Blazier extends JBossEntity {
 
-    private final ServerBossEvent BOSS_INFO = new ServerBossEvent(Objects.requireNonNull(this.getDisplayName()), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_6);
-    private final BossBarRenderer BOSS_BAR = new BossBarRenderer(this, JITL.rl("textures/gui/bossbars/blazier.png"));
     private int spawnTimer;
 
     public Blazier(EntityType<? extends Monster> pEntityType, Level pLevel) {
@@ -50,6 +43,7 @@ public class Blazier extends JBossEntity {
         this.setPathfindingMalus(BlockPathTypes.DANGER_FIRE, 0.0F);
         this.setPathfindingMalus(BlockPathTypes.DAMAGE_FIRE, 0.0F);
         this.spawnTimer = 0;
+        setKnowledge(EnumKnowledge.NETHER, 10);
     }
 
     @Override
@@ -59,8 +53,8 @@ public class Blazier extends JBossEntity {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(4, new Blazier.BlazierAttackGoal(this));
-        this.goalSelector.addGoal(1, new IdleHealGoal(this, 2400));
+        this.goalSelector.addGoal(4, new BlazierAttackGoal(this));
+        this.goalSelector.addGoal(1, new IdleHealGoal(this, 4800));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0D));
@@ -112,17 +106,6 @@ public class Blazier extends JBossEntity {
         }
     }
 
-    @Override
-    public void stopSeenByPlayer(ServerPlayer player) {
-        this.BOSS_INFO.removePlayer(player);
-    }
-
-    @Override
-    public void startSeenByPlayer(ServerPlayer player) {
-        if(showBarWhenSpawned())
-            this.BOSS_INFO.addPlayer(player);
-    }
-
     public static AttributeSupplier createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, MobStats.BLAZIER_HEALTH)
@@ -132,23 +115,11 @@ public class Blazier extends JBossEntity {
                 .add(Attributes.MOVEMENT_SPEED, MobStats.STANDARD_MOVEMENT_SPEED).build();
     }
 
-    @Override
-    public BossBarRenderer getBossBar() {
-        return BOSS_BAR;
-    }
-
-    @Override
-    public ServerBossEvent getEvent() {
-        return BOSS_INFO;
-    }
-
     private final RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.blazier.idle");
 
     @Override
     protected void controller(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controller", 5, state -> {
-                return state.setAndContinue(IDLE);
-        }));
+        controllers.add(new AnimationController<>(this, "controller", 5, state -> state.setAndContinue(IDLE)));
     }
 
     @Override
@@ -168,7 +139,7 @@ public class Blazier extends JBossEntity {
 
     @Override
     public boolean showBarWhenSpawned() {
-        return false;
+        return true;
     }
 
     public float getLightLevelDependentMagicValue() {
@@ -184,7 +155,7 @@ public class Blazier extends JBossEntity {
 
         public BlazierAttackGoal(Blazier blazier) {
             this.blazier = blazier;
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
+            this.setFlags(EnumSet.of(Flag.MOVE, Flag.LOOK));
         }
 
         @Override

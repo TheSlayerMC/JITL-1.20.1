@@ -1,24 +1,20 @@
 package net.jitl.common.entity.boss;
 
-import net.jitl.client.gui.BossBarRenderer;
+import net.jitl.client.knowledge.EnumKnowledge;
 import net.jitl.common.entity.base.JBossEntity;
 import net.jitl.common.entity.base.MobStats;
 import net.jitl.common.entity.goal.AttackWhenDifficultGoal;
 import net.jitl.common.entity.goal.IdleHealGoal;
 import net.jitl.core.helper.JMusic;
-import net.jitl.core.init.JITL;
 import net.jitl.core.init.internal.JLootTables;
 import net.jitl.core.init.internal.JSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerBossEvent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
-import net.minecraft.world.BossEvent;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -43,12 +39,11 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 
 public class TowerGuardian extends JBossEntity {
 
-    private final ServerBossEvent BOSS_INFO = new ServerBossEvent(this.getDisplayName(), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_6);
-    private final BossBarRenderer BOSS_BAR = new BossBarRenderer(this, JITL.rl("textures/gui/bossbars/tower_guardian.png"));
     private static final JMusic BOSS_TRACK = new JMusic(JSounds.TEMPLE_GUARDIAN_MUSIC.get(), 2, 0, 0);
 
     public TowerGuardian(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        setKnowledge(EnumKnowledge.OVERWORLD, 5);
     }
 
     @Override
@@ -74,11 +69,6 @@ public class TowerGuardian extends JBossEntity {
     @Override
     protected SoundEvent getHurtSound(@NotNull DamageSource pDamageSource) {
         return JSounds.ROCK.get();
-    }
-
-    @Override
-    public void stopSeenByPlayer(ServerPlayer player) {
-        this.getEvent().removePlayer(player);
     }
 
     @Override
@@ -125,16 +115,6 @@ public class TowerGuardian extends JBossEntity {
                 .add(Attributes.KNOCKBACK_RESISTANCE, MobStats.TEMPLE_GUARDIAN_KNOCKBACK_RESISTANCE)
                 .add(Attributes.FOLLOW_RANGE, MobStats.STANDARD_FOLLOW_RANGE)
                 .add(Attributes.MOVEMENT_SPEED, MobStats.TEMPLE_GUARDIAN_SPEED).build();
-    }
-
-    @Override
-    public BossBarRenderer getBossBar() {
-        return BOSS_BAR;
-    }
-
-    @Override
-    public ServerBossEvent getEvent() {
-        return BOSS_INFO;
     }
 
     private final RawAnimation MOVING = RawAnimation.begin().thenLoop("animation.tower_guardian.walk");

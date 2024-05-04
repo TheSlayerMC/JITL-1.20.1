@@ -1,0 +1,32 @@
+{
+  "name": "book.jitl.entries.bosses",
+  "category": "jitl:corba",
+  "icon": "jitl:corba_key",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "jitl:logger",
+      "scale": 0.35,
+      "name": "Logger",
+      "offset": 1.7,
+      "anchor": "logger"
+    },
+    {
+      "type": "text",
+      "text": "book.jitl.entry.corba.logger.desc"
+    },
+    {
+      "type": "entity",
+      "entity": "jitl:sentry_king",
+      "scale": 0.6,
+      "name": "Sentry King",
+      "offset": 2,
+      "anchor": "sentry_king"
+    },
+    {
+      "type": "text",
+      "text": "book.jitl.entry.corba.sentry_king.desc"
+    }
+  ]
+}

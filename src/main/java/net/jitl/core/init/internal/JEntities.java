@@ -21,6 +21,7 @@ import net.jitl.common.entity.euca.npc.AlloyMender;
 import net.jitl.common.entity.euca.npc.Crypian;
 import net.jitl.common.entity.euca.npc.RoyalKing;
 import net.jitl.common.entity.frozen.*;
+import net.jitl.common.entity.frozen.npc.FrozenGuardian;
 import net.jitl.common.entity.misc.Sentacoin;
 import net.jitl.common.entity.nether.*;
 import net.jitl.common.entity.overworld.*;
@@ -93,6 +94,7 @@ public class JEntities {
     public static final RegistryObject<EntityType<Sentacoin>> SENTACOIN_TYPE = registerRawEntity(Sentacoin::new, "sentacoin", "Sentacoin", 0.1F, 0.1F);
     public static final RegistryObject<EntityType<Sentacoin>> SENTACOIN_BAG_TYPE = registerRawEntity(Sentacoin::new, "sentacoin_bag", "Sentacoin Bag", 0.375F, 0.375F);
     public static final RegistryObject<EntityType<BossCrystal>> BOSS_CRYSTAL_TYPE = registerEntity(BossCrystal::new, "boss_crystal", "Boss Crystal", 0.5F, 0.5F, OVERWORLD_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<SpiritCrystal>> SPIRIT_CRYSTAL_TYPE = registerEntity(SpiritCrystal::new, "spirit_crystal", "Spirit Crystal", 1F, 2F, CORBA_COLOR, PASSIVE_COLOR);
 
     //BOSS MOBS
     public static final RegistryObject<EntityType<TowerGuardian>> TOWER_GUARDIAN_TYPE = registerEntity(TowerGuardian::new, "tower_guardian", "Tower Guardian", 2F, 3.5F, OVERWORLD_COLOR, BOSS_COLOR);
@@ -279,6 +281,7 @@ public class JEntities {
         event.put(CAVELING_TYPE.get(), Caveling.createAttributes());
         event.put(STONEWALKER_TYPE.get(), Stonewalker.createAttributes());
         event.put(BOSS_CRYSTAL_TYPE.get(), BossCrystal.createAttributes());
+        event.put(SPIRIT_CRYSTAL_TYPE.get(), SpiritCrystal.createAttributes());
 
         event.put(WITHERING_BEAST_TYPE.get(), WitheringBeast.createAttributes());
         event.put(CALCIA_TYPE.get(), Calcia.createAttributes());

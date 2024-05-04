@@ -15,7 +15,7 @@ public class BoomSwellGoal extends Goal {
 
    public BoomSwellGoal(BoomBoom pBoomBoom) {
       this.BoomBoom = pBoomBoom;
-      this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+      this.setFlags(EnumSet.of(Flag.MOVE));
    }
 
    @Override

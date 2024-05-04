@@ -1,0 +1,101 @@
+{
+  "name": "book.jitl.entries.structures",
+  "category": "jitl:overworld",
+  "icon": "jitl:gilded_dungeon_bricks",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "image",
+      "title": "structure.overworld.jitl.tower_guardian",
+      "images": [
+        "jitl:textures/gui/patchouli/tower_guardian.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "text",
+      "text": "book.jitl.entry.overworld.tower_structure.desc"
+    },
+    {
+      "type": "image",
+      "title": "structure.overworld.jitl.mage_hut",
+      "images": [
+        "jitl:textures/gui/patchouli/mage_hut.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "text",
+      "text": "book.jitl.entry.overworld.mage_hut.desc"
+    },
+    {
+      "type": "image",
+      "title": "structure.overworld.jitl.rockite_dungeon",
+      "images": [
+        "jitl:textures/gui/patchouli/rockite_dungeon.png"
+      ],
+      "border": true
+    },
+    {
+      "type": "text",
+      "text": "book.jitl.entry.overworld.rockite_dungeon.desc"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "pattern": [
+          ["_________", "_________", "_________", "_________", "_________", "____Z____", "_________", "_________", "_________", "_________", "_________"],
+          ["_________", "_________", "_________", "_________", "_________", "________G", "_________", "_________", "_________", "_________", "_________"],
+          ["_________", "_________", "_________", "_________", "_________", "G_______C", "_________", "_________", "_________", "_________", "_________"],
+          ["_________", "_______C_", "_________", "_________", "_________", "C_______C", "_________", "_________", "_________", "_________", "____G____"],
+          ["____C____", "_______D_", "_________", "_________", "___SJS___", "G__JIT__C", "___SJS___", "_________", "_________", "_________", "____D____"],
+          ["____G____", "_G_____D_", "_________", "_________", "___LOT___", "D__T0O__D", "___TOJ___", "_________", "_________", "_______C_", "____C____"],
+          ["____C____", "_C_____C_", "_________", "_________", "___JTL___", "C__O_L__C", "___JLO___", "_________", "_________", "_D_____G_", "____C____"],
+          ["____C____", "_C_____G_", "_________", "_________", "___OLT___", "G__L_J__G", "___LOT___", "_________", "_________", "_C_____D_", "____G____"],
+          ["____D____", "_G_____C_", "_________", "_________", "___TOT___", "C__J_T__D", "___JTO___", "_________", "_________", "_G_____G_", "____D____"]
+
+        ],
+        "mapping": {
+          "G": "jitl:gilded_dungeon_bricks",
+          "C": "jitl:cracked_dungeon_bricks",
+          "D": "jitl:dungeon_bricks",
+          "O": "jitl:ancient_stone_runic_0",
+          "J": "jitl:ancient_stone_runic_1",
+          "L": "jitl:ancient_stone_runic_2",
+          "T": "jitl:ancient_stone_runic_3",
+          "I": "jitl:ancient_catalyst",
+          "Z": "jitl:ancient_obelisk",
+          "S": "jitl:ancient_socket"
+        },
+        "symmetrical": true
+      },
+      "name": "Ancient Structure",
+      "anchor": "ancient_structure",
+      "text": "book.jitl.entry.overworld.ancient_structure.desc.1"
+    },
+    {
+      "type": "image",
+      "images": [
+        "jitl:textures/gui/patchouli/open_ancient_structure.png"
+      ],
+      "border": true,
+      "text": "book.jitl.entry.overworld.ancient_structure.desc.2"
+    },
+    {
+      "type": "image",
+      "images": [
+        "jitl:textures/gui/patchouli/inside_ancient_structure.png"
+      ],
+      "border": true,
+      "text": "book.jitl.entry.overworld.ancient_structure.desc.3"
+    },
+    {
+      "type": "image",
+      "images": [
+        "jitl:textures/gui/patchouli/inside_ancient_room.png"
+      ],
+      "border": true,
+      "text": "book.jitl.entry.overworld.ancient_structure.desc.4"
+    }
+  ]
+}

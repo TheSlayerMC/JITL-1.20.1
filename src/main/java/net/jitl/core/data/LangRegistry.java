@@ -58,6 +58,7 @@ public class LangRegistry {
         ArrayList<String> basePortalBlockList = new ArrayList<>(JBlocks.basePortalBlockName);
         ArrayList<String> basePortalFrameBlockList = new ArrayList<>(JBlocks.basePortalFrameBlockName);
         ArrayList<String> topBottomBlockList = new ArrayList<>(JBlocks.topBottomBlockName);
+        ArrayList<String> totemBlockList = new ArrayList<>(JBlocks.totemBlockName);
 
         ArrayList<String> toolItemList = new ArrayList<>(JItems.toolName);
         ArrayList<String> itemList = new ArrayList<>(JItems.itemName);
@@ -100,6 +101,339 @@ public class LangRegistry {
 
         writeToFile("\"curios.identifier.heart_container\" : \"Heart\",");
         writeToFile("\"curios.identifier.catalyst\" : \"Catalyst\",");
+
+        writeToFile("\"jitl.trader.boil_trader1\" : \"Boil Trader: It's not often that newcomers arrive here. Can you stand the heat?\",");
+        writeToFile("\"jitl.trader.boil_trader2\" : \"Boil Trader: I'm an unusual collector, but I have the best deals of any realm!\",");
+        writeToFile("\"jitl.trader.boil_trader3\" : \"Boil Trader: I can see that you're having a tough time getting around. An armor upgrade, perhaps?\",");
+
+        writeToFile("\"jitl.trader.escaped_convict1\" : \"Escaped Convict: I'm an innocent man! I have no reason to be in this realm!\",");
+        writeToFile("\"jitl.trader.escaped_convict2\" : \"Escaped Convict: Don't be threatened by me, strange thing!\",");
+        writeToFile("\"jitl.trader.escaped_convict3\" : \"Escaped Convict: I managed to find some great loot on my way here. If you can help me out of here, I'll give back in return.\",");
+
+        writeToFile("\"jitl.trader.staring_guardian1\" : \"Guardian: It sure is dark down here... I've always speculated about what's on the surface.\",");
+        writeToFile("\"jitl.trader.staring_guardian2\" : \"Guardian: You don't look like any normal creature I've seen here before. We don't get a lot of travelers.\",");
+        writeToFile("\"jitl.trader.staring_guardian3\" : \"Guardian: It's always too dark here to see. Hopefully, there'll be a journey to the light as some wish.\",");
+
+        writeToFile("\"jitl.trader.alloy_mender1\" : \"Alloy Mender: It takes over a thousand degreese to melt this gold!\",");
+        writeToFile("\"jitl.trader.alloy_mender2\" : \"Alloy Mender: My weapons have been melted and shaped into deadly perfection!\",");
+        writeToFile("\"jitl.trader.alloy_mender3\" : \"Alloy Mender: It's a real struggle living here, when everything wants to kill you...\",");
+        writeToFile("\"jitl.trader.alloy_mender4\" : \"Alloy Mender: Did they steal my other things at the village?\",");
+
+        writeToFile("\"jitl.trader.crypian1\" : \"Crypian: Yeah I took some of it\",");
+        writeToFile("\"jitl.trader.crypian2\" : \"Crypian: IT'S MINE.... Unless you want it?\",");
+        writeToFile("\"jitl.trader.crypian3\" : \"Crypian: I might go see where he has moved to....\",");
+
+        writeToFile("\"jitl.npc.crypian_alloy1\" : \"Crypian: Alloy Mender used to live here, but he moved into the royal lands\",");
+        writeToFile("\"jitl.npc.crypian_alloy2\" : \"Crypian: Everyone has raided his house\",");
+        writeToFile("\"jitl.npc.crypian_alloy3\" : \"Crypian: I'm sure you could possibly trade with some of them\",");
+
+        writeToFile("\"jitl.npc.crypian1\" : \"Crypian: I missed out on the Alloy Menders gear\",");
+        writeToFile("\"jitl.npc.crypian2\" : \"Crypian: A few others have some of the Alloy Menders things\",");
+
+        writeToFile("\"jitl.trader.eskimo1\" : \"Eskimo: Did you know its not as cold as it has been?\",");
+        writeToFile("\"jitl.trader.eskimo2\" : \"Eskimo: Storms have been raging since the shrine showed up...\",");
+        writeToFile("\"jitl.trader.eskimo3\" : \"Eskimo: Please sort out the shrine... It's Freezing!\",");
+
+        writeToFile("\"jitl.npc.frozen_guardian1\" : \"Frozen Guardian: Warmth...\",");
+        writeToFile("\"jitl.npc.frozen_guardian2\" : \"Frozen Guardian: ...\",");
+
+        writeToFile("\"jitl.trader.mage1\" : \"Mage: I have some great deals!\",");
+        writeToFile("\"jitl.trader.mage2\" : \"Mage: I've got some nice valuables!\",");
+        writeToFile("\"jitl.trader.mage3\" : \"Mage: Greetings, weary traveller!\",");
+
+        writeToFile("\"jitl.trader.rockite_golem\" : \"Rockite Golem: ...\",");
+
+        writeToFile("\"jitl.tile.summon_table\" : \"Summoning Table\",");
+
+        writeToFile("\"book.jitl.landing_text\" : " + "\"Welcome $(playername) to Journey Into The Light, This book is a WIP, any other info needed head over to the $(l:https://discord.com/invite/WhXvz5b)Discord\",");
+        writeToFile("\"book.jitl.book_name\" : " + "\"Essentia Bible\",");
+
+        writeToFile("\"book.jitl.category.getting_started\" : " + "\"Getting Started\",");
+        writeToFile("\"book.jitl.category.getting_started.desc\" : " + "\"This should give you the tips and hints on getting started.\",");
+        writeToFile("\"book.jitl.entries.getting_started.ores\" : " + "\"Ores\",");
+        writeToFile("\"book.jitl.category.dimensions\" : " + "\"Dimensions\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.iridium_ore.title\" : " + "\"Iridium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.iridium_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops Iridium Nugget\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.sapphire_ore.title\" : " + "\"Sapphire Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.sapphire_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops Sapphire Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.shadium_ore.title\" : " + "\"Shadium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.shadium_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops Raw Shadium\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.lunium_ore.title\" : " + "\"Lunium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.lunium_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops Lunium Powder\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.verdite_ore.title\" : " + "\"Verdite Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.verdite_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops itself\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.blood_rock.title\" : " + "\"Blood Rock\",");
+        writeToFile("\"book.jitl.entry.getting_started.blood_rock.1\" : " + "\"Stone that generates in the Nether between Y -64 and 256. This is used for Summoning Blocks and the Summoning Shrine\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.bloodcrust_ore.title\" : " + "\"Bloodcrust Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.bloodcrust_ore.1\" : " + "\"Ore that generates in the Nether Y -64 and 256, drops Raw Bloodcrust\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.bleedstone_block.title\" : " + "\"Bleedstone\",");
+        writeToFile("\"book.jitl.entry.getting_started.bleedstone_block.1\" : " + "\"Ore that generates in the Nether on the roof, drops Bleedstone Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.smithstone_block.title\" : " + "\"Smithstone\",");
+        writeToFile("\"book.jitl.entry.getting_started.smithstone_block.1\" : " + "\"Ore that generates in the Nether on the roof, drops Smithstone Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.warped_quartz_ore.title\" : " + "\"Warped Quartz Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.warped_quartz_ore.1\" : " + "\"Ore that generates in the Nether Biome Warped Forest, drops Warped Quartz\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.crimson_quartz_ore.title\" : " + "\"Crimson Quartz Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.crimson_quartz_ore.1\" : " + "\"Ore that generates in the Nether Biome Crimson Forest, drops Crimson Quartz\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.firestone_ore.title\" : " + "\"Firestone Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.firestone_ore.1\" : " + "\"Ore that generates in the Nether in Basalt, drops Firestone\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.enderillium_ore.title\" : " + "\"Enderillium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.enderillium_ore.1\" : " + "\"Ore that generates in the End Islands, drops Enderillium Shard\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.ashual_ore.title\" : " + "\"Ashual Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.ashual_ore.1\" : " + "\"Ore that generates in the Boiling Point, drops Ash\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.blazium_ore.title\" : " + "\"Blazium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.blazium_ore.1\" : " + "\"Ore that generates in the Boiling Point, drops Raw Blazium\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.mekyum_ore.title\" : " + "\"Mekyum Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.mekyum_ore.1\" : " + "\"Ore that generates in Euca Biome Goldite Grains, drops Mekyum Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.celestium_ore.title\" : " + "\"Celestium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.celestium_ore.1\" : " + "\"Ore that generates in Euca Biome Euca Plains, drops Celestium Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.storon_ore.title\" : " + "\"Storon Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.storon_ore.1\" : " + "\"Ore that generates in Euca Biome Goldite Grains, drops Storon Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.korite_ore.title\" : " + "\"Korite Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.korite_ore.1\" : " + "\"Ore that generates in Euca Biome Euca Plains, drops Korite Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.rimestone_ore.title\" : " + "\"Rimestone Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.rimestone_ore.1\" : " + "\"Ore that generates in Frozen Lands, drops Rimestone\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.peridot_ore.title\" : " + "\"Peridot Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.peridot_ore.1\" : " + "\"Ore that generates in Frozen Lands, drops Peridot Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.des_ore.title\" : " + "\"Des Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.des_ore.1\" : " + "\"Ore that generates in The Depths, drops itself\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.flairium_ore.title\" : " + "\"Flairium Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.flairium_ore.1\" : " + "\"Ore that generates in The Depths, drops itself\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.orbadite_ore.title\" : " + "\"Orbadite Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.orbadite_ore.1\" : " + "\"Ore that generates in Corba, drops Raw Orbadite\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.gorbite_ore.title\" : " + "\"Gorbite Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.gorbite_ore.1\" : " + "\"Ore that generates in Corba, drops Gorbite Gem\",");
+
+        writeToFile("\"book.jitl.entry.getting_started.lunite_ore.title\" : " + "\"Lunite Ore\",");
+        writeToFile("\"book.jitl.entry.getting_started.lunite_ore.1\" : " + "\"Ore that generates in Cloudia, drops Lunite Chunk\",");
+
+        writeToFile("\"book.jitl.entry.portals.boil\" : " + "\"You find the Portal Frame blocks inside the $(l:jitl:structures/boil_lock_structure)Boil Lock structure\",");
+        writeToFile("\"book.jitl.entry.portals.frozen\" : " + "\"You can craft the Frozen Portal Frame blocks to gain access\",");
+        writeToFile("\"book.jitl.entry.portals.euca\" : " + "\"You can craft the Euca Portal Frame blocks with Euca Portal Pieces dropped by Nether Bosses ($(l:jitl:nether/bosses#okoloo)Okoloo$(/l), $(l:jitl:nether/bosses#withering_beast)Withering Beast$(/l), $(l:jitl:nether/bosses#soul_watcher)Soul Watcher$(/l))\",");
+        writeToFile("\"book.jitl.entry.portals.depths\" : " + "\"You can craft the Depths Portal Frame blocks with Depths Portal Pieces dropped by Euca Bosses ($(l:jitl:euca/bosses#eudor)Eudor$(/l), $(l:jitl:euca/bosses#corallator$)Corallator$(/l))\",");
+        writeToFile("\"book.jitl.entry.portals.corba\" : " + "\"You can craft the Corba Portal Frame blocks with Corba Portal Pieces dropped by Depths Bosses ($(l:jitl:depths/bosses#scale)Scale$(/l), $(l:jitl:depths/bosses#thunder_bird)Thunder Bird$(/l))\",");
+        writeToFile("\"book.jitl.entry.portals.terrania\" : " + "\"You can craft the Terranian Portal Frame blocks with Terrania Portal Pieces dropped by Corba Bosses ($(l:jitl:corba/bosses#logger)Logger$(/l), $(l:jitl:corba/bosses#sentry_king)Sentry King$(/l))\",");
+        writeToFile("\"book.jitl.entry.portals.cloudia\" : " + "\"You can craft the Cloudia Portal Frame blocks with Cloudia Portal Pieces dropped by a Terrania Boss ($(l:jitl:terrania/bosses#terranian_protector)Terranian Protector$(/l))\",");
+        writeToFile("\"book.jitl.entry.portals.senterian\" : " + "\"Found in the $(l:jitl:overworld/structures#ancient_structure)Ancient Structure\",");
+
+        writeToFile("\"book.jitl.entries.structures\" : " + "\"Structures\",");
+        writeToFile("\"book.jitl.entries.ores\" : " + "\"Ores\",");
+        writeToFile("\"book.jitl.entries.mobs\" : " + "\"Mobs\",");
+        writeToFile("\"book.jitl.entries.bosses\" : " + "\"Bosses\",");
+        writeToFile("\"book.jitl.entries.traders\" : " + "\"NPC's\",");
+
+        writeToFile("\"book.jitl.category.summoning\" : " + "\"Summoning\",");
+        writeToFile("\"book.jitl.entries.summoning\" : " + "\"Summoning Shrine\",");
+        writeToFile("\"book.jitl.category.summoning.desc\" : " + "\"Information needed on creating the Summoning Shrine\",");
+        writeToFile("\"book.jitl.entry.summoning.book.desc\" : " + "\"Craft the book needed to find the recipes to summon all the JITL bosses\",");
+
+        writeToFile("\"book.jitl.category.overworld\" : " + "\"Overworld\",");
+        writeToFile("\"book.jitl.category.overworld.desc\" : " + "\"Information on added features to the Overworld\",");
+
+        writeToFile("\"book.jitl.category.nether\" : " + "\"Nether\",");
+        writeToFile("\"book.jitl.category.nether.desc\" : " + "\"Information on added features to the Nether\",");
+
+        writeToFile("\"book.jitl.category.end\" : " + "\"The End\",");
+        writeToFile("\"book.jitl.category.end.desc\" : " + "\"Information on added features to The End\",");
+
+        writeToFile("\"book.jitl.category.boil\" : " + "\"Boiling Point\",");
+        writeToFile("\"book.jitl.category.boil.desc\" : " + "\"Information on features in the Boiling Point\",");
+
+        writeToFile("\"book.jitl.category.frozen\" : " + "\"Frozen Lands\",");
+        writeToFile("\"book.jitl.category.frozen.desc\" : " + "\"Information on features in the Frozen Lands\",");
+
+        writeToFile("\"book.jitl.category.euca\" : " + "\"Euca\",");
+        writeToFile("\"book.jitl.category.euca.desc\" : " + "\"Information on features in Euca\",");
+
+        writeToFile("\"book.jitl.category.depths\" : " + "\"The Depths\",");
+        writeToFile("\"book.jitl.category.depths.desc\" : " + "\"Information on features in The Depths\",");
+
+        writeToFile("\"book.jitl.category.corba\" : " + "\"Corba\",");
+        writeToFile("\"book.jitl.category.corba.desc\" : " + "\"Information on features in Corba\",");
+
+        writeToFile("\"book.jitl.category.terrania\" : " + "\"Terrania\",");
+        writeToFile("\"book.jitl.category.terrania.desc\" : " + "\"Information on features in Terrania\",");
+
+        writeToFile("\"book.jitl.category.cloudia\" : " + "\"Cloudia\",");
+        writeToFile("\"book.jitl.category.cloudia.desc\" : " + "\"Information on features in Cloudia\",");
+
+        writeToFile("\"book.jitl.category.senterian\" : " + "\"Senterian\",");
+        writeToFile("\"book.jitl.category.senterian.desc\" : " + "\"Information on features in Senterian\",");
+
+        writeToFile("\"structure.overworld.jitl.tower_guardian\" : " + "\"Guardian Tower\",");
+        writeToFile("\"book.jitl.entry.overworld.tower_structure.desc\" : " + "\"Found randomly in any Overworld Biomes, climb your way to the top to find $(l:jitl:overworld/bosses#tower_guardian)Tower Guardian$(/l), Kill him if you can and open his Boss Crystal to receive keys to unlock the loot chests\",");
+        writeToFile("\"book.jitl.entry.overworld.tower_guardian.desc\" : " + "\"Tower Guardian is one of the starting bosses, he has 275 Health and 5 Attack Damage, he can smash down on you which occasionally causes an explosion.\",");
+
+        writeToFile("\"structure.overworld.jitl.rockite_dungeon\" : " + "\"Rockite Dungeon\",");
+        writeToFile("\"book.jitl.entry.overworld.rockite_dungeon.desc\" : " + "\"Found randomly in any Overworld Biomes underground between -Y32 and -Y56, Break the stone Rockite Smasher with any Pickaxe to spawn in the $(l:jitl:overworld/bosses#rockite_smasher)Rockite Smasher$(/l) boss, Kill him if you can and open his Boss Crystal to receive keys to unlock the loot chests\",");
+        writeToFile("\"book.jitl.entry.overworld.rockite_smasher.desc\" : " + "\"Rockite Smasher is one of the starting bosses, he can only be damaged with any Pickaxe. He has 175 Health and 10 Attack Damage, he can throw you up to damage you.\",");
+
+        writeToFile("\"book.jitl.entry.overworld.ancient_structure.desc.1\" : " + "\"The Ancient Structure holds the Portal for Senterian, you can open this up by going to the top of the structure and \",");
+        writeToFile("\"book.jitl.entry.overworld.ancient_structure.desc.2\" : " + "\"filling each corner with an Ancient piece (shard or chunk as well) and clicking the middle block with an Ancient Eye of Opening\",");
+        writeToFile("\"book.jitl.entry.overworld.ancient_structure.desc.3\" : " + "\"Inside the bottom you will find $(l:jitl:overworld/traders#neutral_sentry_stalker)Neutral Sentry Stalker$(/l) wanting information on the overworld\",");
+        writeToFile("\"book.jitl.entry.overworld.ancient_structure.desc.4\" : " + "\"Once you give him information he will drop the key he used to lock the room, open it up and fill the missing spots with Sentry Eyes\",");
+
+        writeToFile("\"structure.overworld.jitl.mage_hut\" : " + "\"Mage Hut\",");
+        writeToFile("\"book.jitl.entry.overworld.mage_hut.desc\" : " + "\"Found randomly in any Dark Forest Biome, Climb up the top to find and meet the $(l:jitl:overworld/traders#mage)Mage\",");
+
+        writeToFile("\"structure.nether.jitl.boil_lock\" : " + "\"Boil Lock\",");
+        writeToFile("\"book.jitl.entry.nether.boil_lock.desc\" : " + "\"Unbreakable structure which you need to unlock with a Boiling Lock Key which is found in the Nether Tower. This structure contains the Boiling Point Portal Frames\",");
+
+        writeToFile("\"structure.nether.jitl.nether_tower\" : " + "\"Nether Tower\",");
+        writeToFile("\"book.jitl.entry.nether.nether_tower.desc\" : " + "\"Loot Tower which has locked chests (unlocked with a crafted Nether Chest Key) which may hold a Boiling Lock Key which is used on the Boil Lock structure, also contains Mini Ghast spawners and extra loot\",");
+
+        writeToFile("\"structure.nether.jitl.hellbot\" : " + "\"Hellbot Spawner\",");
+        writeToFile("\"book.jitl.entry.nether.hellbot.desc\" : " + "\"Spawns Hellbots which drops items that is used to craft Nether Chest Keys\",");
+
+        writeToFile("\"structure.nether.jitl.okoloo_crypt\" : " + "\"Okoloo Crypt\",");
+        writeToFile("\"book.jitl.entry.nether.okoloo_crypt.desc\" : " + "\"A structure that you place the Broken Okoloo Club into the Pedestal to spawn $(l:jitl:nether/bosses#okoloo)Okoloo\",");
+
+        writeToFile("\"book.jitl.entry.overworld.mage.desc\" : " + "\"Mage is a trading NPC that lives up the top of $(l:jitl:overworld/structures#mage_hut)Mage Hut\",");
+        writeToFile("\"book.jitl.entry.overworld.neutral_sentry_stalker.desc\" : " + "\"This Sentry Stalker is a bit different to normal... He locked the Senterian Portal away trying to close it away while he finds enough information on the Overworld. While he resides inside of the $(l:jitl:overworld/structures#ancient_tower)Ancient Tower$(/l) he will give the key inside for an exchange\",");
+        writeToFile("\"book.jitl.entry.overworld.rockite_golem.desc\" : " + "\"Rockite Golem is a trading NPC and spawns underground randomly\",");
+
+        writeToFile("\"book.jitl.entry.nether.blazier.desc\" : " + "\"Blazier is spawned using the Blazier Orb made inside the Summoning Table, he has 850 Health, when he gets below 50% health he spawns help\",");
+        writeToFile("\"book.jitl.entry.nether.calcia.desc\" : " + "\"Calcia is spawned using the Calcia Orb made inside the Summoning Table, he has 650 Health, he likes to choose when he is seen...\",");
+        writeToFile("\"book.jitl.entry.nether.okoloo.desc\" : " + "\"Okoloo is spawned inside the $(l:jitl:nether/structures#okoloo_crypt)Okoloo Crypt$(/l), he has 600 Health, he likes to swing his club\",");
+        writeToFile("\"book.jitl.entry.nether.soul_watcher.desc\" : " + "\"The Soul Watcher is spawned using the Soul Watcher Orb made inside the Summoning Table, he has 650 Health, make sure to contain him or he may fly away\",");
+        writeToFile("\"book.jitl.entry.nether.withering_beast.desc\" : " + "\"Withering Beast is spawned using the Withering Beast Orb made inside the Summoning Table, he has 750 Health, deadly to the touch.\",");
+
+        writeToFile("\"structure.boil.jitl.brison\" : " + "\"Brison\",");
+        writeToFile("\"book.jitl.entry.boil.brison.desc\" : " + "\"The Brison is found in the Charred Fields Biome and keeps the $(l:jitl:boil/traders#escaped_convict)Escaped Convict$(/l) with a few needed spawners attached\",");
+        writeToFile("\"book.jitl.entry.boil.mobs.escaped_convict.desc\" : " + "\"Escaped Convict is a NPC that lives in the $(l:jitl:boil/structures#brison)Brison\",");
+
+        writeToFile("\"structure.boil.jitl.hellwing_tower\" : " + "\"Hellwing Tower\",");
+        writeToFile("\"book.jitl.entry.boil.hellwing_tower.desc\" : " + "\"The Hellwing Tower is found inside the Boiling Sands Biome and spawns $(l:jitl:boil/mobs#hellwing)Hellwings$(/l)\",");
+
+        writeToFile("\"structure.boil.jitl.observer_hut\" : " + "\"Observer Hut\",");
+        writeToFile("\"book.jitl.entry.boil.observer_hut.desc\" : " + "\"The Observer Hut is found inside the Boiling Biome and spawns $(l:jitl:boil/mobs#observer)Observers$(/l)\",");
+
+        writeToFile("\"structure.frozen.jitl.eskimo\" : " + "\"Eskimo Camp\",");
+        writeToFile("\"book.jitl.entry.frozen.mobs.eskimo.desc\" : " + "\"The Eskimo is a Trading NPC that lives in the $(l:jitl:frozen/structures#eskimo_camp)Eskimo Camp$(/l), He is the only way to get Frostborn Souls\",");
+
+        writeToFile("\"structure.frozen.jitl.eskimo_camp\" : " + "\"Eskimo Camp\",");
+        writeToFile("\"book.jitl.entry.frozen.eskimo_camp.desc\" : " + "\"The Eskimo Camp is found inside the Dying Forest Biome and spawns $(l:jitl:frozen/traders#eskimo)Eskimos$(/l)\",");
+
+        writeToFile("\"structure.frozen.jitl.frozen_dungeon\" : " + "\"Frozen Dungeon\",");
+        writeToFile("\"book.jitl.entry.frozen.frozen_dungeon.desc\" : " + "\"The Frozen Dungeon is found in any Frozen Lands Biome and spawns $(l:jitl:frozen/mobs#frozen_frostbiter)Frozen Frostbiter$(/l)\",");
+
+        writeToFile("\"structure.frozen.jitl.guardian_ruins\" : " + "\"Guardian Ruins\",");
+        writeToFile("\"book.jitl.entry.frozen.guardian_ruins.desc\" : " + "\"The Guardian Ruins is found inside the Dying Forest Biome and inside has 8 Pedestals and the $(l:jitl:frozen/traders#frozen_guardian)Frozen Guardian$(/l), place 8 x Frostborn souls (collected by trading with an $(l:jitl:frozen/traders#eskimo)Eskimos$(/l)) on the pedestals and interact with the Guardian, this will remove the storm from the dimension and complete the Frozen Knowledge system\",");
+        writeToFile("\"book.jitl.entry.frozen.mobs.frozen_guardian.desc\" : " + "\"The Frozen Guardian is a idle NPC that lives in the $(l:jitl:frozen/structures#guardian_ruins)Guardian Ruins$(/l), He just wants warmth and peace but his anger is the only thing standing between him leaving the Frozen Lands Dimension, without him the storm will be gone\",");
+
+        writeToFile("\"structure.frozen.jitl.spike_dungeon\" : " + "\"Spike Dungeon\",");
+        writeToFile("\"book.jitl.entry.frozen.spike_dungeon.desc\" : " + "\"The Spike Dungeon is found the Frozen Wastes Biome and spawns $(l:jitl:frozen/bosses#frost_golem)Frost Golem$(/l)\",");
+        writeToFile("\"book.jitl.entry.frozen.frost_golem.desc\" : " + "\"Frost Golem is a Boss that lives in the $(l:jitl:frozen/structures#spike_dungeon)Spike Dungeon$(/l), he will hit you up into the air. He has 350 Health and 10 Damage\",");
+
+        writeToFile("\"structure.boil.jitl.trader_hut\" : " + "\"Trader Hut\",");
+        writeToFile("\"book.jitl.entry.boil.trader_hut.desc\" : " + "\"The Trader Hut is found in the Scorched Wastelands Biome and keeps the $(l:jitl:boil/traders#boil_trader)Boil Trader$(/l)\",");
+        writeToFile("\"book.jitl.entry.boil.mobs.boil_trader.desc\" : " + "\"Boil Trader is a NPC that lives in the $(l:jitl:boil/structures#trader_hut)Trader Hut\",");
+
+        writeToFile("\"book.jitl.entry.euca.corallator.desc\" : " + "\"The Corallator is spawned using the Corallator Orb made inside the Summoning Table, he has 950 Health, make sure to trap him or he might fly away\",");
+        writeToFile("\"book.jitl.entry.euca.eudor.desc\" : " + "\"Eudor is the Royal of the lands and is spawned using Eudor's Crown which the $(l:jitl:euca/traders#royal_king)Royal King$(/l) will give you, he has 950 Health, he sure is strong and is only seen when he wants to be\",");
+
+        writeToFile("\"structure.euca.jitl.alloy_mender_hut\" : " + "\"Alloy Mender's Hut\",");
+        writeToFile("\"book.jitl.entry.euca.alloy_mender_hut.desc\" : " + "\"The Alloy Mender's Hut is found in the Goldite Grains Biome and resides the $(l:jitl:euca/traders#alloy_mender)Alloy Mender$(/l)\",");
+        writeToFile("\"book.jitl.entry.euca.mobs.alloy_mender.desc\" : " + "\"Alloy Mender is a trader NPC that lives in his $(l:jitl:euca/structures#alloy_mender_hut)Hut$(/l), He moved away from the village to find his own riches\",");
+
+        writeToFile("\"structure.euca.jitl.euca_palace\" : " + "\"Euca Palace\",");
+        writeToFile("\"book.jitl.entry.euca.euca_palace.desc\" : " + "\"Euca Palace is found in the Goldite Grains Biome and resides the $(l:jitl:euca/traders#royal_king)Royal King$(/l)\",");
+        writeToFile("\"book.jitl.entry.euca.mobs.royal_king.desc\" : " + "\"The Royal King is the keeper of Eudor, he is a idle NPC that lives in the $(l:jitl:euca/structures#euca_palace)Euca Palace$(/l), Once you put on the Royal Pedestals around him what the wants he will give you his Crown\",");
+
+        writeToFile("\"structure.euca.jitl.euca_village\" : " + "\"Euca Village\",");
+        writeToFile("\"book.jitl.entry.euca.euca_village.desc\" : " + "\"Euca Village is found in the Goldite Plains Biome and resides some $(l:jitl:euca/traders#crypian)Crypians$(/l)\",");
+        writeToFile("\"book.jitl.entry.euca.mobs.crypian.desc\" : " + "\"Crypian is a possible trader NPC that lives in the $(l:jitl:euca/structures#euca_village)Euca Village$(/l), He is a Goldbot that found his Sprocket to go back to normal\",");
+
+        writeToFile("\"structure.euca.jitl.euca_sphere\" : " + "\"Euca Sphere\",");
+        writeToFile("\"book.jitl.entry.euca.euca_sphere.desc\" : " + "\"Euca Sphere is found in any Euca Biomes and spawns $(l:jitl:euca/mobs#goldbot)Goldbots$(/l), it also contains loot witch is unlockable with Euca Keys found in chests inside Euca\",");
+
+        writeToFile("\"structure.euca.jitl.gold_bot_spawner\" : " + "\"Goldbot Spawner\",");
+        writeToFile("\"book.jitl.entry.euca.gold_bot_spawner.desc\" : " + "\"Goldbot Spawner is found in any Euca Biomes and spawns $(l:jitl:euca/mobs#goldbot)Goldbots$(/l)\",");
+
+        writeToFile("\"structure.depths.jitl.dark_sorcerers_dungeon\" : " + "\"Sorcerers Dungeon\",");
+        writeToFile("\"book.jitl.entry.depths.dark_sorcerers_dungeon.desc\" : " + "\"Dark Sorcerers Dungeon spawns $(l:jitl:depths/mobs#dark_sorcerer)Dark Sorcerers$(/l) when inside, it is unlocked with Depths Lock Key obtained from $(l:jitl:depths/traders#staring_guardian)Staring Guardian(/l)\",");
+
+        writeToFile("\"structure.depths.jitl.depths_watchtower\" : " + "\"Depths Watchtower\",");
+        writeToFile("\"book.jitl.entry.depths.depths_watchtower.desc\" : " + "\"Depths Watchtower resides $(l:jitl:depths/traders#staring_guardian)Staring Guardian$(/l) up the top\",");
+        writeToFile("\"book.jitl.entry.depths.mobs.staring_guardian.desc\" : " + "\"Staring Guardian is a trading NPC that lives on top of the $(l:jitl:depths/structures#depths_watchtower)Depths Watchtower$(/l)\",");
+
+        writeToFile("\"structure.depths.jitl.depths_village\" : " + "\"Depths Village\",");
+        writeToFile("\"book.jitl.entry.depths.depths_village.desc\" : " + "\"Depths Village resides $(l:jitl:depths/traders#auron)Auron$(/l) and also new crops\",");
+        writeToFile("\"book.jitl.entry.depths.mobs.auron.desc\" : " + "\"Auron is a trading NPC that lives in the $(l:jitl:depths/structures#depths_village)Depths Village$(/l)\",");
+
+        writeToFile("\"book.jitl.entry.depths.scale.desc\" : " + "\"Scale is spawned using the Scale Orb made inside the Summoning Table, he has 1550 Health, make sure to trap him or he might fly away\",");
+        writeToFile("\"book.jitl.entry.depths.thunder_bird.desc\" : " + "\"Thunder Bird is spawned using the Thunder Bird Orb made inside the Summoning Table, he has 1550 Health, he has a hard hit with 10 Damage\",");
+
+        writeToFile("\"structure.corba.jitl.corba_village\" : " + "\"Corba Village\",");
+        writeToFile("\"book.jitl.entry.corba.corba_village.desc\" : " + "\"Corba Village resides Trading NPC's and also new crops\",");
+
+        writeToFile("\"structure.corba.jitl.seer_tree\" : " + "\"Seer Tree\",");
+        writeToFile("\"book.jitl.entry.corba.seer_tree.desc\" : " + "\"Seer Tree spawns $(l:jitl:corba/mobs#overseer)Overseers$(/l), once you have obtained an Elder Key from $(l:jitl:corba/traders#hooded)The Hooded$(/l) climb your way to the very top to spawn $(l:jitl:corba/mobs#overseer_elder)Overseer Elder$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.mobs.green_tordo.desc\" : " + "\"Green Tordo is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.mobs.hooded.desc\" : " + "\"The Hooded is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.mobs.red_tordo.desc\" : " + "\"Red Tordo is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.mobs.overgrown_merchant.desc\" : " + "\"Overgrown Merchant is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.logger.desc\" : " + "\"Logger is spawned using the Logger Orb made inside the Summoning Table, he has 2350 Health, he will throw you while he has a hard hit with 10 Damage\",");
+        writeToFile("\"book.jitl.entry.corba.sentry_king.desc\" : " + "\"Sentry King is spawned using the Sentry King Orb made inside the Summoning Table, he has 2500 Health, he will throw mud at you that hits hard with 15 Damage, his loot contains Ancient Eye of Opening which is used on the $(l:jitl:overworld/structures#ancient_tower)Ancient Tower$(/l)\",");
+
+        writeToFile("\"structure.terrania.jitl.mega_mushroom\" : " + "\"Mega Mushroom\",");
+        writeToFile("\"book.jitl.entry.terrania.mega_mushroom.desc\" : " + "\"Mega Mushroom is found in the Mushroom Biome and has 2 variants, each variant being Purple or Blue topped containing a different Trading NPC\",");
+
+        writeToFile("\"structure.terrania.jitl.mega_tree\" : " + "\"Mega Tree\",");
+        writeToFile("\"book.jitl.entry.terrania.mega_tree.desc\" : " + "\"Mega Tree is found in the Forest Biome and contains the Earthen Crystals which is needed to progress for making the Enchanted Terrastar in the Summoning Shrine\",");
+        writeToFile("\"book.jitl.entry.terrania.mobs.terranian_enchanter.desc\" : " + "\"Terranian Enchanter is a trading NPC that lives in one variant of the $(l:jitl:terrania/structures#mega_mushroom)Mega Mushroom$(/l), he also trade the shards needed to get into the $(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)\",");
+        writeToFile("\"book.jitl.entry.terrania.mobs.terranian_trader.desc\" : " + "\"Terranian Trader is a trading NPC that lives in one variant of the $(l:jitl:terrania/structures#mega_mushroom)Mega Mushroom$(/l), he also trade the shards needed to get into the $(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)\",");
+
+        writeToFile("\"structure.cloudia.jitl.cloudia_village_1\" : " + "\"Cloudia Village\",");
+        writeToFile("\"book.jitl.entry.cloudia.cloudia_village_1.desc\" : " + "\"Cloudia Village resides trading NPC's\",");
+
+        writeToFile("\"structure.cloudia.jitl.cloudia_village_2\" : " + "\"Cloudia Village\",");
+        writeToFile("\"book.jitl.entry.cloudia.cloudia_village_2.desc\" : " + "\"Cloudia Village resides trading NPC's\",");
+
+        writeToFile("\"book.jitl.entry.cloudia.sky_stalker.desc\" : " + "\"Sky Stalker is spawned using the Mysterious Disk which is traded to get from $(l:jitl:cloudia/traders#starlight_villager)Starlight Villager$(/l), be sure to trap him as he has 3500 Health and may fly away\",");
+
+        writeToFile("\"book.jitl.entry.cloudia.mobs.starlight_villager.desc\" : " + "\"Starlight Villager is a trading NPC that lives in one variant of the $(l:jitl:terrania/structures#cloudia_village_1)Cloudia Villages$(/l), he trades what you need for the Mysterious Disk to spawn $(l:jitl:cloudia/bosses#sky_stalker)Sky Stalker$(/l)\",");
+        writeToFile("\"book.jitl.entry.cloudia.mobs.starlight_blacksmith.desc\" : " + "\"Starlight Blacksmith is a trading NPC that lives in one variant of the $(l:jitl:terrania/structures#cloudia_village_1)Cloudia Villages$(/l)\",");
+
+        writeToFile("\"structure.senterian.jitl.senterian_altar\" : " + "\"Senterian Altar\",");
+        writeToFile("\"book.jitl.entry.senterian.senterian_altar.desc\" : " + "\"Senterian Altar Room is the biggest room in the dimension, in this room in the middle you will find the Senterian Altars, you can place a Sentry Observer item into them and they will spawn Mini Senterian Mobs, this is the only way to recieve Sentacoins.\",");
+
+        writeToFile("\"book.jitl.entry.senterian.mobs.sentry_lord.desc\" : " + "\"Sentry Lord is a mob that spawns inside the labyrinth, may drop a Sentry Observer which is used in $(l:jitl:senterian/structures#senterian_altar)Senterian Altar$(/l)\",");
+        writeToFile("\"book.jitl.entry.senterian.mobs.sentry_stalker.desc\" : " + "\"Sentry Stalker is a mob that spawns inside the labyrinth, may drop a Sentry Observer which is used in $(l:jitl:senterian/structures#senterian_altar)Senterian Altar$(/l)\",");
+        writeToFile("\"book.jitl.entry.senterian.mobs.sentry_walker.desc\" : " + "\"Sentry Walker is a mob that spawns inside the labyrinth, may drop a Sentry Observer which is used in $(l:jitl:senterian/structures#senterian_altar)Senterian Altar$(/l)\",");
+
+        writeToFile("\"book.jitl.entry.senterian.mobs.mini_sentry_walker.desc\" : " + "\"Mini Sentry Walker is a mob that spawns from inside the Senterian Altar when activated, they will drop Sentacoins\",");
+        writeToFile("\"book.jitl.entry.senterian.mobs.mini_sentry_stalker.desc\" : " + "\"Mini Sentry Stalker is a mob that spawns from inside the Senterian Altar when activated, they will drop Sentacoins\",");
+        writeToFile("\"book.jitl.entry.senterian.mobs.mini_sentry_lord.desc\" : " + "\"Mini Sentry Lord is a mob that spawns from inside the Senterian Altar when activated, they will drop Sentacoins\",");
+
+        writeToFile("\"book.jitl.entry.portals.flame_coin\" : " + "\"The Flame Coin is what is used to light all the JITL Portals\",");
+        writeToFile("\"book.jitl.entries.dimensions\" : " + "\"Dimensions\",");
+        writeToFile("\"book.jitl.entry.portals.start\" : " + "\"What to do and how to get into Dimensions\",");
+        writeToFile("\"book.jitl.category.dimensions.desc\" : " + "\"A rundown of how to get access to all Portals\",");
 
         writeToFile("\"jitl.trader.boil_trader1\" : \"Boil Trader: It's not often that newcomers arrive here. Can you stand the heat?\",");
         writeToFile("\"jitl.trader.boil_trader2\" : \"Boil Trader: I'm an unusual collector, but I have the best deals of any realm!\",");
@@ -236,6 +570,12 @@ public class LangRegistry {
         writeToFile("\"jitl.item.desc.sentry_observer\" : \"Inserted into the Senterian Altar\",");
         writeToFile("\"jitl.item.desc.bile\" : \"Very Vile!\",");
 
+        writeToFile("\"jitl.message.no_internet\" : \"Update checker failed, Please check your internet connection.\",");
+        writeToFile("\"jitl.message.thank_you\" : \"Thank you %s, for downloading and playing!\",");
+        writeToFile("\"jitl.message.update_available\" : \"Update available! Latest version: %s\",");
+        writeToFile("\"jitl.message.current_version\" : \"Current Version: %s\",");
+        writeToFile("\"jitl.message.up_to_date\" : \"Your version is up to date. Enjoy!\",");
+
         /* --------------------- Finish manual lines --------------------- */
 
         for(int i = 0; i < mobList.size(); i++)
@@ -336,6 +676,10 @@ public class LangRegistry {
 
         for(int i = 0; i < topBottomBlockList.size(); i++)
             writeToFile("\"block.jitl." + topBottomBlockList.get(i) + "\": \"" + JBlocks.topBottomLangName.get(i) + "\"" + ",");
+
+        for(int i = 0; i < totemBlockList.size(); i++)
+            writeToFile("\"block.jitl." + totemBlockList.get(i) + "\": \"" + JBlocks.totemLangName.get(i) + "\"" + ",");
+
 
         for(int i = 0; i < portalBlockList.size(); i++)
             writeToFile("\"block.jitl." + portalBlockList.get(i) + "\": \"" + JBlocks.portalLangName.get(i) + "\"" + ",");

@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.Set;
 
-public abstract class JVillagerEntity extends PathfinderMob implements Npc, Merchant, Enemy, GeoEntity {
+public abstract class JVillagerEntity extends JPathfinderMob implements Npc, Merchant, Enemy, GeoEntity {
 
     private Player playerEntity;
     protected MerchantOffers offers;

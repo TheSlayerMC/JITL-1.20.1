@@ -7,13 +7,17 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.FlyingMob;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -40,6 +44,11 @@ public abstract class JFlyingEntity extends FlyingMob implements Enemy, GeoEntit
     }
 
     protected abstract void controller(AnimatableManager.ControllerRegistrar controllers);
+
+    @Override
+    public boolean checkSpawnRules(LevelAccessor level, @NotNull MobSpawnType type) {
+        return !(level.getBiome(blockPosition()).is(Tags.Biomes.IS_MUSHROOM) || level.getBiome(blockPosition()).is(Biomes.DEEP_DARK));
+    }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {

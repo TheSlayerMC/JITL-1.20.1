@@ -6,7 +6,7 @@ import net.minecraft.world.item.HoeItem;
 
 public class JHoeItem extends HoeItem {
 
-    public JHoeItem(JToolTiers tier) {
-        super(tier.getTier(), 0, tier.getSpeedModifier(), JItems.itemProps());
+    public JHoeItem(JToolTiers tier, int dam) {
+        super(tier.getTier(), dam, tier.getSpeedModifier(), JItems.itemProps());
     }
 }

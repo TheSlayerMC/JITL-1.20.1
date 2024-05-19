@@ -21,6 +21,7 @@ import net.jitl.common.entity.euca.npc.AlloyMender;
 import net.jitl.common.entity.euca.npc.Crypian;
 import net.jitl.common.entity.euca.npc.RoyalKing;
 import net.jitl.common.entity.frozen.*;
+import net.jitl.common.entity.frozen.npc.Eskimo;
 import net.jitl.common.entity.frozen.npc.FrozenGuardian;
 import net.jitl.common.entity.misc.Sentacoin;
 import net.jitl.common.entity.nether.*;
@@ -137,10 +138,10 @@ public class JEntities {
     //NETHER MOBS
     public static final RegistryObject<EntityType<Witherspine>> WITHERSPINE_TYPE = registerEntity(Witherspine::new, "witherspine", "Witherspine", 1F, 3.75F, NETHER_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<MiniGhast>> MINI_GHAST_TYPE = registerEntity(MiniGhast::new, "mini_ghast", "Mini Ghast", 1F, 1F, NETHER_COLOR, HOSTILE_COLOR);
-    public static final RegistryObject<EntityType<HellTurtle>> HELL_TURTLE_TYPE = registerEntity(HellTurtle::new, "hell_turtle", "Hell Turtle", 2F, 2F, NETHER_COLOR, NEUTRAL_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<HellTurtle>> HELL_TURTLE_TYPE = registerEntity(HellTurtle::new, "hell_turtle", "Hell Turtle", 2F, 2F, NETHER_COLOR, NEUTRAL_COLOR);
     public static final RegistryObject<EntityType<Reaper>> REAPER_TYPE = registerEntity(Reaper::new, "reaper", "Reaper", 1F, 2F, NETHER_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<InfernoBlaze>> INFERNO_BLAZE_TYPE = registerEntity(InfernoBlaze::new, "inferno_blaze", "Inferno Blaze", 1F, 2F, NETHER_COLOR, HOSTILE_COLOR);
-    public static final RegistryObject<EntityType<HellCow>> HELL_COW_TYPE = registerEntity(HellCow::new, "hell_cow", "Hell Cow", 1.5F, 1.75F, NETHER_COLOR, PASSIVE_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<HellCow>> HELL_COW_TYPE = registerEntity(HellCow::new, "hell_cow", "Hell Cow", 1.5F, 1.75F, NETHER_COLOR, PASSIVE_COLOR);
     public static final RegistryObject<EntityType<Hellbot>> HELLBOT_TYPE = registerEntity(Hellbot::new, "hellbot", "Hellbot", 0.5F, 0.75F, NETHER_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<HellSerpent>> HELL_SERPENT_TYPE = registerEntity(HellSerpent::new, "hell_serpent", "Hell Serpent", 0.5F, 0.25F, NETHER_COLOR, HOSTILE_COLOR);
 
@@ -156,14 +157,15 @@ public class JEntities {
     public static final RegistryObject<EntityType<EscapedConvict>> ESCAPED_CONVICT_TYPE = registerEntity(EscapedConvict::new, "escaped_convict", "Escaped Convict", 1F, 1.9F, NETHER_COLOR, TRADER_COLOR, MobCategory.CREATURE);
 
     //EUCA MOBS
-    public static final RegistryObject<EntityType<EucaCharger>> EUCA_CHARGER_TYPE = registerEntity(EucaCharger::new, "euca_charger", "Euca Charger", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<Dynaster>> DYNASTER_TYPE = registerEntity(Dynaster::new, "dynaster", "Dynaster", 1F, 1F, EUCA_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<Goldbot>> GOLDBOT_TYPE = registerEntity(Goldbot::new, "goldbot", "Goldbot", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<Crypian>> CRYPIAN_TYPE = registerEntity(Crypian::new, "crypian", "Crypian", 0.75F, 1.8F, EUCA_COLOR, TRADER_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<AlloyMender>> ALLOY_MENDER_TYPE = registerEntity(AlloyMender::new, "alloy_mender", "Alloy Mender", 0.75F, 1.8F, EUCA_COLOR, TRADER_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<Shimmerer>> SHIMMERER_TYPE = registerEntity(Shimmerer::new, "shimmerer", "Shimmerer", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<Golder>> GOLDER_TYPE = registerEntity(Golder::new, "golder", "Golder", 1F, 2F, EUCA_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
-    public static final RegistryObject<EntityType<RoyalKing>> ROYAL_KING_TYPE = registerEntity(RoyalKing::new, "royal_king", "Royal King", 1F, 2F, EUCA_COLOR, PASSIVE_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<EucaCharger>> EUCA_CHARGER_TYPE = registerEntity(EucaCharger::new, "euca_charger", "Euca Charger", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<Dynaster>> DYNASTER_TYPE = registerEntity(Dynaster::new, "dynaster", "Dynaster", 1F, 1F, EUCA_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<Goldbot>> GOLDBOT_TYPE = registerEntity(Goldbot::new, "goldbot", "Goldbot", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<Crypian>> CRYPIAN_TYPE = registerEntity(Crypian::new, "crypian", "Crypian", 0.75F, 1.8F, EUCA_COLOR, TRADER_COLOR);
+    public static final RegistryObject<EntityType<AlloyMender>> ALLOY_MENDER_TYPE = registerEntity(AlloyMender::new, "alloy_mender", "Alloy Mender", 0.75F, 1.8F, EUCA_COLOR, TRADER_COLOR);
+    public static final RegistryObject<EntityType<Shimmerer>> SHIMMERER_TYPE = registerEntity(Shimmerer::new, "shimmerer", "Shimmerer", 0.5F, 0.75F, EUCA_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<Golder>> GOLDER_TYPE = registerEntity(Golder::new, "golder", "Golder", 1F, 2F, EUCA_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<RoyalKing>> ROYAL_KING_TYPE = registerEntity(RoyalKing::new, "royal_king", "Royal King", 1F, 2F, EUCA_COLOR, PASSIVE_COLOR);
+    public static final RegistryObject<EntityType<EucaHopper>> EUCA_HOPPER = registerEntity(EucaHopper::new, "euca_hopper", "Euca Hopper", 1F, 1F, EUCA_COLOR, NEUTRAL_COLOR);
 
     //FROZEN MOBS
     public static final RegistryObject<EntityType<Eskimo>> ESKIMO_TYPE = registerEntity(Eskimo::new, "eskimo", "Eskimo", 1F, 2F, FROZEN_COLOR, TRADER_COLOR, MobCategory.CREATURE);
@@ -171,7 +173,7 @@ public class JEntities {
     public static final RegistryObject<EntityType<FrozenGuardian>> FROZEN_GUARDIAN_TYPE = registerEntity(FrozenGuardian::new, "frozen_guardian", "Frozen Guardian", 0.75F, 2F, FROZEN_COLOR, PASSIVE_COLOR, MobCategory.CREATURE);
     public static final RegistryObject<EntityType<CrystalCluster>> CRYSTAL_CLUSTER_TYPE = registerEntity(CrystalCluster::new, "crystal_cluster", "Crystal Cluster", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<FrozenFrostbiter>> FROZEN_FROSTBITER_TYPE = registerEntity(FrozenFrostbiter::new, "frozen_frostbiter", "Frozen Frostbiter", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
-    public static final RegistryObject<EntityType<IceGolem>> ICE_GOLEM_TYPE = registerEntity(IceGolem::new, "ice_golem", "Ice Golem", 1F, 2F,FROZEN_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<IceGolem>> ICE_GOLEM_TYPE = registerEntity(IceGolem::new, "ice_golem", "Ice Golem", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR, MobCategory.CREATURE);
     public static final RegistryObject<EntityType<Permafraust>> PERMAFRAUST_TYPE = registerEntity(Permafraust::new, "permafraust", "Permafraust", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<Shatterer>> SHATTERER_TYPE = registerEntity(Shatterer::new, "shatterer", "Shatterer", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<ShiveringBushwalker>> SHIVERING_BUSHWALKER_TYPE = registerEntity(ShiveringBushwalker::new, "shivering_bushwalker", "Shivering Bushwalker", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
@@ -324,6 +326,7 @@ public class JEntities {
         event.put(ROYAL_KING_TYPE.get(), RoyalKing.createAttributes());
         event.put(CRYPIAN_TYPE.get(), Crypian.createAttributes());
         event.put(ALLOY_MENDER_TYPE.get(), AlloyMender.createAttributes());
+        event.put(EUCA_HOPPER.get(), EucaHopper.createAttributes());
 
         event.put(DARKENER_TYPE.get(), Darkener.createAttributes());
         event.put(DARKNESS_CRAWLER_TYPE.get(), DarknessCrawler.createAttributes());
@@ -421,10 +424,10 @@ public class JEntities {
         setDefaultSpawn(event, NEUTRAL_SENTRY_STALKER_TYPE);
 
         setDefaultMonsterSpawn(event, WITHERSPINE_TYPE);
-        setDefaultMonsterSpawn(event, HELL_TURTLE_TYPE);
+        setDefaultSpawn(event, HELL_TURTLE_TYPE);
         setDefaultMonsterSpawn(event, REAPER_TYPE);
         setDefaultMonsterSpawn(event, INFERNO_BLAZE_TYPE);
-        setDefaultMonsterSpawn(event, HELL_COW_TYPE);
+        setDefaultSpawn(event, HELL_COW_TYPE);
         setDefaultMonsterSpawn(event, HELLBOT_TYPE);
         setDefaultMonsterSpawn(event, HELL_SERPENT_TYPE);
         setDefaultMonsterSpawn(event, OKOLOO_TYPE);
@@ -441,6 +444,7 @@ public class JEntities {
         setDefaultMonsterSpawn(event, EUCA_CHARGER_TYPE);
         setDefaultMonsterSpawn(event, DYNASTER_TYPE);
         setDefaultMonsterSpawn(event, GOLDER_TYPE);
+        setDefaultSpawn(event, EUCA_HOPPER);
 
         setDefaultMonsterSpawn(event, DARKNESS_CRAWLER_TYPE);
         setDefaultMonsterSpawn(event, DEPTHS_BEAST_TYPE);
@@ -507,6 +511,7 @@ public class JEntities {
         setDefaultMonsterSpawn(event, MINI_SENTRY_LORD_TYPE);
         setDefaultMonsterSpawn(event, MINI_SENTRY_STALKER_TYPE);
         setDefaultMonsterSpawn(event, MINI_SENTRY_WALKER_TYPE);
+
     }
 
     public static <T extends Entity> void setCustomSpawn(SpawnPlacementRegisterEvent event, RegistryObject<EntityType<T>> entity, SpawnPlacements.SpawnPredicate<T> spawn) {

@@ -6,6 +6,8 @@ import net.jitl.common.capability.gear.PlayerArmor;
 import net.jitl.common.capability.gear.PlayerArmorProvider;
 import net.jitl.common.capability.keypressed.PressedKeyCap;
 import net.jitl.common.capability.keypressed.PressedKeyCapProvider;
+import net.jitl.common.capability.portal.PlayerPortal;
+import net.jitl.common.capability.portal.PlayerPortalProvider;
 import net.jitl.common.capability.stats.PlayerStats;
 import net.jitl.common.capability.stats.PlayerStatsProvider;
 import net.jitl.core.init.JITL;
@@ -39,6 +41,9 @@ public class ModEvents {
             if(!player.getCapability(PlayerArmorProvider.PLAYER_ARMOR).isPresent()) {
                 event.addCapability(new ResourceLocation(JITL.MODID, "player_armor"), new PlayerArmorProvider());
             }
+            if(!player.getCapability(PlayerPortalProvider.PORTAL).isPresent()) {
+                event.addCapability(new ResourceLocation(JITL.MODID, "player_portal"), new PlayerPortalProvider());
+            }
         }
     }
 
@@ -47,6 +52,7 @@ public class ModEvents {
         event.register(PlayerStats.class);
         event.register(PressedKeyCap.class);
         event.register(PlayerArmor.class);
+        event.register(PlayerPortal.class);
     }
 
     @SubscribeEvent
@@ -67,27 +73,30 @@ public class ModEvents {
             event.getOriginal().getCapability(PlayerArmorProvider.PLAYER_ARMOR).ifPresent(oldStore ->
                     event.getOriginal().getCapability(PlayerArmorProvider.PLAYER_ARMOR).ifPresent(newStore ->
                             newStore.copyFrom(oldStore)));
+
+            event.getOriginal().getCapability(PlayerPortalProvider.PORTAL).ifPresent(oldStore ->
+                    event.getOriginal().getCapability(PlayerPortalProvider.PORTAL).ifPresent(newStore ->
+                            newStore.copyFrom(oldStore)));
         }
     }
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if(event.player != null) {
-            event.player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> {
-                if (event.phase == TickEvent.Phase.END) {
-                    stats.update(event.player);
-                }
-            });
-            event.player.getCapability(PlayerEssenceProvider.PLAYER_ESSENCE).ifPresent(essence -> {
-                if (event.phase == TickEvent.Phase.END) {
+            if (event.phase == TickEvent.Phase.END) {
+                event.player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> stats.update(event.player));
+
+                event.player.getCapability(PlayerPortalProvider.PORTAL).ifPresent(PlayerPortal::serverTick);
+
+                event.player.getCapability(PlayerEssenceProvider.PLAYER_ESSENCE).ifPresent(essence -> {
                     if (essence.isRegenReady()) {
                         essence.addEssence(event.player, (float) Objects.requireNonNull(event.player.getAttribute(JAttributes.ESSENCE_REGEN_SPEED.get())).getValue());
                     } else {
                         essence.setBurnout(essence.getBurnout() - 0.1F);
                     }
                     essence.sendPacket(event.player);
-                }
-            });
+                });
+            }
         }
     }
 }

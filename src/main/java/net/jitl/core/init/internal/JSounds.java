@@ -118,8 +118,16 @@ public class JSounds {
     public static final RegistryObject<SoundEvent> CRYSTAL_ERROR = registerSound("misc.crystal_error");
     public static final RegistryObject<SoundEvent> CRYSTAL_PICKUP = registerSound("misc.crystal_pickup");
 
-    //BELOW
+    public static final RegistryObject<SoundEvent> EUCA_PORTAL = registerSound("misc.portal.euca");
+    public static final RegistryObject<SoundEvent> FROZEN_PORTAL = registerSound("misc.portal.frozen");
+    public static final RegistryObject<SoundEvent> BOIL_PORTAL = registerSound("misc.portal.boil");
+    public static final RegistryObject<SoundEvent> DEPTHS_PORTAL = registerSound("misc.portal.depths");
+    public static final RegistryObject<SoundEvent> CORBA_PORTAL = registerSound("misc.portal.corba");
+    public static final RegistryObject<SoundEvent> TERRANIA_PORTAL = registerSound("misc.portal.terrania");
+    public static final RegistryObject<SoundEvent> CLOUDIA_PORTAL = registerSound("misc.portal.cloudia");
+    public static final RegistryObject<SoundEvent> SENTERIAN_PORTAL = registerSound("misc.portal.senterian");
 
+    //BELOW
     public static final RegistryObject<SoundEvent> ROCK = registerSound("rock");
     public static final RegistryObject<SoundEvent> CAVE_MOB = registerSound("cave_mob");
     public static final RegistryObject<SoundEvent> BASE_MOB_HURT = registerSound("base_mob_hurt");

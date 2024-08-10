@@ -1,5 +1,6 @@
 package net.jitl.common.block.portal;
 
+import net.jitl.common.capability.portal.PlayerPortalProvider;
 import net.jitl.common.world.dimension.Dimensions;
 import net.jitl.common.world.dimension.SenterianTeleporter;
 import net.jitl.core.init.internal.JBlockProperties;
@@ -60,7 +61,18 @@ public class SenterianPortalBlock extends Block {
                 if(!entity.level().isClientSide && !pos.equals(entity.portalEntrancePos)) {
                     entity.portalEntrancePos = pos.immutable();
                 }
-                teleport(entity);
+                if(entity instanceof Player player) {
+                    player.getCapability(PlayerPortalProvider.PORTAL).ifPresent(stats -> {
+                        stats.setInPortal(this, true);
+                        int cooldownTime = stats.getPortalTimer();
+                        if(cooldownTime >= player.getPortalWaitTime()) {
+                            teleport(entity);
+                            stats.setPortalTimer(0);
+                        }
+                    });
+                } else {
+                    teleport(entity);
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 package net.jitl.common.block.portal;
 
+import net.jitl.common.capability.portal.PlayerPortalProvider;
 import net.jitl.common.world.dimension.BaseTeleporter;
 import net.jitl.common.world.dimension.Dimensions;
 import net.jitl.core.init.internal.JBlockProperties;
@@ -110,7 +111,7 @@ public class JBasePortalBlock extends Block {
                 pLevel.addParticle(particle2, d0, d1, d2, d3, d4, d5);
         }
     }
-    
+
     @Override
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) {
         Direction.Axis direction$axis = facing.getAxis();
@@ -156,7 +157,18 @@ public class JBasePortalBlock extends Block {
                 if(!entity.level().isClientSide && !pos.equals(entity.portalEntrancePos)) {
                     entity.portalEntrancePos = pos.immutable();
                 }
-                teleport(entity);
+                if(entity instanceof Player player) {
+                    player.getCapability(PlayerPortalProvider.PORTAL).ifPresent(stats -> {
+                        stats.setInPortal(this, true);
+                        int cooldownTime = stats.getPortalTimer();
+                        if(cooldownTime >= player.getPortalWaitTime()) {
+                            teleport(entity);
+                            stats.setPortalTimer(0);
+                        }
+                    });
+                } else {
+                    teleport(entity);
+                }
             }
         }
     }

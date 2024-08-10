@@ -2,8 +2,10 @@ package net.jitl.core.helper;
 
 import net.jitl.core.init.internal.JItems;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ForgeTier;
 
 public enum JToolTiers {
@@ -221,57 +223,57 @@ public enum JToolTiers {
 
         public static final Tier SOULSTONE = new ForgeTier(3, 1883, 8F, 5F, 15, null, () -> Ingredient.of(JItems.SOULSTONE.get()));
 
-        public static final Tier CHAMPIONS_SWORD = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> null);
-        public static final Tier THE_WRAITH = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> null);
-        public static final Tier POISON_SWORD = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> null);
-        public static final Tier CLOUD_SLICER = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> null);
-        public static final Tier DRAGONS_TOOTH = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier DEMONIC_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier PEDAL_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier RE_CRYSTAL_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier RE_STONE_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier CRYSTAL_BLADE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier SNOW_SHOVELER = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier FROSTBITTEN_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier FROSTY_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier WITHIC_BLADE = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier CALCIA_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier NETHER_BEAST_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier WITHERING_BEAST_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier BOILING_BLADE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier SIZZLER_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier BLOODWIELD_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier CHARRED_BLADE = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier MOLTEN_KNIFE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier CORE_MENDER = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier ROYAL_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> null);
-        public static final Tier ROYAL_STABBER = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> null);
-        public static final Tier KINGS_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier DEPTHS_DARKSWORD = new ForgeTier(3, 3000, 8F, 5, 25, null, () -> null);
-        public static final Tier DEPTHS_SLAYER = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> null);
-        public static final Tier ROC_SWORD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> null);
-        public static final Tier SWORD_THUNDERBIRD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> null);
-        public static final Tier THUNDERBLADE = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> null);
-        public static final Tier BUBBLE_SWORD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> null);
-        public static final Tier VINESTRAND_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> null);
-        public static final Tier DARK_PINE_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> null);
-        public static final Tier NATURES_BLADE = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> null);
-        public static final Tier TREE_HUGGER = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> null);
-        public static final Tier HEALERS_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> null);
-        public static final Tier LOGGERS_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> null);
-        public static final Tier SENTRY_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> null);
-        public static final Tier TERRALIGHT_BLADE = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> null);
-        public static final Tier TERRANA_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> null);
-        public static final Tier TERROLICA_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> null);
-        public static final Tier VOLITE_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> null);
-        public static final Tier TERRONIC_BLADE = new ForgeTier(3, 3000, 8F, 7F, 25, null, () -> null);
-        public static final Tier GOLEM_SWORD = new ForgeTier(3, 3000, 8F, 9F, 25, null, () -> null);
-        public static final Tier STARLIGHT_BLADE = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> null);
-        public static final Tier FLUFFY_BLADE = new ForgeTier(3, 3000, 8F, 15F, 25, null, () -> null);
-        public static final Tier DARK_KEEPER = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> null);
+        public static final Tier CHAMPIONS_SWORD = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier THE_WRAITH = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier POISON_SWORD = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier CLOUD_SLICER = new ForgeTier(3, 1883, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DRAGONS_TOOTH = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DEMONIC_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier PEDAL_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier RE_CRYSTAL_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier RE_STONE_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier CRYSTAL_BLADE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier SNOW_SHOVELER = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier FROSTBITTEN_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier FROSTY_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier WITHIC_BLADE = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier CALCIA_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier NETHER_BEAST_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier WITHERING_BEAST_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier BOILING_BLADE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier SIZZLER_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier BLOODWIELD_SWORD = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier CHARRED_BLADE = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier MOLTEN_KNIFE = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier CORE_MENDER = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier ROYAL_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier ROYAL_STABBER = new ForgeTier(3, 3000, 8F, 3F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier KINGS_SWORD = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DEPTHS_DARKSWORD = new ForgeTier(3, 3000, 8F, 5, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DEPTHS_SLAYER = new ForgeTier(3, 3000, 8F, 5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier ROC_SWORD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier SWORD_THUNDERBIRD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier THUNDERBLADE = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier BUBBLE_SWORD = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier VINESTRAND_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DARK_PINE_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier NATURES_BLADE = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier TREE_HUGGER = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier HEALERS_BLADE = new ForgeTier(3, 3000, 8F, 8F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier LOGGERS_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier SENTRY_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier TERRALIGHT_BLADE = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier TERRANA_SWORD = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier TERROLICA_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier VOLITE_SWORD = new ForgeTier(3, 3000, 8F, 7.5F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier TERRONIC_BLADE = new ForgeTier(3, 3000, 8F, 7F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier GOLEM_SWORD = new ForgeTier(3, 3000, 8F, 9F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier STARLIGHT_BLADE = new ForgeTier(3, 3000, 8F, 12F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier FLUFFY_BLADE = new ForgeTier(3, 3000, 8F, 15F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier DARK_KEEPER = new ForgeTier(3, 3000, 8F, 10F, 25, null, () -> Ingredient.of(Blocks.AIR));
 
-        public static final Tier DEVELOPER_SWORD = new ForgeTier(3, 3000, 8F, 1000F, 25, null, () -> null);
-        public static final Tier THROWING_KNIFE = new ForgeTier(2, -1, 3F, 2F, 25, null, () -> null);
+        public static final Tier DEVELOPER_SWORD = new ForgeTier(3, 3000, 8F, 1000F, 25, null, () -> Ingredient.of(Blocks.AIR));
+        public static final Tier THROWING_KNIFE = new ForgeTier(2, -1, 3F, 2F, 25, null, () -> Ingredient.of(Blocks.AIR));
     }
 
     public static class JArmorTier {
@@ -287,12 +289,12 @@ public enum JToolTiers {
         public static final JArmorMaterial GORBITE = new JArmorMaterial("gorbite", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(JItems.GORBITE_GEM.get()));
         public static final JArmorMaterial ORBADITE = new JArmorMaterial("orbadite", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(JItems.ORBADITE_INGOT.get()));
 
-        public static final JArmorMaterial TWILIGHT = new JArmorMaterial("twilight", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
-        public static final JArmorMaterial FLAME = new JArmorMaterial("flame", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
-        public static final JArmorMaterial HOLLOW = new JArmorMaterial("hollow", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
-        public static final JArmorMaterial CRYSTAL_FLAKE = new JArmorMaterial("crystal_flake", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
-        public static final JArmorMaterial FROSTBITTEN = new JArmorMaterial("frostbitten", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
-        public static final JArmorMaterial HELLMETAL = new JArmorMaterial("hellmetal", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, null);
+        public static final JArmorMaterial TWILIGHT = new JArmorMaterial("twilight", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
+        public static final JArmorMaterial FLAME = new JArmorMaterial("flame", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
+        public static final JArmorMaterial HOLLOW = new JArmorMaterial("hollow", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
+        public static final JArmorMaterial CRYSTAL_FLAKE = new JArmorMaterial("crystal_flake", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
+        public static final JArmorMaterial FROSTBITTEN = new JArmorMaterial("frostbitten", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
+        public static final JArmorMaterial HELLMETAL = new JArmorMaterial("hellmetal", 33, new int[] {8, 9, 10, 8}, 25, SoundEvents.ARMOR_EQUIP_CHAIN, 2.0F, 0.0F, () -> Ingredient.of(Blocks.AIR));
 
     }
 }

@@ -1,6 +1,7 @@
 package net.jitl.client.gui;
 
 import net.jitl.client.gui.overlay.EssenceBar;
+import net.jitl.client.gui.overlay.PortalOverlay;
 import net.jitl.core.init.JITL;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
@@ -13,5 +14,6 @@ public class OverlayRegistry {
     @SubscribeEvent
     public static void registerOverlays(RegisterGuiOverlaysEvent event) {
         event.registerAboveAll("essence_bar", EssenceBar::render);
+        event.registerAboveAll("portal_overlay", PortalOverlay::render);
     }
 }

@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:chiseled_crimson_quartz_block"
-  }
+  },
+  "show_notification": true
 }

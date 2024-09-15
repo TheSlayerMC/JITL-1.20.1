@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "jitl:frozen_fence"
-  }
+  },
+  "show_notification": true
 }

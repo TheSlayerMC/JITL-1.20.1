@@ -81,11 +81,6 @@ public class SpiritCrystal extends PathfinderMob implements GeoEntity {
     }
 
     @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
-
-    @Override
     public void addAdditionalSaveData(CompoundTag compound) {
         super.addAdditionalSaveData(compound);
         ContainerHelper.saveAllItems(compound, storedItems);

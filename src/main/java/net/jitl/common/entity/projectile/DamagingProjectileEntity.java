@@ -85,11 +85,6 @@ public class DamagingProjectileEntity extends ThrowableProjectile {
     }
 
     @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
-
-    @Override
     protected float getGravity() {
         return 0.03F;
     }

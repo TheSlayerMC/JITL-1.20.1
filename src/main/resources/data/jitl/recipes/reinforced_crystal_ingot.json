@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:reinforced_crystal_ingot"
-  }
+  },
+  "show_notification": true
 }

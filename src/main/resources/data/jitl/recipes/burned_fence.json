@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "jitl:burned_fence"
-  }
+  },
+  "show_notification": true
 }

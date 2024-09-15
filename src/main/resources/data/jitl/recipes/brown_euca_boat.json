@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:brown_euca_boat"
-  }
+  },
+  "show_notification": true
 }

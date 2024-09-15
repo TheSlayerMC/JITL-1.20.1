@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:bloodcrust_chestplate"
-  }
+  },
+  "show_notification": true
 }

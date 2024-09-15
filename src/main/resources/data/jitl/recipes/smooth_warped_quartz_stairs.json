@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:smooth_warped_quartz_stairs"
-  }
+  },
+  "show_notification": true
 }

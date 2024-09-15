@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:lunium_sword"
-  }
+  },
+  "show_notification": true
 }

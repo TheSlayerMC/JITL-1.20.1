@@ -235,11 +235,6 @@ public class PiercerEntity extends AbstractArrow implements ItemSupplier {
     }
 
     @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
-
-    @Override
     protected void defineSynchedData() {
         this.getEntityData().define(STACK, ItemStack.EMPTY);
         super.defineSynchedData();

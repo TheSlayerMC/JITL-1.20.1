@@ -14,5 +14,6 @@
   "result": {
     "count": 10,
     "item": "jitl:euca_portal_frame"
-  }
+  },
+  "show_notification": true
 }

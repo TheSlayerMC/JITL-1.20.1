@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:bloodcrust_boots"
-  }
+  },
+  "show_notification": true
 }

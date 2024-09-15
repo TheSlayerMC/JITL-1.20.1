@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:soulstone_shovel"
-  }
+  },
+  "show_notification": true
 }

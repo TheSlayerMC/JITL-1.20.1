@@ -322,6 +322,12 @@ public class JBlockProperties {
         if(name.contains("corba_post")) {
             texName = "corba_post";
         }
+        if(name.contains("terranian")) {
+            texName = "terranian_planks";
+        }
+        if(name.contains("cloudia")) {
+            texName = "cloudia_planks";
+        }
         if(name.contains("dungeon_lamp")) {
             texName = "dungeon_lamp";
         }
@@ -384,9 +390,6 @@ public class JBlockProperties {
         }
         if(name.contains("corba_brick")) {
             texName = "corba_bricks";
-        }
-        if(name.contains("terranian_post")) {
-            texName = "terranian_post";
         }
         if(name.contains("cloudia_post")) {
             texName = "cloudia_post";

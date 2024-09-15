@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:korite_axe"
-  }
+  },
+  "show_notification": true
 }

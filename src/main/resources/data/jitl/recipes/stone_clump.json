@@ -14,5 +14,6 @@
   "result": {
     "count": 16,
     "item": "jitl:stone_clump"
-  }
+  },
+  "show_notification": true
 }

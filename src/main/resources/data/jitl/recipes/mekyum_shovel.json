@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:mekyum_shovel"
-  }
+  },
+  "show_notification": true
 }

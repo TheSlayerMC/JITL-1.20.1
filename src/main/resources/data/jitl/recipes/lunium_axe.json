@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:lunium_axe"
-  }
+  },
+  "show_notification": true
 }

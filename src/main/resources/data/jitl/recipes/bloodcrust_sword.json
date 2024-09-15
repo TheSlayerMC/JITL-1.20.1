@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:bloodcrust_sword"
-  }
+  },
+  "show_notification": true
 }

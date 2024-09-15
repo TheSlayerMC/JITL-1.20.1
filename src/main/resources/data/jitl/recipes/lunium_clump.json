@@ -11,5 +11,6 @@
   ],
   "result": {
     "item": "jitl:lunium_clump"
-  }
+  },
+  "show_notification": true
 }

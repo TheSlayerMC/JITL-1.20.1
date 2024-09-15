@@ -14,5 +14,6 @@
   "result": {
     "count": 12,
     "item": "jitl:depths_portal_frame"
-  }
+  },
+  "show_notification": true
 }

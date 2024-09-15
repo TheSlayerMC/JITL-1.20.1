@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:shadium_helmet"
-  }
+  },
+  "show_notification": true
 }

@@ -53,7 +53,7 @@ public class JBoatItem extends Item {
             }
             if(hitresult.getType() == HitResult.Type.BLOCK) {
                 JBoat boat = new JBoat(level, hitresult.getLocation().x, hitresult.getLocation().y, hitresult.getLocation().z);
-                boat.setType(this.type);
+                boat.setVariant(this.type);
                 boat.setYRot(player.getYRot());
                 if(!level.noCollision(boat, boat.getBoundingBox())) {
                     return InteractionResultHolder.fail(itemstack);

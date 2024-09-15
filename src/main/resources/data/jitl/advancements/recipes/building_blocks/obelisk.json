@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_block.jitl.corba_portal_frame": {
+    "has_block.jitl.blood_rock": {
       "conditions": {
         "items": [
           {
             "items": [
-              "jitl:corba_portal_frame"
+              "jitl:blood_rock"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "jitl:corba_portal_gem"
+        "recipe": "jitl:obelisk"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_block.jitl.corba_portal_frame",
+      "has_block.jitl.blood_rock",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "jitl:corba_portal_gem"
+      "jitl:obelisk"
     ]
   },
   "sends_telemetry_event": false

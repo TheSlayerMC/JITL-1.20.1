@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:crimson_quartz_stairs"
-  }
+  },
+  "show_notification": true
 }

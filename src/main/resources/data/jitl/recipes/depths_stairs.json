@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:depths_stairs"
-  }
+  },
+  "show_notification": true
 }

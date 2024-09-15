@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:orbadite_shovel"
-  }
+  },
+  "show_notification": true
 }

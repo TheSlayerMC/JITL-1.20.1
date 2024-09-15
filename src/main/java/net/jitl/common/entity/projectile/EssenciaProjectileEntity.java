@@ -47,9 +47,4 @@ public class EssenciaProjectileEntity extends ThrowableProjectile {
 
     @Override
     protected void defineSynchedData() { }
-
-    @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
 }

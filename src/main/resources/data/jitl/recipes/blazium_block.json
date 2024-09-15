@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:blazium_block"
-  }
+  },
+  "show_notification": true
 }

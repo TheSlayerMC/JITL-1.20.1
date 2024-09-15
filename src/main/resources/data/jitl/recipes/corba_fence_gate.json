@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "jitl:corba_fence_gate"
-  }
+  },
+  "show_notification": true
 }

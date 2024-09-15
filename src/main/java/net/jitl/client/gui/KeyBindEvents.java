@@ -11,14 +11,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
+import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.glfw.GLFW;
 
-@Mod.EventBusSubscriber(modid = JITL.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = JITL.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class KeyBindEvents {
 
-    public static KeyMapping keyStats = new KeyMapping("Open Journey Stats", GLFW.GLFW_KEY_J, I18n.get("jitl.key"));
+    public static KeyMapping keyStats = new KeyMapping("Open Journey Stats", KeyConflictContext.IN_GAME, InputConstants.getKey(InputConstants.KEY_J, -1), I18n.get("jitl.key"));
     public static KeyMapping keyArmor = new KeyMapping("Use Armor Ability", GLFW.GLFW_KEY_C, I18n.get("jitl.key"));
     public static KeyMapping keyAmulet = new KeyMapping("Use Amulet Ability", GLFW.GLFW_KEY_V, I18n.get("jitl.key"));
 
@@ -36,61 +37,24 @@ public class KeyBindEvents {
     public static KeyMapping keyCycleSnapAngle = new KeyMapping("Cycle Through Isometric Angles", GLFW.GLFW_KEY_MINUS, I18n.get("jitl.key"));
     public static KeyMapping keyBigScreenshot = new KeyMapping("Take Big Screenshot", GLFW.GLFW_KEY_F9, I18n.get("jitl.key"));
 
-    private static final Minecraft MINECRAFT = Minecraft.getInstance();
 
     @SubscribeEvent
     public static void onKeyRegister(RegisterKeyMappingsEvent event) {
         event.register(keyStats);
-        event.register(keyArmor);
+//        event.register(keyArmor);
         event.register(keyAmulet);
-
-        event.register(keyIsometricView);
-        event.register(keyLockPerspective);
-        event.register(keyMoveCameraUp);
-        event.register(keyMoveCameraDown);
-        event.register(keyMoveCameraLeft);
-        event.register(keyMoveCameraRight);
-        event.register(keyRotateCameraClockwise);
-        event.register(keyRotateCameraCounterClockwise);
-        event.register(keyResetRotation);
-        event.register(keyResetAll);
-        event.register(keyCycleSnapAngle);
-        event.register(keyBigScreenshot);
-    }
-
-    @SubscribeEvent
-    public static void onKeyInput(InputEvent.Key event) {
-        InputConstants.Key key = InputConstants.getKey(event.getKey(), event.getScanCode());
-        if (MINECRAFT.screen == null) {
-
-            assert MINECRAFT.player != null;
-            int action = event.getAction();
-
-            if (action == GLFW.GLFW_PRESS) {
-                if (key == keyStats.getKey()) {
-                    assert Minecraft.getInstance().player != null;
-                    displayPlayerStats(Minecraft.getInstance().player);
-
-                } else {
-                    //handleIsometricCameraKeys(key);
-                    //handleBigScreenshotKeys(key);
-                    handleAbilityKeys(key, action);
-                }
-            } else if (action == GLFW.GLFW_RELEASE) {
-                handleAbilityKeys(key, action);
-            }
-        }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void displayPlayerStats(Player player) {
-        Minecraft.getInstance().setScreen(new PlayerStats(player));
-    }
-
-    public static void handleAbilityKeys(InputConstants.Key input, int action) {
-        boolean key = input == keyAmulet.getKey();
-        if (key || input == keyArmor.getKey()) {
-            //JNetworkRegistry.INSTANCE.send(new CKeyPressedPacket(key, action == GLFW.GLFW_PRESS));
-        }
+//
+//        event.register(keyIsometricView);
+//        event.register(keyLockPerspective);
+//        event.register(keyMoveCameraUp);
+//        event.register(keyMoveCameraDown);
+//        event.register(keyMoveCameraLeft);
+//        event.register(keyMoveCameraRight);
+//        event.register(keyRotateCameraClockwise);
+//        event.register(keyRotateCameraCounterClockwise);
+//        event.register(keyResetRotation);
+//        event.register(keyResetAll);
+//        event.register(keyCycleSnapAngle);
+//        event.register(keyBigScreenshot);
     }
 }

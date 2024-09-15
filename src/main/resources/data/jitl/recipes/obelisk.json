@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:obelisk"
-  }
+  },
+  "show_notification": true
 }

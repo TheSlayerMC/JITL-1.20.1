@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block.jitl.blood_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jitl:blood_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jitl:carved_blood_rock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_block.jitl.blood_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jitl:carved_blood_rock"
+    ]
+  },
+  "sends_telemetry_event": false
+}

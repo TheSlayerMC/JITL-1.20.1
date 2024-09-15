@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:storon_sword"
-  }
+  },
+  "show_notification": true
 }

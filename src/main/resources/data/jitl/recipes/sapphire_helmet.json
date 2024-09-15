@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:sapphire_helmet"
-  }
+  },
+  "show_notification": true
 }

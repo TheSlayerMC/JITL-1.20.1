@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:shadium_block"
-  }
+  },
+  "show_notification": true
 }

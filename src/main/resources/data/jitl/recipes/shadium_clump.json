@@ -11,5 +11,6 @@
   ],
   "result": {
     "item": "jitl:shadium_clump"
-  }
+  },
+  "show_notification": true
 }

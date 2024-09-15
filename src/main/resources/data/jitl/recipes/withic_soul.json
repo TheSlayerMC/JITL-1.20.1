@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:withic_soul"
-  }
+  },
+  "show_notification": true
 }

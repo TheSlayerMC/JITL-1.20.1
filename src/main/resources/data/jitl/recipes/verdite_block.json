@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:verdite_block"
-  }
+  },
+  "show_notification": true
 }

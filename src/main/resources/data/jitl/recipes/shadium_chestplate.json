@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:shadium_chestplate"
-  }
+  },
+  "show_notification": true
 }

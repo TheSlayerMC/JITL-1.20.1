@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:corba_stairs"
-  }
+  },
+  "show_notification": true
 }

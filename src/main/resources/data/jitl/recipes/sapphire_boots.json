@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "jitl:sapphire_boots"
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:flairium_chestplate"
-  }
+  },
+  "show_notification": true
 }

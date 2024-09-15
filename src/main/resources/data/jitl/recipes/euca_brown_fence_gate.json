@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "jitl:euca_brown_fence_gate"
-  }
+  },
+  "show_notification": true
 }

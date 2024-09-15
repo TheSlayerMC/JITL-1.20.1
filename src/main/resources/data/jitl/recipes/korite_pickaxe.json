@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:korite_pickaxe"
-  }
+  },
+  "show_notification": true
 }

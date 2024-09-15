@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:frozen_stairs"
-  }
+  },
+  "show_notification": true
 }

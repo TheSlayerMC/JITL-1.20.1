@@ -18,5 +18,6 @@
   ],
   "result": {
     "item": "jitl:summoning_table"
-  }
+  },
+  "show_notification": true
 }

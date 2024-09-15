@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "jitl:sapphire_sword"
-  }
+  },
+  "show_notification": true
 }

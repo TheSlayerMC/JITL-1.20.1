@@ -69,9 +69,4 @@ public class FireballEntity extends ThrowableProjectile {
     protected void defineSynchedData() {
 
     }
-
-    @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
 }

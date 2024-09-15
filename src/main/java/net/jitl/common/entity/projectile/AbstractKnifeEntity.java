@@ -62,11 +62,6 @@ public abstract class AbstractKnifeEntity extends AbstractArrow {
     }
 
     @Override
-    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return new ClientboundAddEntityPacket(this);
-    }
-
-    @Override
     protected @NotNull ItemStack getPickupItem() {
         return new ItemStack(this::pickupItem);
     }

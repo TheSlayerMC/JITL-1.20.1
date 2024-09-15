@@ -444,6 +444,8 @@ public class JItems {
     public static final RegistryObject<Item> DEPTHS_BOAT = registerNormalItem("depths_boat", "Depths Boat", () -> new JBoatItem(JBoat.Type.DEPTHS));
     public static final RegistryObject<Item> BURNED_BOAT = registerNormalItem("burned_boat", "Burned Boat", () -> new JBoatItem(JBoat.Type.BURNED));
     public static final RegistryObject<Item> CORBA_BOAT = registerNormalItem("corba_boat", "Corba Boat", () -> new JBoatItem(JBoat.Type.CORBA));
+    public static final RegistryObject<Item> TERRANIAN_BOAT = registerNormalItem("terranian_boat", "Terranian Boat", () -> new JBoatItem(JBoat.Type.TERRANIA));
+    public static final RegistryObject<Item> CLOUDIA_BOAT = registerNormalItem("cloudia_boat", "Cloudia Boat", () -> new JBoatItem(JBoat.Type.CLOUDIA));
 
     public static final RegistryObject<Item> EUCA_PIERCER = registerToolItem("euca_piercer", "Euca Piercer", () ->
             new PiercerItem(itemProps().durability(50), (worldIn, owner, stack) -> new PiercerEntity(owner, worldIn, stack, 3, 10.0F)));

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "jitl:green_gem_block"
-  }
+  },
+  "show_notification": true
 }

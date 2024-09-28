@@ -107,6 +107,7 @@ public class MobStats {
     public static final double DARKNESS_CRAWLER_DAMAGE = 11;
 
     public static final double DARK_SORCERER_HEALTH = 50;
+    public static final double DARK_SORCERER_DAMAGE = 10;
 
     public static final double DEPTHS_BEAST_HEALTH = 60;
     public static final double DEPTHS_BEAST_DAMAGE = 15;
@@ -132,7 +133,7 @@ public class MobStats {
     // =======================================================
 
     public static final double DYNASTER_HEALTH = 46;
-    public static final double DYNASTER_DAMAGE = 7;
+    public static final double DYNASTER_DAMAGE = 8;
 
     public static final double EUCA_CHARGER_HEALTH = 44;
     public static final double EUCA_CHARGER_DAMAGE = 8;
@@ -145,7 +146,7 @@ public class MobStats {
     public static final double GOLDBOT_DAMAGE = 7;
 
     public static final double GOLDER_HEALTH = 45;
-    public static final double GOLDER_DAMAGE = 8;
+    public static final double GOLDER_DAMAGE = 9;
 
     public static final double GOLDITE_MAGE_HEALTH = 40;
 
@@ -164,6 +165,7 @@ public class MobStats {
     public static final double CRYSTAL_CLUSTER_HEALTH = 44;
 
     public static final double CAPYBARA_HEALTH = 30;
+    public static final double CAPYBARA_DAMAGE = 6;
 
     public static final double FROZEN_FROSTBITER_HEALTH = 45;
     public static final double FROZEN_FROSTBITER_DAMAGE = 8;
@@ -206,6 +208,7 @@ public class MobStats {
     public static final double INFERNO_BLAZE_DAMAGE = 8;
 
     public static final double LAVASNAKE_HEALTH = 30;
+    public static final double LAVASNAKE_DAMAGE = 8;
 
     public static final double MINI_GHAST_HEALTH = 20;
 
@@ -260,7 +263,7 @@ public class MobStats {
     public static final double FROST_GOLEM_KNOCKBACK_RESISTANCE = 3;
 
     public static final double STONEWALKER_HEALTH = 30;
-    public static final double STONEWALKER_DAMAGE = 3;
+    public static final double STONEWALKER_DAMAGE = 4;
 
     public static final double BIG_HONGO_HEALTH = 40;
     public static final double BIG_HONGO_DAMAGE = 8.5;
@@ -351,7 +354,6 @@ public class MobStats {
     public static final int ARANA_KING_HEALTH = 45;
     public static final int ARANA_KING_DAMAGE = 13;
 
-    //TODO change
     public static final int FLUNGUS_HEALTH = 50;
     public static final int FLUNGUS_MOVEMENT_SPEED = 0;
     public static final int FLUNGUS_KNOCKBACK_RESISTANCE = 1;
@@ -376,10 +378,10 @@ public class MobStats {
     // ======================= BOSSES ========================
     // =======================================================
 
-    public static final double SOUL_WATCHER_HEALTH = 700.0D;
+    public static final double SOUL_WATCHER_HEALTH = 650.0D;
     public static final double SOUL_WATCHER_KNOCKBACK_RESISTANCE = 1.0D;
 
-    public static final double SCALE_HEALTH = 1560.0D;
+    public static final double SCALE_HEALTH = 1550.0D;
     public static final double SCALE_KNOCKBACK_RESISTANCE = 1.0D;
 
     public static final double SKY_STALKER_HEALTH = 3500.0D;
@@ -419,10 +421,6 @@ public class MobStats {
     public static final int OKOLOO_HEALTH = 600;
     public static final int OKOLOO_DAMAGE = 8;
 
-    public static final int SENTRY_HEART_HEALTH = 5000;//TODO CHANGE
-    public static final int SENTRY_HEART_MOVEMENT_SPEED = 0;
-    public static final int SENTRY_HEART_KNOCKBACK_RESISTANCE = 1;
-
     public static final int SENTRY_KING_HEALTH = 2500;
     public static final int SENTRY_KING_DAMAGE = 20;
     public static final int SENTRY_KING_KNOCKBACK_RESISTANCE = 1;
@@ -432,7 +430,7 @@ public class MobStats {
     public static final double TEMPLE_GUARDIAN_SPEED = 0.1;
     public static final int TEMPLE_GUARDIAN_KNOCKBACK_RESISTANCE = 2;
 
-    public static final int THUNDERBIRD_HEALTH = 2000;
+    public static final int THUNDERBIRD_HEALTH = 1550;
     public static final int THUNDERBIRD_DAMAGE = 10;
     public static final int WITHERING_BEAST_HEALTH = 750;
     public static final int WITHERING_BEAST_DAMAGE = 10;

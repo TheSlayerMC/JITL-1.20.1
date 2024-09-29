@@ -48,5 +48,6 @@ public class JFood {
     public static final FoodProperties VANILLA_WAFER = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.1F).fast().build();
 
     public static final FoodProperties EUCA_MEAT = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F).meat().fast().build();
-    
+    public static final FoodProperties DEPTHS_MEAT = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.7F).meat().fast().build();
+
 }

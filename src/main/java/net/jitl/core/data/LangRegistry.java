@@ -91,11 +91,16 @@ public class LangRegistry {
         writeToFile("\"jitl.knowledge.level\" : \"Level Up!\",");
         writeToFile("\"jitl.knowledge.experience\" : \"XP Gain!\",");
         writeToFile("\"jitl.knowledge.overworld\" : \"Overworld Knowledge\",");
-        writeToFile("\"jitl.knowledge.nether\" : \"Nether Knowledge\",");
-        writeToFile("\"jitl.knowledge.end\" : \"End Knowledge\",");
+        writeToFile("\"jitl.knowledge.the_nether\" : \"Nether Knowledge\",");
+        writeToFile("\"jitl.knowledge.the_end\" : \"End Knowledge\",");
         writeToFile("\"jitl.knowledge.euca\" : \"Euca Knowledge\",");
         writeToFile("\"jitl.knowledge.boil\" : \"Boiling Knowledge\",");
         writeToFile("\"jitl.knowledge.frozen\" : \"Frozen Knowledge\",");
+        writeToFile("\"jitl.knowledge.the_depths\" : \"Depths Knowledge\",");
+        writeToFile("\"jitl.knowledge.corba\" : \"Corba Knowledge\",");
+        writeToFile("\"jitl.knowledge.terrania\" : \"Terranian Knowledge\",");
+        writeToFile("\"jitl.knowledge.cloudia\" : \"Cloudia Knowledge\",");
+        writeToFile("\"jitl.knowledge.senterian\" : \"Senterian Knowledge\",");
         writeToFile("\"death.attack.bradberryBush\" : \"%1$s was poked to death by a Bradberry bush\",");
         writeToFile("\"death.attack.redcurrant\" : \"%1$s was poked to death by a Redcurrant bush\",");
         writeToFile("\"jitl.stats\" : \"Player Stats\",");
@@ -104,59 +109,55 @@ public class LangRegistry {
         writeToFile("\"jitl.sen.knowledge_1\" : \"See me when you have at least 75 Overworld Knowledge\",");
         writeToFile("\"jitl.sen.unlocked\" : \"I locked it for a reason but goodluck...\",");
 
+        writeToFile("\"scroll.jitl.fail\" : \"Can't retrieve entry from scroll, report in Discord (unless this item came from creative tab)\",");
+
+        writeToFile("\"scroll.jitl.sentry_gospel\" : \"We never saw it, but we know it - the Divine land Corba was birthed by the o' powerful Rock and Eye. Never forget the day, the hour, the second he - The True One - the all powerful Rock and Eye - cometh unto the great world he created, to seek his revenge on the wrong-doers who dare disrespect his land.\",");
+        writeToFile("\"scroll.jitl.chap1.my_last_words\" : \"I have to make this quick Clancy... I'm not sure how much time I have left... I'm not sure how much time our reality has left. These horrid machines... they're evil. They've pioneered an art form of killing. These Sentries... I'm certain they will destroy reality as we know it if they become too powerful. They - I think they've found me... I hope this reaches you. Please take all of the other contents of my Ender Chest I've left you. They're yours now. Goodbye, my friend.\",");
+        writeToFile("\"scroll.jitl.chap1.netheric_status\" : \"  nether\",");
+        writeToFile("\"scroll.jitl.chap1.the_end\" : \"  end\",");
+        writeToFile("\"scroll.jitl.chap1.beyond_boiling\" : \" boiling \",");
+        writeToFile("\"scroll.jitl.chap1.frozen_despair\" : \" frozen \",");
+        writeToFile("\"scroll.jitl.chap1.the_royals\" : \" euca \",");
+        writeToFile("\"scroll.jitl.chap1.darkness\" : \" depths \",");
+        writeToFile("\"scroll.jitl.chap1.fungi\" : \" terrania \",");
+        writeToFile("\"scroll.jitl.chap1.mist\" : \" cloudia \",");
+        writeToFile("\"scroll.jitl.chap1.this_is_it\" : \" senterian \",");
+
+        writeToFile("\"scroll.jitl.name.sentry_gospel\" : \"The Senterian Gospel\",");
+        writeToFile("\"scroll.jitl.name.my_last_words\" : \"My Last Words\",");
+        writeToFile("\"scroll.jitl.name.netheric_status\" : \"Netheric Status\",");
+        writeToFile("\"scroll.jitl.name.the_end\" : \"Netheric Status\",");
+        writeToFile("\"scroll.jitl.name.beyond_boiling\" : \"Beyond Boiling\",");
+        writeToFile("\"scroll.jitl.name.frozen_despair\" : \"Frozen Despair\",");
+        writeToFile("\"scroll.jitl.name.the_royals\" : \"The Royals\",");
+        writeToFile("\"scroll.jitl.name.darkness\" : \"Darkness\",");
+        writeToFile("\"scroll.jitl.name.fungi\" : \"Fungi Everywhere\",");
+        writeToFile("\"scroll.jitl.name.mist\" : \"Mist In The Distance\",");
+        writeToFile("\"scroll.jitl.name.this_is_it\" : \"This Is IT\",");
+
+        writeToFile("\"scroll.jitl.chapter.one\" : \"Chapter 1\",");
+        writeToFile("\"scroll.jitl.chapter.two\" : \"Chapter 2\",");
+        writeToFile("\"scroll.jitl.chapter.three\" : \"Chapter 3\",");
+        writeToFile("\"scroll.jitl.chapter.four\" : \"Chapter 4\",");
+        writeToFile("\"scroll.jitl.chapter.five\" : \"Chapter 5\",");
+        writeToFile("\"scroll.jitl.chapter.six\" : \"Chapter 6\",");
+        writeToFile("\"scroll.jitl.chapter.seven\" : \"Chapter 7\",");
+        writeToFile("\"scroll.jitl.chapter.eight\" : \"Chapter 8\",");
+        writeToFile("\"scroll.jitl.chapter.nine\" : \"Chapter 9\",");
+        writeToFile("\"scroll.jitl.chapter.ten\" : \"Chapter 10\",");
+        writeToFile("\"scroll.jitl.chapter.eleven\" : \"Chapter 11\",");
+
         writeToFile("\"curios.identifier.heart_container\" : \"Heart\",");
         writeToFile("\"curios.identifier.catalyst\" : \"Catalyst\",");
 
-        writeToFile("\"jitl.trader.boil_trader1\" : \"Boil Trader: It's not often that newcomers arrive here. Can you stand the heat?\",");
-        writeToFile("\"jitl.trader.boil_trader2\" : \"Boil Trader: I'm an unusual collector, but I have the best deals of any realm!\",");
-        writeToFile("\"jitl.trader.boil_trader3\" : \"Boil Trader: I can see that you're having a tough time getting around. An armor upgrade, perhaps?\",");
-
-        writeToFile("\"jitl.trader.escaped_convict1\" : \"Escaped Convict: I'm an innocent man! I have no reason to be in this realm!\",");
-        writeToFile("\"jitl.trader.escaped_convict2\" : \"Escaped Convict: Don't be threatened by me, strange thing!\",");
-        writeToFile("\"jitl.trader.escaped_convict3\" : \"Escaped Convict: I managed to find some great loot on my way here. If you can help me out of here, I'll give back in return.\",");
-
-        writeToFile("\"jitl.trader.staring_guardian1\" : \"Guardian: It sure is dark down here... I've always speculated about what's on the surface.\",");
-        writeToFile("\"jitl.trader.staring_guardian2\" : \"Guardian: You don't look like any normal creature I've seen here before. We don't get a lot of travelers.\",");
-        writeToFile("\"jitl.trader.staring_guardian3\" : \"Guardian: It's always too dark here to see. Hopefully, there'll be a journey to the light as some wish.\",");
-
-        writeToFile("\"jitl.trader.alloy_mender1\" : \"Alloy Mender: It takes over a thousand degreese to melt this gold!\",");
-        writeToFile("\"jitl.trader.alloy_mender2\" : \"Alloy Mender: My weapons have been melted and shaped into deadly perfection!\",");
-        writeToFile("\"jitl.trader.alloy_mender3\" : \"Alloy Mender: It's a real struggle living here, when everything wants to kill you...\",");
-        writeToFile("\"jitl.trader.alloy_mender4\" : \"Alloy Mender: Did they steal my other things at the village?\",");
-
-        writeToFile("\"jitl.trader.crypian1\" : \"Crypian: Yeah I took some of it\",");
-        writeToFile("\"jitl.trader.crypian2\" : \"Crypian: IT'S MINE.... Unless you want it?\",");
-        writeToFile("\"jitl.trader.crypian3\" : \"Crypian: I might go see where he has moved to....\",");
-
-        writeToFile("\"jitl.npc.crypian_alloy1\" : \"Crypian: Alloy Mender used to live here, but he moved into the royal lands\",");
-        writeToFile("\"jitl.npc.crypian_alloy2\" : \"Crypian: Everyone has raided his house\",");
-        writeToFile("\"jitl.npc.crypian_alloy3\" : \"Crypian: I'm sure you could possibly trade with some of them\",");
-
-        writeToFile("\"jitl.npc.crypian1\" : \"Crypian: I missed out on the Alloy Menders gear\",");
-        writeToFile("\"jitl.npc.crypian2\" : \"Crypian: A few others have some of the Alloy Menders things\",");
-
-        writeToFile("\"jitl.trader.eskimo1\" : \"Eskimo: Did you know its not as cold as it has been?\",");
-        writeToFile("\"jitl.trader.eskimo2\" : \"Eskimo: Storms have been raging since the shrine showed up...\",");
-        writeToFile("\"jitl.trader.eskimo3\" : \"Eskimo: Please sort out the shrine... It's Freezing!\",");
-
-        writeToFile("\"jitl.npc.frozen_guardian1\" : \"Frozen Guardian: Warmth...\",");
-        writeToFile("\"jitl.npc.frozen_guardian2\" : \"Frozen Guardian: ...\",");
-
-        writeToFile("\"jitl.trader.mage1\" : \"Mage: I have some great deals!\",");
-        writeToFile("\"jitl.trader.mage2\" : \"Mage: I've got some nice valuables!\",");
-        writeToFile("\"jitl.trader.mage3\" : \"Mage: Greetings, weary traveller!\",");
-
-        writeToFile("\"jitl.trader.rockite_golem\" : \"Rockite Golem: ...\",");
-
-        writeToFile("\"jitl.tile.summon_table\" : \"Summoning Table\",");
-
-        writeToFile("\"book.jitl.landing_text\" : " + "\"Welcome $(playername) to Journey Into The Light, This book is a WIP, any other info needed head over to the $(l:https://discord.com/invite/WhXvz5b)Discord\",");
+        writeToFile("\"book.jitl.landing_text\" : " + "\"Welcome $(playername) to Journey Into The Light, any other info needed head over to the $(l:https://discord.com/invite/WhXvz5b)Discord\",");
         writeToFile("\"book.jitl.book_name\" : " + "\"Essentia Bible\",");
 
         writeToFile("\"book.jitl.category.getting_started\" : " + "\"Getting Started\",");
         writeToFile("\"book.jitl.category.getting_started.desc\" : " + "\"This should give you the tips and hints on getting started.\",");
         writeToFile("\"book.jitl.entries.getting_started.ores\" : " + "\"Ores\",");
         writeToFile("\"book.jitl.category.dimensions\" : " + "\"Dimensions\",");
+        writeToFile("\"book.jitl.entries.pets\" : " + "\"Pets\",");
 
         writeToFile("\"book.jitl.entry.getting_started.iridium_ore.title\" : " + "\"Iridium Ore\",");
         writeToFile("\"book.jitl.entry.getting_started.iridium_ore.1\" : " + "\"Ore that generates in the Overworld between Y -80 and 48, drops Iridium Nugget\",");
@@ -382,7 +383,7 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry.euca.gold_bot_spawner.desc\" : " + "\"Goldbot Spawner is found in any Euca Biomes and spawns $(l:jitl:euca/mobs#goldbot)Goldbots$(/l)\",");
 
         writeToFile("\"structure.depths.jitl.dark_sorcerers_dungeon\" : " + "\"Sorcerers Dungeon\",");
-        writeToFile("\"book.jitl.entry.depths.dark_sorcerers_dungeon.desc\" : " + "\"Dark Sorcerers Dungeon spawns $(l:jitl:depths/mobs#dark_sorcerer)Dark Sorcerers$(/l) when inside, it is unlocked with Depths Lock Key obtained from $(l:jitl:depths/traders#staring_guardian)Staring Guardian(/l)\",");
+        writeToFile("\"book.jitl.entry.depths.dark_sorcerers_dungeon.desc\" : " + "\"Dark Sorcerers Dungeon spawns $(l:jitl:depths/mobs#dark_sorcerer)Dark Sorcerers$(/l) when inside, it is unlocked with Depths Lock Key obtained from $(l:jitl:depths/traders#staring_guardian)Staring Guardian$(/l)\",");
 
         writeToFile("\"structure.depths.jitl.depths_watchtower\" : " + "\"Depths Watchtower\",");
         writeToFile("\"book.jitl.entry.depths.depths_watchtower.desc\" : " + "\"Depths Watchtower resides $(l:jitl:depths/traders#staring_guardian)Staring Guardian$(/l) up the top\",");
@@ -405,7 +406,7 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry.corba.mobs.red_tordo.desc\" : " + "\"Red Tordo is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
         writeToFile("\"book.jitl.entry.corba.mobs.overgrown_merchant.desc\" : " + "\"Overgrown Merchant is a trading NPC that lives in the $(l:jitl:corba/structures#corba_village)Corba Village$(/l)\",");
         writeToFile("\"book.jitl.entry.corba.logger.desc\" : " + "\"Logger is spawned using the Logger Orb made inside the Summoning Table, he has 2350 Health, he will throw you while he has a hard hit with 10 Damage\",");
-        writeToFile("\"book.jitl.entry.corba.sentry_king.desc\" : " + "\"Sentry King is spawned using the Sentry King Orb made inside the Summoning Table, he has 2500 Health, he will throw mud at you that hits hard with 15 Damage, his loot contains Ancient Eye of Opening which is used on the $(l:jitl:overworld/structures#ancient_tower)Ancient Tower$(/l)\",");
+        writeToFile("\"book.jitl.entry.corba.sentry_king.desc\" : " + "\"Sentry King is spawned using the Sentry King Orb made inside the Summoning Table, he has 2500 Health, he will throw mud at you that hits hard with 15 Damage, his loot contains Ancient Eye of Opening which is used on the $(l:jitl:overworld/structures#ancient)Ancient Tower$(/l)\",");
 
         writeToFile("\"structure.terrania.jitl.mega_mushroom\" : " + "\"Mega Mushroom\",");
         writeToFile("\"book.jitl.entry.terrania.mega_mushroom.desc\" : " + "\"Mega Mushroom is found in the Mushroom Biome and has 2 variants, each variant being Purple or Blue topped containing a different Trading NPC\",");
@@ -474,18 +475,19 @@ public class LangRegistry {
         addMob(EnumKnowledge.FROZEN, "shivering_bushwalker", "Frozen", true, MobStats.SHIVERING_BUSHWALKER_HEALTH, MobStats.SHIVERING_BUSHWALKER_DAMAGE, "Crystal Flakes");
         addMob(EnumKnowledge.FROZEN, "shivering_shrieker", "Frozen", true, MobStats.SHIVERING_SHRIEKER_HEALTH, MobStats.SHIVERING_SHRIEKER_DAMAGE, "Crystal Flakes");
 
-        addMob(EnumKnowledge.EUCA, "dynaster", "Euca", true, MobStats.DYNASTER_HEALTH, MobStats.DYNASTER_DAMAGE, "Royal Disk and Shimmerer Dust");
-        addMob(EnumKnowledge.EUCA, "euca_charger", "Euca", "Very quick", false , MobStats.EUCA_CHARGER_HEALTH, MobStats.EUCA_CHARGER_DAMAGE, "Gate Keys and Shimmerer Dust");
+        addMob(EnumKnowledge.EUCA, "dynaster", "Euca", true, MobStats.DYNASTER_HEALTH, MobStats.DYNASTER_DAMAGE, "Euca Meat, Royal Disk and Shimmerer Dust");
+        addMob(EnumKnowledge.EUCA, "euca_charger", "Euca", "Very quick", false , MobStats.EUCA_CHARGER_HEALTH, MobStats.EUCA_CHARGER_DAMAGE, "Euca Meat, Gate Keys and Shimmerer Dust");
         addStructureMob(EnumKnowledge.EUCA, "goldbot", "$(l:jitl:euca/structures#euca_sphere)Euca Sphere$(/l)", false, MobStats.GOLDBOT_HEALTH, MobStats.GOLDBOT_DAMAGE, "Gate Keys and Metal Disk");
-        addMob(EnumKnowledge.EUCA, "golder", "Euca", false, MobStats.GOLDER_HEALTH, MobStats.GOLDER_DAMAGE, "Golder Dust");
+        addMob(EnumKnowledge.EUCA, "golder", "Euca", false, MobStats.GOLDER_HEALTH, MobStats.GOLDER_DAMAGE, "Euca Meat and Golder Dust");
         addMob(EnumKnowledge.EUCA, "shimmerer", "Euca", "Fly's around", MobStats.SHIMMERER_HEALTH, "Gate Keys, Royal Disc and Shimmerer Dust");
+        addPet(EnumKnowledge.EUCA, "euca_hopper", "Goldite Grains", "Euca Meat", MobStats.TAMED_EUCA_HOPPER_HEALTH, MobStats.EUCA_HOPPER_HEALTH, (float)MobStats.EUCA_HOPPER_DAMAGE, "");
 
-        writeToFile("\"book.jitl.entry.depths.mobs.darkener.desc\" : " + "\"Spawns in any Depths Biomes, Harmless, It has 55HP, Chance to drop Dark Crystal\",");
-        addMob(EnumKnowledge.DEPTHS, "darkness_crawler", "Depths", true, MobStats.DARKNESS_CRAWLER_HEALTH, MobStats.DARKNESS_CRAWLER_DAMAGE, "Scale");
+        addMob(EnumKnowledge.DEPTHS, "darkener", "Depths", "Fly's around", MobStats.DARKENER_HEALTH, 0, "Dark Crystal");
+        addPet(EnumKnowledge.DEPTHS, "darkness_crawler", "Depths", "Beastly Stomach", MobStats.TAME_DARKNESS_CRAWLER_HEALTH, MobStats.DARKNESS_CRAWLER_HEALTH, (float)MobStats.DARKNESS_CRAWLER_DAMAGE, "Scale");
         addStructureMob(EnumKnowledge.DEPTHS, "dark_sorcerer", "$(l:jitl:depths/structures#dark_sorcerers_dungeon)Dark Sorcerers Dungeon$(/l)", false, MobStats.DARK_SORCERER_HEALTH, MobStats.DARK_SORCERER_DAMAGE, "Dark Orb");
         addMob(EnumKnowledge.DEPTHS, "depths_beast", "Depths", false, MobStats.DEPTHS_BEAST_HEALTH, MobStats.DEPTHS_BEAST_DAMAGE, "Beastly Stomach");
-        addMob(EnumKnowledge.DEPTHS, "depths_hunter", "Depths", false, MobStats.DEPTHS_HUNTER_HEALTH, MobStats.DEPTHS_HUNTER_DAMAGE, "Dark Crystal");
-        addMob(EnumKnowledge.DEPTHS, "roc", "Depths", MobStats.TAMED_ROC_HEALTH, "Roc Feather");
+        addMob(EnumKnowledge.DEPTHS, "depths_hunter", "Depths", false, MobStats.DEPTHS_HUNTER_HEALTH, MobStats.DEPTHS_HUNTER_DAMAGE, "Depths Meat and Dark Crystal");
+        addPet(EnumKnowledge.DEPTHS, "roc", "Depths", "Depths Meat", MobStats.TAMED_ROC_HEALTH, MobStats.ROC_HEALTH, MobStats.ROC_DAMAGE, "Roc Feather");
         addMob(EnumKnowledge.DEPTHS, "spiked_beast", "Depths", false, MobStats.SPIKED_BEAST_HEALTH, MobStats.SPIKED_BEAST_DAMAGE, "Beastly Stomach");
 
         addMob(EnumKnowledge.CORBA, "corbanian_mollusk", "Corba", "A Slow slug that leaves a trail of Slime behind", MobStats.CORBANIAN_MOLLUSK_HEALTH, "Slimy Flesh and Slug Slime");
@@ -621,9 +623,10 @@ public class LangRegistry {
 
         writeToFile("\"jitl.tooltip.uses_remaining\" : \"Uses Remaining\",");
         writeToFile("\"jitl.tooltip.okoloo\" : \"Placed in Okoloo Pedestal\",");
-        writeToFile("\"jitl.tooltip.spawn\" : \"Used to spawn a Boss\",");
+        writeToFile("\"jitl.boss.spawn\" : \"Used to spawn the boss %s\",");
 
         writeToFile("\"enchantment.jitl.lightweight\" : \"Lightweight\",");
+        writeToFile("\"enchantment.jitl.razor\" : \"Razor Sharp\",");
         writeToFile("\"enchantment.jitl.ambit\" : \"Ambit\",");
         writeToFile("\"enchantment.jitl.scorching\" : \"Scorching\",");
         writeToFile("\"enchantment.jitl.faithful\" : \"Faithful\",");
@@ -660,13 +663,29 @@ public class LangRegistry {
         writeToFile("\"jitl.item.desc.demonic_eye\" : \"Inserted into the Corba Portal Frame\",");
         writeToFile("\"jitl.item.desc.dark_gem\" : \"Inserted into the Depths Portal Frame\",");
         writeToFile("\"jitl.item.desc.sentry_observer\" : \"Inserted into the Senterian Altar\",");
-        writeToFile("\"jitl.item.desc.bile\" : \"Very Vile!\",");
+        writeToFile("\"jitl.item.desc.bile\" : \"A very Bile Vile!\",");
 
         writeToFile("\"jitl.message.no_internet\" : \"Update checker failed, Please check your internet connection.\",");
         writeToFile("\"jitl.message.thank_you\" : \"Thank you %s, for downloading and playing!\",");
         writeToFile("\"jitl.message.update_available\" : \"Update available! Latest version: %s\",");
         writeToFile("\"jitl.message.current_version\" : \"Current Version: %s\",");
         writeToFile("\"jitl.message.up_to_date\" : \"Your version is up to date. Enjoy!\",");
+
+        writeToFile("\"jitl.boss_spawn.fail\" : \"%s cannot be called upon unless in the %s dimension.\",");
+        writeToFile("\"jitl.boss_spawn.okoloo\" : \"Time to get Clubbing\",");
+        writeToFile("\"jitl.boss_spawn.withering_beast\" : \"You can feel the Withering around you\",");
+        writeToFile("\"jitl.boss_spawn.calcia\" : \"Hide and seek?\",");
+        writeToFile("\"jitl.boss_spawn.soul_watcher\" : \"Your soul shouldn't be watched!\",");
+        writeToFile("\"jitl.boss_spawn.blazier\" : \"You're playing with the inferno. It's not too late to turn back...\",");
+        writeToFile("\"jitl.boss_spawn.eudor\" : \"Bow down The King of this land\",");
+        writeToFile("\"jitl.boss_spawn.corallator\" : \"You will regret this mistake for the rest of your life - if you'll still have one, that is...\",");
+        writeToFile("\"jitl.boss_spawn.thunderbird\" : \"The thunderbird is not pleased with its awakening...\",");
+        writeToFile("\"jitl.boss_spawn.scale\" : \"The blue blubby fish monster has been summoned!\",");
+        writeToFile("\"jitl.boss_spawn.logger\" : \"You'll get chopped to pieces with this one...\",");
+        writeToFile("\"jitl.boss_spawn.sentry_king\" : \"It sucked all the energy out of this world, don't let it suck the energy out of you...\",");
+        writeToFile("\"jitl.boss_spawn.terranian_protector\" : \"It's sole purpose was to protect this land. Why would you try to destroy it?\",");
+        writeToFile("\"jitl.boss_spawn.sky_stalker\" : \"Watch the Sky's...\",");
+
 
         /* --------------------- Finish manual lines --------------------- */
 
@@ -718,6 +737,9 @@ public class LangRegistry {
         for(int i = 0; i < paneList.size(); i++)
             writeToFile("\"block.jitl." + paneList.get(i) + "\": \"" + JBlocks.paneLangName.get(i) + "\"" + ",");
 
+        for(int i = 0; i < totemBlockList.size(); i++)
+            writeToFile("\"block.jitl." + totemBlockList.get(i) + "\": \"" + JBlocks.totemLangName.get(i) + "\"" + ",");
+
         for(int i = 0; i < terrainBlockList.size(); i++)
             writeToFile("\"block.jitl." + terrainBlockList.get(i) + "\": \"" + JBlocks.terrainLangName.get(i) + "\"" + ",");
 
@@ -768,10 +790,6 @@ public class LangRegistry {
 
         for(int i = 0; i < topBottomBlockList.size(); i++)
             writeToFile("\"block.jitl." + topBottomBlockList.get(i) + "\": \"" + JBlocks.topBottomLangName.get(i) + "\"" + ",");
-
-        for(int i = 0; i < totemBlockList.size(); i++)
-            writeToFile("\"block.jitl." + totemBlockList.get(i) + "\": \"" + JBlocks.totemLangName.get(i) + "\"" + ",");
-
 
         for(int i = 0; i < portalBlockList.size(); i++)
             writeToFile("\"block.jitl." + portalBlockList.get(i) + "\": \"" + JBlocks.portalLangName.get(i) + "\"" + ",");
@@ -838,12 +856,21 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + "\"Spawns in " + biome + " Biomes, " + getNeutral(neutral) + ", " + extra + ", " + getHealth(health, damage) + getDrops(drops) + "\",");
     }
 
+    public void addPet(EnumKnowledge dim, String name, String biome, String tameItem, double tamedHealth, double health, double damage, String drops) {
+        writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + "\"Spawns in " + biome + " Biomes, " + getNeutral(true) + ", " + "Tamable with " + tameItem + ", when tamed it goes to " + (int)tamedHealth + "HP" + ", " + getHealth(health, damage) + getDrops(drops) + "\",");
+    }
+
+
     public void addMob(EnumKnowledge dim, String name, String biome, String extra, boolean harmless, double health, String drops) {
         writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + "\"Spawns in " + biome + " Biomes" + getHarmless(harmless) + ", " + extra + ", " + getHealth(health, 0) + getDrops(drops) + "\",");
     }
 
     public void addMob(EnumKnowledge dim, String name, String biome, String extra, double health, String drops) {
         addMob(dim, name, biome, extra, true, health, drops);
+    }
+
+    public void addMob(EnumKnowledge dim, String name, String biome, String extra, double health, float damage, String drops) {
+        addMob(dim, name, biome, extra, true, health, damage, drops);
     }
 
     public void addMob(EnumKnowledge dim, String name, String biome, boolean neutral, double health, double damage, String drops) {

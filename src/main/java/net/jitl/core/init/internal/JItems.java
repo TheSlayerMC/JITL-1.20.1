@@ -166,6 +166,7 @@ public class JItems {
     public static final RegistryObject<Item> DARK_CRYSTAL = registerNormalItem("dark_crystal", "Dark Crystal");
     public static final RegistryObject<Item> DARK_ORB = registerNormalItem("dark_orb", "Dark Orb");
     public static final RegistryObject<Item> GLOSSY_EYE = registerNormalItem("glossy_eye", "Glossy Eye");
+    public static final RegistryObject<Item> DEPTHS_MEAT = registerFoodItem("depths_meat", "Depths Meat", JFood.DEPTHS_MEAT);
 
     public static final RegistryObject<Item> FROST_GEM = registerNormalItem("frost_gem", "Frost Gem");
     public static final RegistryObject<Item> ROC_FEATHER = registerNormalItem("roc_feather", "Roc Feather");

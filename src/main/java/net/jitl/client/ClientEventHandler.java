@@ -57,6 +57,7 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
         event.register(Dimensions.EUCA_EFFECTS, new EucaRenderInfo());
+        event.register(Dimensions.CORBA_EFFECTS, new CorbaRenderInfo());
         event.register(Dimensions.BOIL_EFFECTS, new BoilRenderInfo());
         event.register(Dimensions.FROZEN_EFFECTS, new FrozenRenderInfo());
         event.register(Dimensions.TERRANIA_EFFECTS, new TerraniaRenderInfo());

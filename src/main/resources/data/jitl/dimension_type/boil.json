@@ -1,4 +1,5 @@
 {
+  "name": "Boil",
   "ultrawarm": true,
   "natural": true,
   "piglin_safe": false,
@@ -11,8 +12,8 @@
   "ambient_light": 0,
   "fixed_time": 23000,
   "logical_height": 256,
-  "effects": "jitl:boil",
   "infiniburn": "#minecraft:infiniburn_overworld",
+  "effects": "jitl:boil",
   "min_y": -64,
   "height": 256,
   "monster_spawn_light_level": {

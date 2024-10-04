@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
 
 public class TerraniaRenderInfo extends DimensionSpecialEffects {
 
-    private static final ResourceLocation MOON_LOCATION = JITL.rl("textures/environment/terrania_moon.png");
+    private static final ResourceLocation MOON_LOCATION = JITL.rl("textures/environment/terrania_moon1.png");
     private static final ResourceLocation CLOUDIA_SKY_LOCATION = JITL.rl("textures/environment/cloudia_sky.png");
 
     public TerraniaRenderInfo() {
@@ -59,26 +59,26 @@ public class TerraniaRenderInfo extends DimensionSpecialEffects {
             float f = (float)vec3.x;
             float f1 = (float)vec3.y;
             float f2 = (float)vec3.z;
+            this.renderSkyTexture(poseStack);
             FogRenderer.levelFogColor();
             BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
             RenderSystem.depthMask(false);
             RenderSystem.setShaderColor(f, f1, f2, 1.0F);
             VertexBuffer.unbind();
             RenderSystem.enableBlend();
-                RenderSystem.setShader(GameRenderer::getPositionColorShader);
-                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-                poseStack.pushPose();
-                poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
-                float f3 = Mth.sin(level.getSunAngle(partialTick)) < 0.0F ? 180.0F : 0.0F;
-                poseStack.mulPose(Axis.ZP.rotationDegrees(f3));
-                poseStack.mulPose(Axis.ZP.rotationDegrees(90.0F));
-                bufferbuilder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION_COLOR);
-                BufferUploader.drawWithShader(bufferbuilder.end());
-                poseStack.popPose();
+            RenderSystem.setShader(GameRenderer::getPositionColorShader);
+            RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+            poseStack.pushPose();
+            poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
+            float f3 = Mth.sin(level.getSunAngle(partialTick)) < 0.0F ? 180.0F : 0.0F;
+            poseStack.mulPose(Axis.ZP.rotationDegrees(f3));
+            poseStack.mulPose(Axis.ZP.rotationDegrees(90.0F));
+            bufferbuilder.begin(VertexFormat.Mode.TRIANGLE_FAN, DefaultVertexFormat.POSITION_COLOR);
+            BufferUploader.drawWithShader(bufferbuilder.end());
+            poseStack.popPose();
             RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
             poseStack.pushPose();
 
-            this.renderSkyTexture(poseStack);
             poseStack.mulPose(Axis.YP.rotationDegrees(-180.0F));
             poseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(partialTick) + 2200F * 360.0F));
             Matrix4f matrix4f1 = poseStack.last().pose();

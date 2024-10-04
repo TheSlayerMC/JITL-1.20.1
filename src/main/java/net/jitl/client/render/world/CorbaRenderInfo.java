@@ -21,23 +21,14 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Matrix4f;
 
-import javax.annotation.Nullable;
+public class CorbaRenderInfo extends DimensionSpecialEffects {
 
-public class BoilRenderInfo extends DimensionSpecialEffects {
-
-    private static final ResourceLocation SUN_LOCATION = JITL.rl("textures/environment/boil_sun.png");
-    private static final ResourceLocation BOIL_SKY_LOCATION = JITL.rl("textures/environment/boil_sky.png");
-    private static final ResourceLocation CORBA_MOON_LOCATION = JITL.rl("textures/environment/corba_moon.png");
+    private static final ResourceLocation SKY_LOCATION = JITL.rl("textures/environment/corba_sky.png");
+    private static final ResourceLocation BOIL_MOON_LOCATION = JITL.rl("textures/environment/boil_moon1.png");
     private static final ResourceLocation EUCA_MOON_LOCATION = JITL.rl("textures/environment/euca_moon1.png");
 
-    public BoilRenderInfo() {
-        super(150F, true, SkyType.NONE, false, false);
-    }
-
-    @Override
-    public boolean renderClouds(ClientLevel level, int ticks, float partialTick, PoseStack poseStack, double camX, double camY, double camZ, Matrix4f projectionMatrix) {
-        new JCloudRenderer(JITL.rl("textures/environment/boil_clouds.png")).render(level, ticks, partialTick, poseStack, Minecraft.getInstance(), camX, camY, camZ, projectionMatrix);
-        return true;
+    public CorbaRenderInfo() {
+        super(192F, true, SkyType.NONE, false, false);
     }
 
     @Override
@@ -47,8 +38,9 @@ public class BoilRenderInfo extends DimensionSpecialEffects {
     }
 
     @Override
-    public boolean isFoggyAt(int i, int i2) {
-        return false;
+    public boolean renderClouds(ClientLevel level, int ticks, float partialTick, PoseStack poseStack, double camX, double camY, double camZ, Matrix4f projectionMatrix) {
+        new JCloudRenderer(JITL.rl("textures/environment/euca_clouds.png")).render(level, ticks, partialTick, poseStack, Minecraft.getInstance(), camX, camY, camZ, projectionMatrix);
+        return true;
     }
 
     @Override
@@ -81,13 +73,13 @@ public class BoilRenderInfo extends DimensionSpecialEffects {
             RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
             poseStack.pushPose();
 
-            //START SUN
+
             poseStack.mulPose(Axis.YP.rotationDegrees(-90.0F));
-            poseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(partialTick) * 360.0F));
+            poseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(partialTick) + 8000F));
             Matrix4f matrix4f1 = poseStack.last().pose();
-            float f12 = 80F;
+            float f12 = 10F;
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
-            RenderSystem.setShaderTexture(0, SUN_LOCATION);
+            RenderSystem.setShaderTexture(0, BOIL_MOON_LOCATION);
             bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
             bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(0.0F, 0.0F).endVertex();
             bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(1.0F, 0.0F).endVertex();
@@ -95,25 +87,10 @@ public class BoilRenderInfo extends DimensionSpecialEffects {
             bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0.0F, 1.0F).endVertex();
             BufferUploader.drawWithShader(bufferbuilder.end());
 
-            //START CORBA MOON
-            poseStack.mulPose(Axis.YP.rotationDegrees(-45.0F));
-            poseStack.mulPose(Axis.XP.rotationDegrees(6600F));
-            matrix4f1 = poseStack.last().pose();
-            f12 = 1.5F;
-            RenderSystem.setShader(GameRenderer::getPositionTexShader);
-            RenderSystem.setShaderTexture(0, CORBA_MOON_LOCATION);
-            bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-            bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(0.0F, 0.0F).endVertex();
-            bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(1.0F, 0.0F).endVertex();
-            bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(1.0F, 1.0F).endVertex();
-            bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0.0F, 1.0F).endVertex();
-            BufferUploader.drawWithShader(bufferbuilder.end());
-
-            //START EUCA MOON
-            poseStack.mulPose(Axis.YP.rotationDegrees(77.5F));
-            poseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(partialTick) * 360.0F + 2000));
-            matrix4f1 = poseStack.last().pose();
-            f12 = 4.0F;
+            poseStack.mulPose(Axis.YP.rotationDegrees(180F));
+            poseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(partialTick) + 8000F));
+            poseStack.last().pose();
+            f12 = 25F;
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
             RenderSystem.setShaderTexture(0, EUCA_MOON_LOCATION);
             bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
@@ -133,16 +110,11 @@ public class BoilRenderInfo extends DimensionSpecialEffects {
         return false;
     }
 
-    @Nullable
-    public float[] getSunriseColor(float ff, float ff1) {
-        return null;
-    }
-
     private void renderSkyTexture(PoseStack pPoseStack) {
         RenderSystem.enableBlend();
         RenderSystem.depthMask(false);
         RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
-        RenderSystem.setShaderTexture(0, BOIL_SKY_LOCATION);
+        RenderSystem.setShaderTexture(0, SKY_LOCATION);
         Tesselator tesselator = Tesselator.getInstance();
         BufferBuilder bufferbuilder = tesselator.getBuilder();
         for(int i = 0; i < 6; ++i) {
@@ -180,5 +152,10 @@ public class BoilRenderInfo extends DimensionSpecialEffects {
         Entity entity = camera.getEntity();
         if(!(entity instanceof LivingEntity livingentity)) return false;
         return livingentity.hasEffect(MobEffects.BLINDNESS) || livingentity.hasEffect(MobEffects.DARKNESS);
+    }
+
+    @Override
+    public boolean isFoggyAt(int int_, int int1_) {
+        return false;
     }
 }

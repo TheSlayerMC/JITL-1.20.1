@@ -11,6 +11,7 @@ import net.jitl.client.render.entity.euca.RoyalKingRenderer;
 import net.jitl.client.render.entity.frozen.FrozenGuardianRenderer;
 import net.jitl.client.render.entity.frozen.FrozenTrollRenderer;
 import net.jitl.client.render.entity.misc.BossCrystalRenderer;
+import net.jitl.client.render.entity.misc.RenderAnimated2D;
 import net.jitl.client.render.entity.misc.SentacoinRender;
 import net.jitl.client.render.entity.misc.SpiritCrystalRenderer;
 import net.jitl.client.render.entity.nether.MiniGhastRenderer;
@@ -58,6 +59,11 @@ public class RenderEntitys {
         event.registerEntityRenderer(JEntities.SENTACOIN_BAG_TYPE.get(), (context) -> new SentacoinRender(context, Sentacoin.Type.BAG));
 
         event.registerEntityRenderer(JEntities.FROZEN_TROLL_TYPE.get(), FrozenTrollRenderer::new);
+        event.registerEntityRenderer(JEntities.SWAMP_FLY_TYPE.get(), manager -> new RenderAnimated2D<>(manager, 10,
+                "corba/swamp_fly_0",
+                "corba/swamp_fly_1",
+                "corba/swamp_fly_2",
+                "corba/swamp_fly_3"));
 
         event.registerBlockEntityRenderer(JBlockEntities.ROCKITE.get(), RockiteSpawnerRenderer::new);
         event.registerBlockEntityRenderer(JBlockEntities.OBELISK.get(), con -> new ObeliskRenderer());
@@ -177,7 +183,7 @@ public class RenderEntitys {
         EntityRenderers.register(JEntities.STARING_GUARDIAN_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("staring_guardian", JDimension.DEPTHS)));
         EntityRenderers.register(JEntities.AURON_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("auron", JDimension.DEPTHS), 0.35F, 1.5F));
 
-        EntityRenderers.register(JEntities.CORBANIAN_MOLLUSK_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("corbanian_mollusk", JDimension.CORBA), 0.35F, 1.5F));
+        EntityRenderers.register(JEntities.CORBANIAN_MOLLUSK_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("corbanian_mollusk", JDimension.CORBA), 0.35F, 2.5F));
         EntityRenderers.register(JEntities.SMELLY_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("smelly", JDimension.CORBA)));
         EntityRenderers.register(JEntities.STINKY_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("stinky", JDimension.CORBA)));
         EntityRenderers.register(JEntities.RED_TORDO_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("red_tordo", JDimension.CORBA)));

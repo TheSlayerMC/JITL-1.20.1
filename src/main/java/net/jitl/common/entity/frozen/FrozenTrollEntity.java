@@ -79,11 +79,6 @@ public class FrozenTrollEntity extends JNeutralMonster {
         this.entityData.set(IS_ANGRY_ID, angry);
     }
 
-    @Nullable
-    public LivingEntity getTarget() {
-        return this.brain.getMemory(MemoryModuleType.ATTACK_TARGET).orElse(null);
-    }
-
     public void playSound(SoundEvent soundEvent_) {
         this.playSound(soundEvent_, this.getSoundVolume(), this.getVoicePitch());
     }

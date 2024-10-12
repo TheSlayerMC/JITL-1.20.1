@@ -447,6 +447,9 @@ public class LangRegistry {
         addMob(EnumKnowledge.OVERWORLD, "rockite_golem", "Overworld Underground", "NPC Mob, Will trade with you", MobStats.NPC_HEALTH, "");
         addStructureMob(EnumKnowledge.OVERWORLD, "neutral_sentry_stalker", "$(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)", "NPC Mob, Will trade with you once you reach 100 Overworld Knowledge", true, MobStats.NPC_HEALTH, 0, "");
         addStructureMob(EnumKnowledge.OVERWORLD, "mage", "$(l:jitl:overworld/structures#mage_hut)Mage Hut$(/l)", "NPC Mob, Will trade with you", true, MobStats.NPC_HEALTH, 0, "");
+        addMob(EnumKnowledge.OVERWORLD, "robot", "Any Overworld Biome", "Will attack on site", MobStats.ROBOT_HEALTH, "Iron Ingot and Redstone Dust");
+        addPet(EnumKnowledge.OVERWORLD, "pet_robot", true, "Obtained from the $(l:jitl:overworld/traders#mage)Mage$(/l)", "Already tamed when spawned, can be healed with Pet Food", MobStats.PET_ROBOT_HEALTH, MobStats.PET_ROBOT_DAMAGE,"");
+        addPet(EnumKnowledge.OVERWORLD, "ferret", false, "Forest like", "Pet Food", MobStats.FERRET_HEALTH, MobStats.FERRET_DAMAGE,"");
 
         addStructureMob(EnumKnowledge.NETHER, "hellbot", "$(l:jitl:nether/structures#hellbot)Hellbot Structure$(/l)", false, MobStats.HELLBOT_HEALTH, MobStats.HELLBOT_DAMAGE, "Flaming Sprocket, Hell Shards and Flaming Spring");
         addMob(EnumKnowledge.NETHER, "hell_cow", "Nether", "Breedable with HellShards, Can be used to get Lava with a Bucket", MobStats.HELL_COW_HEALTH, "Blazing Fireball and Boil Powder");
@@ -474,6 +477,7 @@ public class LangRegistry {
         addMob(EnumKnowledge.FROZEN, "shatterer", "Frozen", true, MobStats.SHATTERER_HEALTH, 0, "");
         addMob(EnumKnowledge.FROZEN, "shivering_bushwalker", "Frozen", true, MobStats.SHIVERING_BUSHWALKER_HEALTH, MobStats.SHIVERING_BUSHWALKER_DAMAGE, "Crystal Flakes");
         addMob(EnumKnowledge.FROZEN, "shivering_shrieker", "Frozen", true, MobStats.SHIVERING_SHRIEKER_HEALTH, MobStats.SHIVERING_SHRIEKER_DAMAGE, "Crystal Flakes");
+        addPet(EnumKnowledge.FROZEN, "shiverwolf", "Dying Forest and Bitterwood Forest", "Frozen Ice Ball which is obtained from an $(l:jitl:frozen/traders#eskimo)Eskimo$(/l))", MobStats.TAMED_SHIVERWOLF_HEALTH, MobStats.SHIVERWOLF_HEALTH, MobStats.SHIVERWOLF_DAMAGE, "");
 
         addMob(EnumKnowledge.EUCA, "dynaster", "Euca", true, MobStats.DYNASTER_HEALTH, MobStats.DYNASTER_DAMAGE, "Euca Meat, Royal Disk and Shimmerer Dust");
         addMob(EnumKnowledge.EUCA, "euca_charger", "Euca", "Very quick", false , MobStats.EUCA_CHARGER_HEALTH, MobStats.EUCA_CHARGER_DAMAGE, "Euca Meat, Gate Keys and Shimmerer Dust");
@@ -625,6 +629,7 @@ public class LangRegistry {
         writeToFile("\"jitl.tooltip.uses_remaining\" : \"Uses Remaining\",");
         writeToFile("\"jitl.tooltip.okoloo\" : \"Placed in Okoloo Pedestal\",");
         writeToFile("\"jitl.boss.spawn\" : \"Used to spawn the boss %s\",");
+        writeToFile("\"jitl.pet.spawn\" : \"Used to spawn a pet %s\",");
 
         writeToFile("\"enchantment.jitl.lightweight\" : \"Lightweight\",");
         writeToFile("\"enchantment.jitl.razor\" : \"Razor Sharp\",");
@@ -671,6 +676,11 @@ public class LangRegistry {
         writeToFile("\"jitl.message.update_available\" : \"Update available! Latest version: %s\",");
         writeToFile("\"jitl.message.current_version\" : \"Current Version: %s\",");
         writeToFile("\"jitl.message.up_to_date\" : \"Your version is up to date. Enjoy!\",");
+
+        writeToFile("\"jitl.message.item.miners_pearl\" : \"The pearl doesn't feel safe enough to teleport.\",");
+        writeToFile("\"jitl.message.item.eternal_night\" : \"%s isn't scared of the dark...\",");
+        writeToFile("\"jitl.item.desc.full_health\" : \"Restores player to full health\",");
+        writeToFile("\"jitl.item.desc.health\" : \"Restores player to full health\",");
 
         writeToFile("\"jitl.boss_spawn.fail\" : \"%s cannot be called upon unless in the %s dimension.\",");
         writeToFile("\"jitl.boss_spawn.okoloo\" : \"Time to get Clubbing\",");
@@ -861,6 +871,15 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + "\"Spawns in " + biome + " Biomes, " + getNeutral(true) + ", " + "Tamable with " + tameItem + ", when tamed it goes to " + (int)tamedHealth + "HP" + ", " + getHealth(health, damage) + getDrops(drops) + "\",");
     }
 
+    public void addPet(EnumKnowledge dim, String name, boolean structure, String obtained, String tameItem, double health, double damage, String drops) {
+        String found = "";
+        if(structure) {
+            found = "\"" + obtained;
+        } else {
+            found = "\"Spawns in " + obtained + " Biomes";
+        }
+        writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + found + ", " + getNeutral(true) + ", " + "Tamable with " + tameItem + ", " + getHealth(health, damage) + getDrops(drops) + "\",");
+    }
 
     public void addMob(EnumKnowledge dim, String name, String biome, String extra, boolean harmless, double health, String drops) {
         writeToFile("\"book.jitl.entry." + dim.getName().toLowerCase() + ".mobs." + name + ".desc\" : " + "\"Spawns in " + biome + " Biomes" + getHarmless(harmless) + ", " + extra + ", " + getHealth(health, 0) + getDrops(drops) + "\",");

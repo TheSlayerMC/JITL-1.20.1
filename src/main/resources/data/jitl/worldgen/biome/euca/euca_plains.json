@@ -23,43 +23,55 @@
     "monster": [
       {
         "type": "jitl:euca_charger",
-        "weight": 15,
+        "maxCount": 2,
         "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "jitl:golder",
-        "weight": 15,
-        "minCount": 1,
-        "maxCount": 2
+        "weight": 15
       },
       {
         "type": "jitl:dynaster",
-        "weight": 15,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 15
+      },
+      {
+        "type": "jitl:golder",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 15
       },
       {
         "type": "jitl:shimmerer",
-        "weight": 5,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 5
       }
     ]
-  },
+},
   "spawn_costs": {},
   "carvers": {},
   "features": [
+    [],
     [
-      "jitl:euca_boulder",
-      "jitl:euca_gold_tree",
-      "jitl:euca_green_tree",
-      "jitl:gold_veg",
-      "jitl:celestium_ore",
-      "jitl:korite_ore",
-      "jitl:gold_bot_spawner",
-      "jitl:euca_water",
+      "jitl:euca_water"
+    ],
+    [
       "jitl:euca_ruins",
+      "jitl:euca_boulder",
+      "jitl:gold_bot_spawner"
+    ],
+    [],
+    [],
+    [],
+    [
+      "jitl:celestium_ore",
+      "jitl:korite_ore"
+    ],
+    [],
+    [],
+    [
+      "jitl:euca_green_tree",
+      "jitl:euca_gold_tree",
+      "jitl:goldite_veg",
       "jitl:euca_pumpkin"
     ]
   ]

@@ -17,47 +17,61 @@
     }
   },
   "spawners": {
+    "creature": [
+      {
+        "type": "jitl:corbanian_mollusk",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 20
+      }
+    ],
     "monster": [
       {
         "type": "jitl:leaf_blower",
-        "weight": 3,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 3
       },
       {
         "type": "jitl:surface_seer",
-        "weight": 4,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 4
       },
       {
         "type": "jitl:wood_creature",
-        "weight": 4,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "jitl:corbanian_mollusk",
-        "weight": 3,
-        "minCount": 1,
-        "maxCount": 2
+        "weight": 4
       },
       {
         "type": "jitl:smelly",
-        "weight": 2,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 2
       }
     ]
   },
   "spawn_costs": {},
   "carvers": {},
   "features": [
+    [],
+    [],
+    [
+      "jitl:corba_ruins"
+    ],
+    [],
+    [],
+    [],
     [
       "jitl:orbadite_ore",
-      "jitl:gorbite_ore",
+      "jitl:gorbite_ore"
+    ],
+    [],
+    [],
+    [
+      "jitl:corba_tall_grass",
       "jitl:corba_tall_plants",
-      "jitl:corba_ruins",
       "jitl:corba_lily_pad"
     ]
   ]

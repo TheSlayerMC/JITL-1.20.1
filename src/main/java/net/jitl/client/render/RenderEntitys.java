@@ -4,12 +4,14 @@ import net.jitl.client.JModelLayers;
 import net.jitl.client.model.AnimatedMonsterModel;
 import net.jitl.client.model.FrozenTrollModel;
 import net.jitl.client.model.JBoatModel;
+import net.jitl.client.model.ShiverwolfModel;
 import net.jitl.client.render.block.*;
 import net.jitl.client.render.entity.euca.CrypianRenderer;
 import net.jitl.client.render.entity.euca.EucaHopperRenderer;
 import net.jitl.client.render.entity.euca.RoyalKingRenderer;
 import net.jitl.client.render.entity.frozen.FrozenGuardianRenderer;
 import net.jitl.client.render.entity.frozen.FrozenTrollRenderer;
+import net.jitl.client.render.entity.frozen.ShiverwolfRenderer;
 import net.jitl.client.render.entity.misc.BossCrystalRenderer;
 import net.jitl.client.render.entity.misc.RenderAnimated2D;
 import net.jitl.client.render.entity.misc.SentacoinRender;
@@ -25,6 +27,8 @@ import net.jitl.core.init.internal.JBlockEntities;
 import net.jitl.core.init.internal.JDimension;
 import net.jitl.core.init.internal.JEntities;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -59,6 +63,8 @@ public class RenderEntitys {
         event.registerEntityRenderer(JEntities.SENTACOIN_BAG_TYPE.get(), (context) -> new SentacoinRender(context, Sentacoin.Type.BAG));
 
         event.registerEntityRenderer(JEntities.FROZEN_TROLL_TYPE.get(), FrozenTrollRenderer::new);
+        event.registerEntityRenderer(JEntities.SHIVERWOLF_TYPE.get(), ShiverwolfRenderer::new);
+
         event.registerEntityRenderer(JEntities.SWAMP_FLY_TYPE.get(), manager -> new RenderAnimated2D<>(manager, 10,
                 "corba/swamp_fly_0",
                 "corba/swamp_fly_1",
@@ -89,7 +95,7 @@ public class RenderEntitys {
         }
 
         event.registerLayerDefinition(JModelLayers.FROZEN_TROLL_MODEL_LAYER, FrozenTrollModel::createBodyLayer);
-        event.registerLayerDefinition(JModelLayers.FROZEN_TROLL_HELD_ITEM_LAYER, FrozenTrollModel::createBodyLayer);
+        event.registerLayerDefinition(JModelLayers.SHIVERWOLF_MODEL_LAYER, () -> LayerDefinition.create(ShiverwolfModel.createMeshDefinition(CubeDeformation.NONE), 64, 32));
 
         event.registerLayerDefinition(JModelLayers.JCHEST, JChestRenderer::createSingleBodyLayer);
         event.registerLayerDefinition(JModelLayers.JDOUBLE_CHEST_RIGHT, JChestRenderer::createDoubleBodyRightLayer);
@@ -115,6 +121,9 @@ public class RenderEntitys {
         EntityRenderers.register(JEntities.CAVELING_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("caveling", JDimension.OVERWORLD), 0.5F));
         EntityRenderers.register(JEntities.CAVURN_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("cavurn", JDimension.OVERWORLD), 0.5F));
         EntityRenderers.register(JEntities.NEUTRAL_SENTRY_STALKER_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("neutral_sentry_stalker", JDimension.OVERWORLD), 0.25F, 0.7F));
+        EntityRenderers.register(JEntities.ROBOT_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("robot", JDimension.OVERWORLD)));
+        EntityRenderers.register(JEntities.PET_ROBOT_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("pet_robot", JDimension.OVERWORLD), 0.25F, 0.5F));
+        EntityRenderers.register(JEntities.FERRET_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("ferret", JDimension.OVERWORLD), 0.25F, 1.0F));
 
         EntityRenderers.register(JEntities.TOWER_GUARDIAN_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("tower_guardian", JDimension.BOSS), 1F, 1.15F));
         EntityRenderers.register(JEntities.ROCKITE_SMASHER_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("rockite_smasher", JDimension.BOSS), 1F, 2F));

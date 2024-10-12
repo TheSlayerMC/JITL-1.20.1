@@ -14,7 +14,7 @@ public class BossCrystalModel extends DefaultedEntityGeoModel<BossCrystal> {
 
     @Override
     public ResourceLocation getModelResource(BossCrystal object) {
-        return new ResourceLocation(JITL.MODID, "geo/bosscrystal.json");
+        return new ResourceLocation(JITL.MODID, "geo/bosscrystal.geo.json");
     }
 
     @Override

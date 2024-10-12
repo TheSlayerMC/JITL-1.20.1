@@ -413,6 +413,7 @@ public class JBlocks {
     public static final RegistryObject<Block> ICE_STONE = register("ice_stone", "Ice Stone", JBlockProperties.GLOW_BLOCK);
     public static final RegistryObject<Block> FROST_GEM_BLOCK = register("frost_gem_block", "Frost Gem Block", JBlockProperties.STONE);
     public static final RegistryObject<Block> FROSTBITER_SPAWNER = register("frostbiter_spawner", "Frostbiter Spawner", FrostbiterSpawnerBlock::new, JBlockProperties.SPAWNER);
+    public static final RegistryObject<Block> GLACIAL_ROCK = register("glacial_rock", "Glacial Rock", JBlockProperties.STONE);
 
     public static final RegistryObject<Block> BOIL_PORTAL_FRAME = register("boil_portal_frame", "Boiling Point Portal Frame", JBlockProperties.STONE);
     public static final RegistryObject<JBasePortalBlock> BOIL_PORTAL = registerPortalBlock("boil_portal", "Boiling Point Portal", () -> new JBasePortalBlock(Dimensions.BOIL, BOIL_PORTAL_FRAME));
@@ -483,6 +484,10 @@ public class JBlocks {
     public static final RegistryObject<Block> DEPTHS_CRYSTAL = registerAttachedCrossBlock("depths_crystal", "Depths Crystal", () -> new AttachedBlock(JBlockProperties.GLOW_BLOCK.noCollission().noOcclusion()));
     public static final RegistryObject<Block> DEPTHS_CRYSTAL_BLOCK = register("depths_crystal_block", "Depths Crystal Block", JBlockProperties.STONE);
     public static final RegistryObject<Block> BUDDING_DEPTHS_CRYSTAL = register("budding_depths_crystal", "Budding Depths Crystal", JBlockProperties.STONE);
+    public static final RegistryObject<Block> FLOOR_DEPTHS_CRYSTAL_BLUE = registerModeledBlock("floor_depths_crystal_blue", "Depths Crystal", FloorDepthsCrystalBlock::new);
+    public static final RegistryObject<Block> FLOOR_DEPTHS_CRYSTAL_PINK = registerModeledBlock("floor_depths_crystal_pink", "Depths Crystal", FloorDepthsCrystalBlock::new);
+    public static final RegistryObject<Block> FLOOR_DEPTHS_CRYSTAL_YELLOW = registerModeledBlock("floor_depths_crystal_yellow", "Depths Crystal", FloorDepthsCrystalBlock::new);
+    public static final RegistryObject<Block> FLOOR_DEPTHS_CRYSTAL_GREEN = registerModeledBlock("floor_depths_crystal_green", "Depths Crystal", FloorDepthsCrystalBlock::new);
     public static final RegistryObject<Block> DARK_BRICK = register("dark_brick", "Dark Brick", JBlockProperties.STONE);
     public static final RegistryObject<Block> DARK_FLOOR = register("dark_floor", "Dark Floor", JBlockProperties.STONE);
     public static final RegistryObject<Block> DARK_SHINGLE = register("dark_shingle", "Dark Shingle", JBlockProperties.STONE);
@@ -615,9 +620,9 @@ public class JBlocks {
     public static final RegistryObject<StairBlock> CLOUDIA_BRICK_STAIRS = registerStairs("cloudia_brick_stairs", "Cloudia Brick Stairs", CLOUDIA_BRICK, false, JBlockProperties.STONE);
     public static final RegistryObject<StairBlock> CLOUDIA_TILE_STAIRS = registerStairs("cloudia_tile_stairs", "Cloudia Tile Stairs",CLOUDIA_TILE, false, JBlockProperties.STONE);
     public static final RegistryObject<JFenceBlock> CLOUDIA_POST = registerFence("cloudia_post", "Cloudia Post", false, JBlockProperties.STONE);
-    public static final RegistryObject<Block> PINK_CLOUDIA_CLOUD = register("pink_cloudia_cloud", "Pink Cloudia Cloud", JBlockProperties.CLOUD);
-    public static final RegistryObject<Block> BLUE_CLOUDIA_CLOUD = register("blue_cloudia_cloud", "Blue Cloudia Cloud", JBlockProperties.CLOUD);
-    public static final RegistryObject<Block> LIGHT_BLUE_CLOUDIA_CLOUD = register("light_blue_cloudia_cloud", "Light Blue Cloudia Cloud", JBlockProperties.CLOUD);
+    public static final RegistryObject<Block> PINK_CLOUDIA_CLOUD = register("pink_cloudia_cloud", "Pink Cloudia Cloud", () -> new GlassBlock(JBlockProperties.CLOUD));
+    public static final RegistryObject<Block> BLUE_CLOUDIA_CLOUD = register("blue_cloudia_cloud", "Blue Cloudia Cloud", () -> new GlassBlock(JBlockProperties.CLOUD));
+    public static final RegistryObject<Block> LIGHT_BLUE_CLOUDIA_CLOUD = register("light_blue_cloudia_cloud", "Light Blue Cloudia Cloud", () -> new GlassBlock(JBlockProperties.CLOUD));
     public static final RegistryObject<SlabBlock> CLOUDIA_TILE_SLAB = registerSlab("cloudia_tile_slab", "Cloudia Tile Slab", false, JBlockProperties.STONE);
     public static final RegistryObject<SlabBlock> CLOUDIA_BRICK_SLAB = registerSlab("cloudia_brick_slab", "Cloudia Brick Slab", false, JBlockProperties.STONE);
     public static final RegistryObject<Block> SENTERIAN_PORTAL_FRAME = registerEndPortalFrameStyleBlock("senterian_portal_frame", "Senterian Portal Frame", SenterianPortalFrameBlock::new);

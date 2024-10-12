@@ -120,6 +120,7 @@ public class JConfiguredFeatures {
             DEPTHS_VEG = registerKey("depths_veg"),
             DEPTHS_TREE = registerKey("depths_tree"),
             DEPTHS_CRYSTAL = registerKey("depths_crystal"),
+            FLOOR_DEPTHS_CRYSTAL = registerKey("floor_depths_crystal"),
             DEPTHS_GEODE = registerKey("depths_geode");
 
     //BOIL
@@ -151,7 +152,9 @@ public class JConfiguredFeatures {
             LARGE_FROZEN_BITTERWOOD_TREE = registerKey("large_frozen_bitterwood_tree"),
             MEDIUM_FROZEN_BITTERWOOD_TREE = registerKey("medium_frozen_bitterwood_tree"),
             SMALL_FROZEN_BITTERWOOD_TREE = registerKey("small_frozen_bitterwood_tree"),
-            ICE_SPIKE = registerKey("frozen_ice_spike");
+            ICE_SPIKE = registerKey("frozen_ice_spike"),
+            GLACIAL_ROCK = registerKey("glacial_rock");
+
 
     //CORBA
     public static final ResourceKey<ConfiguredFeature<?, ?>>
@@ -245,6 +248,7 @@ public class JConfiguredFeatures {
         register(context, FLAIRIUM_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(DEPTHS_REPLACEABLES, JBlocks.FLAIRIUM_ORE.get().defaultBlockState()))).get(), 7));
         register(context, DES_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(DEPTHS_REPLACEABLES, JBlocks.DES_ORE.get().defaultBlockState()))).get(), 7));
         register(context, DEPTHS_VEG , Feature.FLOWER, new RandomPatchConfiguration(60, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.DEPTHS_BLUE_FLOWER.get().defaultBlockState(), JBlocks.DEPTHS_FLOWER.get().defaultBlockState()))))));
+        register(context, FLOOR_DEPTHS_CRYSTAL , Feature.FLOWER, new RandomPatchConfiguration(60, 4, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.FLOOR_DEPTHS_CRYSTAL_YELLOW.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_PINK.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_GREEN.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_BLUE.get().defaultBlockState()))))));
 
         //BOIL
         register(context, VOLCANIC_ROCK, JFeatures.VOLCANIC_ROCK.get(), new NoneFeatureConfiguration());
@@ -276,6 +280,7 @@ public class JConfiguredFeatures {
         register(context, PERIDOT_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(FROZEN_REPLACEABLES, JBlocks.PERIDOT_ORE.get().defaultBlockState()))).get(), 7));
         register(context, FROZEN_VEG , Feature.FLOWER, new RandomPatchConfiguration(60, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.ICE_BUSH.get().defaultBlockState(), JBlocks.FROSTBERRY_THORN.get().defaultBlockState()))))));
         register(context, FROZEN_FLOWERS, Feature.FLOWER, new RandomPatchConfiguration(60, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.FROZEN_BLOOM.get().defaultBlockState(), JBlocks.CICLEBLOOM.get().defaultBlockState(), JBlocks.ICE_BUD.get().defaultBlockState()))))));
+        register(context, GLACIAL_ROCK, JFeatures.BOULDER.get(), new BlockStateConfiguration(JBlocks.GLACIAL_ROCK.get().defaultBlockState()));
 
         //CORBA
         register(context, ORBADITE_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(CORBA_REPLACEABLES, JBlocks.ORBADITE_ORE.get().defaultBlockState()))).get(), 7));

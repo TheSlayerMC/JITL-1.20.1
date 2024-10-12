@@ -162,6 +162,11 @@ public class BlockRenderTypes {
         translucent.add(JBlocks.CLOUDIA_PORTAL.get());
         translucent.add(JBlocks.SLIME.get());
 
+        translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_BLUE.get());
+        translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_GREEN.get());
+        translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_PINK.get());
+        translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_YELLOW.get());
+
         for(Block b : cutout) {
             ItemBlockRenderTypes.setRenderLayer(b, RenderType.cutout());
         }

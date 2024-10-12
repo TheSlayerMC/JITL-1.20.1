@@ -2,7 +2,11 @@ package net.jitl.core.data;
 
 import net.jitl.core.data.loot.JLootTableSubProvider;
 import net.jitl.core.data.recipe.JRecipeRegistry;
+import net.jitl.core.data.world_gen.BiomeGenerator;
 import net.jitl.core.data.world_gen.ConfiguredFeaturesGenerator;
+import net.jitl.core.data.world_gen.PlacedBonmealFeaturesGenerator;
+import net.jitl.core.data.world_gen.PlacedFeaturesGenerator;
+import net.jitl.core.data.world_gen.carver.CarverGenerator;
 import net.jitl.core.init.JITL;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -16,10 +20,12 @@ public class JDataGenerator {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
 
-        generator.addProvider(event.includeServer(), new JRecipeRegistry(generator.getPackOutput()));
+        //generator.addProvider(event.includeServer(), new JRecipeRegistry(generator.getPackOutput()));
         generator.addProvider(event.includeServer(), new JLootTableSubProvider(generator.getPackOutput()));
         //generator.addProvider(event.includeServer(), new CarverGenerator(generator.getPackOutput()));
-        generator.addProvider(event.includeServer(), new ConfiguredFeaturesGenerator(generator.getPackOutput(), event.getLookupProvider()));
+        //generator.addProvider(event.includeServer(), new ConfiguredFeaturesGenerator(generator.getPackOutput(), event.getLookupProvider()));
         //generator.addProvider(event.includeServer(), new PlacedBonmealFeaturesGenerator(generator.getPackOutput()));
+        //generator.addProvider(event.includeServer(), new PlacedFeaturesGenerator(generator.getPackOutput(), event.getLookupProvider()));
+        //generator.addProvider(event.includeServer(), new BiomeGenerator(generator.getPackOutput(), event.getLookupProvider()));
     }
 }

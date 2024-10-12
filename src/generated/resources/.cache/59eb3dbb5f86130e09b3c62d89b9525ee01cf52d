@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-15T13:43:56.7389341	Loot Tables
+// 1.20.1	2024-10-12T16:23:07.3304557	Loot Tables
 eb2a6c12fb5418fb0379d12edf6fe5ac551aacce data/jitl/loot_tables/blocks/airroot.json
 666ee18a903a50702a4b1d58c86293478b38ef0c data/jitl/loot_tables/blocks/airroot_melon.json
 870b5aabcb3228bd0597a4e243ae983b4718cfd7 data/jitl/loot_tables/blocks/ancient_catalyst.json
@@ -275,6 +275,10 @@ f213d17a2d9f44351cb4ea235a3e8ec7d3d1bf46 data/jitl/loot_tables/blocks/firestone_
 5186c32bb76bc03246ee54b328f39547d268ceff data/jitl/loot_tables/blocks/flairium_block.json
 d2d71083ea72e46b6ec1d93bc2b1dc2e1d19b7a4 data/jitl/loot_tables/blocks/flairium_ore.json
 7974c6e3d5ea719c1a0c4644b54a9f121889e53c data/jitl/loot_tables/blocks/flame_pod.json
+879098ac5448b89145b7853ebb9e08626a2909ed data/jitl/loot_tables/blocks/floor_depths_crystal_blue.json
+0e86523047d42970c785dd4e3f1c56557fbde385 data/jitl/loot_tables/blocks/floor_depths_crystal_green.json
+e159fbebd1a27424f1c1c4f7ace31913a7cf2c0c data/jitl/loot_tables/blocks/floor_depths_crystal_pink.json
+3facf7e3f7685ebdb2440e1a328a3c813efdc0b8 data/jitl/loot_tables/blocks/floor_depths_crystal_yellow.json
 5143fd7f09d59e90711c2bb41b9b9344604a10ba data/jitl/loot_tables/blocks/floro_pedal_crop.json
 da310839f0d5346fdbf7be41c370bb9d95c10e14 data/jitl/loot_tables/blocks/frostberry_thorn.json
 5e0effa326fcd3faad40b5b94e8d35235e43c522 data/jitl/loot_tables/blocks/frostbiter_spawner.json
@@ -308,6 +312,7 @@ b0a3a51c1dca807d15d33ac133dd028a04395783 data/jitl/loot_tables/blocks/frozen_sta
 c9cd191693726614754d88d691e9bac749160674 data/jitl/loot_tables/blocks/gilded_dungeon_bricks.json
 2cd21d0a38a7077e880f9d309242e3cc8326465a data/jitl/loot_tables/blocks/gilded_dungeon_brick_fence.json
 f42235dbfe6a0fb68de4396efae726a427cc0b8c data/jitl/loot_tables/blocks/gilded_dungeon_brick_stairs.json
+0ae023ada18379cf42a23e8dab674a14fca5f55a data/jitl/loot_tables/blocks/glacial_rock.json
 c88c62f38051ca273b07d7601925c434e1baa556 data/jitl/loot_tables/blocks/glimmer_root.json
 1c1424f1af300b29e3b0162230202f436446ad2c data/jitl/loot_tables/blocks/glowa_crop.json
 273799105b5eff69f5badc549a763ad1873fad99 data/jitl/loot_tables/blocks/goldite_bulb.json
@@ -469,6 +474,7 @@ f4bb1d0cdbaefabcb5427bd0d1c0f0573252f5e3 data/jitl/loot_tables/blocks/stripped_t
 2a19cae8b6eabbe6cd7280c4a5dcad5b9e2da432 data/jitl/loot_tables/blocks/sulphur_crystal.json
 e5e8ffaa152bb9550bb70db67b6e742ad0a43bc8 data/jitl/loot_tables/blocks/sulphur_rock.json
 ab6c9c2a27292ef3ca1bf22c27ca1d533658163e data/jitl/loot_tables/blocks/summoning_table.json
+6bc2d174b4857818f01d00150ca09a155e69fe3b data/jitl/loot_tables/blocks/swamp_lamp.json
 776d0bb32dee255495ff40d1ebd930ce519b46cb data/jitl/loot_tables/blocks/swamp_lily.json
 51c3ec67139855a6f66a8f51086bb2f5c0793d99 data/jitl/loot_tables/blocks/tainted_mud.json
 84512632e1b9b9e31b33a7741adfb85e090568d2 data/jitl/loot_tables/blocks/tall_blue_glowshroom.json
@@ -556,14 +562,15 @@ f7b8a2c79da51914d4ae30c60a49ae171f813ff3 data/jitl/loot_tables/entities/corbania
 826fbd57ab07c9f683a851e77eb3524e5e71f1dd data/jitl/loot_tables/entities/darkener.json
 5ba995fbe1199e95978fb99780579acc3dd87da2 data/jitl/loot_tables/entities/darkness_crawler.json
 00ca7bb1eb2b3c9aea2b92c9c0117b9d598d04e3 data/jitl/loot_tables/entities/dark_sorcerer.json
-904d4b3f23bc15a41f476ac80c4ff7dbb2706271 data/jitl/loot_tables/entities/depths_beast.json
-ed324fe4b3e95f993fdef6b8ecf5cad0221a8c2b data/jitl/loot_tables/entities/depths_hunter.json
-9447b58760a88b5aadf37c62463a57c9cedec6e0 data/jitl/loot_tables/entities/dynaster.json
+55d02d436551ce33bbf1ea217de93b101739f341 data/jitl/loot_tables/entities/depths_beast.json
+6f25216bc4fd86158adc32ee1ccccc83263ff339 data/jitl/loot_tables/entities/depths_hunter.json
+7a7cff2f57578e1e2d0849743890756aecc1928a data/jitl/loot_tables/entities/dynaster.json
 245b7165402ace4cd7c734d805f548a389a5da8e data/jitl/loot_tables/entities/escaped_convict.json
 7ad4473aa8367b5fe427f90d3081869851f9fc34 data/jitl/loot_tables/entities/eskimo.json
-937cb2be19c0ea3ffe89dcd9dc3d3a63363bafd3 data/jitl/loot_tables/entities/euca_charger.json
+159155a435e71e42b3ecd3f9eb1a3923d49b985d data/jitl/loot_tables/entities/euca_charger.json
 d2f704b9406d5b74e56d85591364bd38dc2bd8d1 data/jitl/loot_tables/entities/euca_hopper.json
 f696cd2e5b7261d7efa024b9a616c1f731c30b1e data/jitl/loot_tables/entities/eudor.json
+0664778ec57757ab43f7306f3fde191e457af95d data/jitl/loot_tables/entities/ferret.json
 b83a5a4e96bfa2fcee6c7e768fc87dc6a0671cc6 data/jitl/loot_tables/entities/flame_lotus.json
 6069658427bf793b665b6b101ccbf8c47eb43d8d data/jitl/loot_tables/entities/floro.json
 6e991f3c17e3199c100614df06651dcf69995098 data/jitl/loot_tables/entities/flungas.json
@@ -573,7 +580,7 @@ af5d15ead7db3d6501d912e1294c087f014a817b data/jitl/loot_tables/entities/frozen_f
 f7c18ee73102fd7d06ff34573f550be94ce1e15f data/jitl/loot_tables/entities/frozen_guardian.json
 4ab0443bb028b86abb59087bf29e3490c2ccb8a3 data/jitl/loot_tables/entities/frozen_troll.json
 1368c37c6badc4d7d633ec0e35a908537160734f data/jitl/loot_tables/entities/goldbot.json
-f7c42bb5109c8106d109330ccd2b0a3ddae07a85 data/jitl/loot_tables/entities/golder.json
+622c8a15e1d78a3b9ffc8ffc45740d6f53597c21 data/jitl/loot_tables/entities/golder.json
 aa58df48c5e57b3d1e7ac199b771fd0178db64ce data/jitl/loot_tables/entities/green_tordo.json
 f518b0b9170764d5bdc815fc8c5c18ef2d1b5bc3 data/jitl/loot_tables/entities/hellbot.json
 f4502bbfab460752f0170e762ac156b5ab4e4c2a data/jitl/loot_tables/entities/hellwing.json
@@ -603,9 +610,11 @@ f9a6edbc76b2319727ce077e693d5d28b389401f data/jitl/loot_tables/entities/observer
 8810985bfefcdff5d2f10c645984cf12dbf3050f data/jitl/loot_tables/entities/overseer.json
 89f77399b07c6bf1d6cc69df6669f2a3fe877396 data/jitl/loot_tables/entities/overseer_elder.json
 1f3fb2842a8712c9c2b3b2b2c7b72f6c3f107b44 data/jitl/loot_tables/entities/permafraust.json
+4776c3c26820da664b9a6af88aab493afaa8c95d data/jitl/loot_tables/entities/pet_robot.json
 be9ef0cf6a1c904382f983acc757aa7837e8a963 data/jitl/loot_tables/entities/purplian.json
 b3dc0cf5b9be22463814a38df363fb25b9a6665a data/jitl/loot_tables/entities/reaper.json
 890444229e7d479d34aaf0f3246e8bd5c81d6cac data/jitl/loot_tables/entities/red_tordo.json
+8c5772ab5272b17593e1063a3eb046d9f03716fb data/jitl/loot_tables/entities/robot.json
 cccfbb3bf60781fa63a6aed1e42186dd69b140cb data/jitl/loot_tables/entities/roc.json
 796169d751e848dad6ea04c1c391a3b2d2ea7b94 data/jitl/loot_tables/entities/rockite_golem.json
 8bab2bebc71fb9fb95a8ff247871f8858f7a4424 data/jitl/loot_tables/entities/rockite_smasher.json
@@ -621,6 +630,7 @@ b399eb179514a1c587929005ff222115f62148ed data/jitl/loot_tables/entities/sentry_k
 5df78bab10ed6f7f42a2a35c0ad7110230c88d3f data/jitl/loot_tables/entities/shimmerer.json
 f0f6ef598344daf72676ad34bffed02fefd9672e data/jitl/loot_tables/entities/shivering_bushwalker.json
 0ead697f97b934e53b317de2c69e6c78c26f0e4d data/jitl/loot_tables/entities/shivering_shrieker.json
+c71a301538a674953521b8cdead1f34c0fcf748f data/jitl/loot_tables/entities/shiverwolf.json
 80639f5a638c49ac3a8befed12990c143af88207 data/jitl/loot_tables/entities/sky_eel.json
 69b5d4a44e046fa8638a7f8b468d82793dc18b84 data/jitl/loot_tables/entities/sky_stalker.json
 336c4d23ff994d9761dde015403690e1f26e7add data/jitl/loot_tables/entities/small_hongo.json
@@ -638,6 +648,7 @@ dece2d5924f718591adbfad65dcf2adc7221dcf6 data/jitl/loot_tables/entities/staring_
 58e4ec5b456db4eff075b0db1a514444220d43ef data/jitl/loot_tables/entities/stinky.json
 aca69271a76388dfb3490fd23153f04614dd228c data/jitl/loot_tables/entities/stonewalker.json
 cfc37b32006bf4ee3d7c2784035094ddb54e2099 data/jitl/loot_tables/entities/surface_seer.json
+4fc35357718b149b0750fb44c370e3e72b35ca8f data/jitl/loot_tables/entities/swamp_fly.json
 ba94198bd8a56bd40b44d45f6dab3744696410cc data/jitl/loot_tables/entities/terragrow.json
 1506b1e8d8823dea8a52b72c86aeecaf76dcae03 data/jitl/loot_tables/entities/terranian_enchanter.json
 3e0586faea9d64e419eaf6672662d63f01d43a8c data/jitl/loot_tables/entities/terranian_protector.json

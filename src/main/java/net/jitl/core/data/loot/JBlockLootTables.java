@@ -68,6 +68,8 @@ public class JBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(JBlocks.ASHUAL_BLOCK);
         this.dropSelf(JBlocks.FIRESTONE_ORE);
         this.dropSelf(JBlocks.FIRESTONE_BLOCK);
+        this.dropSelf(JBlocks.GLACIAL_ROCK);
+        this.dropSelf(JBlocks.SWAMP_LAMP);
 
         this.add(JBlocks.BLAZIUM_ORE, (block) -> createOreDrop(block, JItems.RAW_BLAZIUM.get()));
         this.dropSelf(JBlocks.BLAZIUM_BLOCK);
@@ -393,6 +395,10 @@ public class JBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(JBlocks.DEPTHS_FURNACE);
         this.dropSelf(JBlocks.DEPTHS_GATE);
         this.add(JBlocks.DARK_SORCERER_SPAWNER, noDrop());
+        this.dropSelf(JBlocks.FLOOR_DEPTHS_CRYSTAL_BLUE);
+        this.dropSelf(JBlocks.FLOOR_DEPTHS_CRYSTAL_PINK);
+        this.dropSelf(JBlocks.FLOOR_DEPTHS_CRYSTAL_YELLOW);
+        this.dropSelf(JBlocks.FLOOR_DEPTHS_CRYSTAL_GREEN);
 
         this.dropSelf(JBlocks.CORBA_PORTAL_FRAME);
         this.add(JBlocks.CORBA_PORTAL, noDrop());

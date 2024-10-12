@@ -17,43 +17,58 @@
     }
   },
   "spawners": {
-    "monster": [
+    "creature": [
       {
         "type": "jitl:euca_hopper",
-        "weight": 5,
+        "maxCount": 2,
         "minCount": 1,
-        "maxCount": 2
-      },
+        "weight": 5
+      }
+    ],
+    "monster": [
       {
         "type": "jitl:euca_charger",
-        "weight": 15,
+        "maxCount": 2,
         "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "jitl:golder",
-        "weight": 15,
-        "minCount": 1,
-        "maxCount": 2
+        "weight": 15
       },
       {
         "type": "jitl:dynaster",
-        "weight": 15,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 15
+      },
+      {
+        "type": "jitl:golder",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 15
       }
     ]
   },
   "spawn_costs": {},
   "carvers": {},
   "features": [
+    [],
+    [
+      "jitl:euca_water"
+    ],
+    [
+      "jitl:euca_goldite_ruins"
+    ],
+    [],
+    [],
+    [],
+    [
+      "jitl:storon_ore",
+      "jitl:mekyum_ore"
+    ],
+    [],
+    [],
     [
       "jitl:euca_green_tree",
-      "jitl:storon_ore",
-      "jitl:mekyum_ore",
-      "jitl:euca_water",
-      "jitl:euca_goldite_ruins",
-      "jitl:goldite_veg"
+      "jitl:goldite_veg",
+      "jitl:goldite_stalks"
     ]
   ]
 }

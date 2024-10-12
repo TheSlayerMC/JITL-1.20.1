@@ -14,7 +14,7 @@ public class SpiritCrystalModel extends DefaultedEntityGeoModel<SpiritCrystal> {
 
     @Override
     public ResourceLocation getModelResource(SpiritCrystal object) {
-        return new ResourceLocation(JITL.MODID, "geo/spirit_crystal.json");
+        return new ResourceLocation(JITL.MODID, "geo/spirit_crystal.geo.json");
     }
 
     @Override

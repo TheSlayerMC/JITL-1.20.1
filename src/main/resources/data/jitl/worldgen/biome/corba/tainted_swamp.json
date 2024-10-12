@@ -17,68 +17,80 @@
     }
   },
   "spawners": {
-    "monster": [
-      {
-        "type": "jitl:nature_mage",
-        "weight": 3,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "jitl:leaf_blower",
-        "weight": 3,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "jitl:surface_seer",
-        "weight": 4,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "jitl:wood_creature",
-        "weight": 4,
-        "minCount": 1,
-        "maxCount": 1
-      },
+    "creature": [
       {
         "type": "jitl:corbanian_mollusk",
-        "weight": 3,
+        "maxCount": 2,
         "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "jitl:stinky",
-        "weight": 2,
-        "minCount": 5,
-        "maxCount": 10
-      },
-      {
-        "type": "jitl:smelly",
-        "weight": 4,
-        "minCount": 1,
-        "maxCount": 1
+        "weight": 20
       },
       {
         "type": "jitl:swamp_fly",
-        "weight": 20,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 40
+      }
+    ],
+    "monster": [
+      {
+        "type": "jitl:nature_mage",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 3
+      },
+      {
+        "type": "jitl:leaf_blower",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 3
+      },
+      {
+        "type": "jitl:surface_seer",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 4
+      },
+      {
+        "type": "jitl:wood_creature",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 4
+      },
+      {
+        "type": "jitl:stinky",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 2
+      },
+      {
+        "type": "jitl:smelly",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 4
       }
     ]
   },
   "spawn_costs": {},
   "carvers": {},
   "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
     [
       "jitl:orbadite_ore",
-      "jitl:gorbite_ore",
+      "jitl:gorbite_ore"
+    ],
+    [],
+    [],
+    [
       "jitl:corba_tall_grass",
       "jitl:corba_tall_plants",
-      "jitl:corba_lily_pad",
+      "jitl:corba_swamp_tree",
       "jitl:bogshrooms",
-      "jitl:corba_swamp_tree"
+      "jitl:corba_lily_pad"
     ]
   ]
 }

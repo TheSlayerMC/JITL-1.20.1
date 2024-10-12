@@ -28,6 +28,49 @@
       "jitl:misc/dialog_basic"
     ]
   },
+
+  "misc.portal.euca": {
+    "sounds": [
+      "jitl:misc/portal/euca_portal"
+    ]
+  },
+
+  "misc.portal.frozen": {
+    "sounds": [
+      "jitl:misc/portal/frozen_portal"
+    ]
+  },
+
+  "misc.portal.boil": {
+    "sounds": [
+      "jitl:misc/portal/boil_portal"
+    ]
+  },
+
+  "misc.portal.depths": {
+    "sounds": [
+      "jitl:misc/portal/depths_portal"
+    ]
+  },
+
+  "misc.portal.corba": {
+    "sounds": [
+      "jitl:misc/portal/corba_portal"
+    ]
+  },
+
+  "misc.portal.cloudia": {
+    "sounds": [
+      "jitl:misc/portal/cloudia_portal"
+    ]
+  },
+
+  "misc.portal.senterian": {
+    "sounds": [
+      "jitl:misc/portal/senterian_portal"
+    ]
+  },
+
   "block.icicle.break": {
     "sounds": [
       "jitl:blocks/break/icicle_1",
@@ -361,6 +404,25 @@
     ]
   },
 
+  "entities.ferret": {
+    "sounds": [
+      "jitl:entities/ferret1",
+      "jitl:entities/ferret2",
+      "jitl:entities/ferret3"
+    ]
+  },
+  "entities.ferret_hurt": {
+    "sounds": [
+      "jitl:entities/ferret_hurt"
+    ]
+  },
+  "entities.ferret_death": {
+    "sounds": [
+      "jitl:entities/ferret_death"
+    ]
+  },
+
+
   "entities.spiked_beast": {
     "sounds": [
       "jitl:entities/spiked_beast"
@@ -597,9 +659,9 @@
   },
   "entities.blazier_idle":{
     "sounds": [
-      "jitl:blazier_idle_0",
-      "jitl:blazier_idle_1",
-      "jitl:blazier_idle_2"
+      "jitl:entities/blazier_idle_0",
+      "jitl:entities/blazier_idle_1",
+      "jitl:entities/blazier_idle_2"
     ]},
   "entities.blazier_hurt":{
     "sounds": [
@@ -668,10 +730,10 @@
     "sounds": [
       "jitl:entities/rockite_smasher_hurt_0",
       "jitl:entities/rockite_smasher_hurt_1",
-	   "jitl:entities/rockite_smasher_hurt_2"
+      "jitl:entities/rockite_smasher_hurt_2"
     ]
   },
-    "entities.rockite_smasher_death": {
+  "entities.rockite_smasher_death": {
     "sounds": [
       "jitl:entities/rockite_smasher_death"
     ]
@@ -763,45 +825,87 @@
     ]
   },
 
-  "misc.portal.euca": {
+  "music.dim.euca": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/euca_portal"
+      {
+        "name": "jitl:music/dimensions/euca/euca_1",
+        "stream": true
+      },
+      {
+        "name": "jitl:music/dimensions/euca/euca_2",
+        "stream": true
+      },
+      {
+        "name": "jitl:music/dimensions/euca/euca_3",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.frozen": {
+  "music.dim.boil": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/frozen_portal"
+      {
+        "name": "jitl:music/dimensions/boil/boil_1",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.boil": {
+  "music.dim.cloudia": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/boil_portal"
+      {
+        "name": "jitl:music/dimensions/cloudia/cloudia_1",
+        "stream": true
+      },
+      {
+        "name": "jitl:music/dimensions/cloudia/cloudia_2",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.depths": {
+  "music.dim.corba": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/depths_portal"
+      {
+        "name": "jitl:music/dimensions/corba/corba_1",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.corba": {
+  "music.dim.depths": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/corba_portal"
+      {
+        "name": "jitl:music/dimensions/depths/depths_1",
+        "stream": true
+      },
+      {
+        "name": "jitl:music/dimensions/depths/depths_2",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.cloudia": {
+  "music.dim.frozen": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/cloudia_portal"
+      {
+        "name": "jitl:music/dimensions/frozen/frozen_1",
+        "stream": true
+      },
+      {
+        "name": "jitl:music/dimensions/frozen/frozen_2",
+        "stream": true
+      }
     ]
   },
-
-  "misc.portal.senterian": {
+  "music.dim.terrania": {
+    "replace": false,
     "sounds": [
-      "jitl:misc/portal/senterian_portal"
+      {
+        "name": "jitl:music/dimensions/terrania/terrania_1",
+        "stream": true
+      }
     ]
   },
 

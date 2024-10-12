@@ -10,30 +10,32 @@
     "water_fog_color": 4262144
   },
   "spawners": {
-    "monster": [
+    "creature": [
       {
         "type": "jitl:flame_lotus",
-        "weight": 1,
+        "maxCount": 50,
         "minCount": 1,
-        "maxCount": 3
-      },
+        "weight": 2
+      }
+    ],
+    "monster": [
       {
-        "type": "jitl:burning_light",
-        "weight": 1,
+        "type": "jitl:magma_blaze",
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 2
       },
       {
         "type": "jitl:frightener",
-        "weight": 1,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 2
       },
       {
-        "type": "jitl:magma_blaze",
-        "weight": 1,
+        "type": "jitl:burning_light",
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 2
       }
     ]
   },
@@ -44,11 +46,21 @@
   },
   "spawn_costs": {},
   "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "jitl:ashual_ore",
+      "jitl:blazium_ore"
+    ],
+    [],
+    [],
     [
       "jitl:boil_fire",
       "jitl:boil_veg",
-      "jitl:ashual_ore",
-      "jitl:blazium_ore",
       "jitl:boil_undergrowth"
     ]
   ]

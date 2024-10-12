@@ -5,7 +5,8 @@ import net.jitl.common.entity.misc.Sentacoin;
 import net.jitl.common.entity.projectile.*;
 import net.jitl.common.items.*;
 import net.jitl.common.items.base.*;
-import net.jitl.common.items.curios.HeartContainerItem;
+import net.jitl.common.items.curios.HealingItem;
+import net.jitl.common.items.HeartContainerItem;
 import net.jitl.common.items.curios.JCurioItem;
 import net.jitl.common.items.curios.amulet.CloudwalkingAmuletItem;
 import net.jitl.common.items.curios.amulet.DynasterAmuletItem;
@@ -89,7 +90,6 @@ public class JItems {
     public static final RegistryObject<Item> GREEN_GEM = registerNormalItem("green_gem", "Green Gem");
     public static final RegistryObject<Item> BLUE_GEM = registerNormalItem("blue_gem", "Blue Gem");
     public static final RegistryObject<Item> AQUA_STONE = registerNormalItem("aqua_stone", "Aqua Stone");
-    public static final RegistryObject<Item> HEART_STONE = registerNormalItem("heart_stone", "Heart Stone");
     public static final RegistryObject<Item> HELL_TURTLE_SHELL = registerNormalItem("hell_turtle_shell", "Hell Turtle Shell");
     public static final RegistryObject<Item> OVER_SEEING_EYE = registerNormalItem("over_seeing_eye", "Over Seeing Eye");
     public static final RegistryObject<Item> OVER_SEEING_TABLET = registerNormalItem("over_seeing_tablet", "Over Seeing tablet");
@@ -642,6 +642,14 @@ public class JItems {
     public static final RegistryObject<Item> RING_OF_NAUSEA = registerNormalItem("ring_of_nausea", "Ring of Nausea", () -> new JRingItem(itemProps().stacksTo(1)).effect(() -> MobEffects.CONFUSION));
     public static final RegistryObject<Item> RING_OF_SLOWNESS = registerNormalItem("ring_of_slowness", "Ring of Slowness", () -> new JRingItem(itemProps().stacksTo(1)).effect(() -> MobEffects.MOVEMENT_SLOWDOWN));
     public static final RegistryObject<Item> RING_OF_WITHERING = registerNormalItem("ring_of_withering", "Ring of Withering", () -> new JRingItem(itemProps().stacksTo(1)).effect(() -> MobEffects.WITHER));
+    public static final RegistryObject<Item> SKULL_OF_DECAY = registerNormalItem("skull_of_decay", "Skull Of Decay", () -> new JCurioItem(JItems.itemProps().stacksTo(1).durability(100)));
+    public static final RegistryObject<Item> DEATH_CAP = registerNormalItem("death_cap", "Death Cap", () -> new JCurioItem(JItems.itemProps().stacksTo(1).durability(100)));
+
+    public static final RegistryObject<Item> MINERS_PEARL = registerNormalItem("miners_pearl", "Miner's Pearl", () -> new MinersPearl(JItems.itemProps().stacksTo(1).durability(10)));
+    public static final RegistryObject<Item> MOON_OF_ETERNAL_NIGHT = registerNormalItem("moon_of_eternal_night", "Moon of Eternal Night", () -> new EternalNight(JItems.itemProps().stacksTo(1).durability(10)));
+    public static final RegistryObject<Item> HEART_STONE = registerNormalItem("heart_stone", "Heart Stone", () -> new HealingItem(-1F));
+
+    public static final RegistryObject<Item> PET_FOOD = registerNormalItem("pet_food", "Pet Food");
 
     public static final RegistryObject<Item> LOOT_POUCH = registerNormalItem("loot_pouch", "Loot Pouch", () -> new LootItem(LootItem.LootTier.NORMAL));
     public static final RegistryObject<Item> GOLD_LOOT_POUCH = registerNormalItem("gold_loot_pouch", "Loot Pouch", () -> new LootItem(LootItem.LootTier.GOLD));
@@ -672,6 +680,8 @@ public class JItems {
     public static final RegistryObject<Item> SENTRY_KING_ORB = registerNormalItem("sentry_king_orb", "Sentry King Orb", BossSpawnerItem::new);
     public static final RegistryObject<Item> MYSTERIOUS_DISK = registerNormalItem("mysterious_disk", "Mysterious Disk", BossSpawnerItem::new);
     public static final RegistryObject<Item> ENCHANTED_TERRASTAR = registerNormalItem("enchanted_terrastar", "Enchanted Terrastar", BossSpawnerItem::new);
+
+    public static final RegistryObject<Item> PET_ROBOT_SPAWNER = registerNormalItem("pet_robot_spawner", "Pet Robot Egg", PetSpawnerItem::new);
 
     public static final RegistryObject<Item> SENTACOIN = registerNormalItem("sentacoin", "Sentacoin", () -> new SentacoinItem(Sentacoin.Type.COIN));
     public static final RegistryObject<Item> SENTACOIN_BAG = register("sentacoin_bag", "Sentacoin Bag", () -> new SentacoinItem(Sentacoin.Type.BAG), ItemType.MODEL);

@@ -26,6 +26,7 @@ import net.jitl.common.entity.frozen.npc.FrozenGuardian;
 import net.jitl.common.entity.misc.Sentacoin;
 import net.jitl.common.entity.nether.*;
 import net.jitl.common.entity.overworld.*;
+import net.jitl.common.entity.overworld.Robot;
 import net.jitl.common.entity.overworld.npc.Mage;
 import net.jitl.common.entity.overworld.npc.OverworldSentryStalker;
 import net.jitl.common.entity.overworld.npc.RockiteGolem;
@@ -49,6 +50,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(modid = JITL.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -134,6 +136,9 @@ public class JEntities {
     public static final RegistryObject<EntityType<Cavurn>> CAVURN_TYPE = registerEntity(Cavurn::new, "cavurn", "Cavurn", 1F, 2F, OVERWORLD_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<Stonewalker>> STONEWALKER_TYPE = registerEntity(Stonewalker::new, "stonewalker", "Stonewalker", 1F, 1.2F, OVERWORLD_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<OverworldSentryStalker>> NEUTRAL_SENTRY_STALKER_TYPE = registerEntity(OverworldSentryStalker::new, "neutral_sentry_stalker", "Neutral Sentry Stalker", 1F, 2.75F, OVERWORLD_COLOR, NEUTRAL_COLOR);
+    public static final RegistryObject<EntityType<Robot>> ROBOT_TYPE = registerEntity(Robot::new, "robot", "Robot", 1F, 2F, OVERWORLD_COLOR, HOSTILE_COLOR);
+    public static final RegistryObject<EntityType<PetRobot>> PET_ROBOT_TYPE = registerEntity(PetRobot::new, "pet_robot", "Pet Robot", 0.5F, 1F, OVERWORLD_COLOR, NEUTRAL_COLOR);
+    public static final RegistryObject<EntityType<Ferret>> FERRET_TYPE = registerEntity(Ferret::new, "ferret", "Ferret", 0.5F, 0.5F, OVERWORLD_COLOR, NEUTRAL_COLOR, MobCategory.CREATURE);
 
     //NETHER MOBS
     public static final RegistryObject<EntityType<Witherspine>> WITHERSPINE_TYPE = registerEntity(Witherspine::new, "witherspine", "Witherspine", 1F, 3.75F, NETHER_COLOR, HOSTILE_COLOR);
@@ -179,6 +184,7 @@ public class JEntities {
     public static final RegistryObject<EntityType<ShiveringBushwalker>> SHIVERING_BUSHWALKER_TYPE = registerEntity(ShiveringBushwalker::new, "shivering_bushwalker", "Shivering Bushwalker", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<ShiveringShrieker>> SHIVERING_SHRIEKER_TYPE = registerEntity(ShiveringShrieker::new, "shivering_shrieker", "Shivering Shrieker", 1F, 2F, FROZEN_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<Capybara>> CAPYBARA_TYPE = registerEntity(Capybara::new, "capybara", "Capybara", 1F, 2F, FROZEN_COLOR, NEUTRAL_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<Shiverwolf>> SHIVERWOLF_TYPE = registerEntity(Shiverwolf::new, "shiverwolf", "Shiverwolf", 1F, 2F, FROZEN_COLOR, NEUTRAL_COLOR, MobCategory.CREATURE);
 
     //DEPTHS MOBS
     public static final RegistryObject<EntityType<Darkener>> DARKENER_TYPE = registerEntity(Darkener::new, "darkener", "Darkener", 1F, 1F, DEPTHS_COLOR, NEUTRAL_COLOR);
@@ -351,6 +357,7 @@ public class JEntities {
         event.put(SHIVERING_SHRIEKER_TYPE.get(), ShiveringShrieker.createAttributes());
         event.put(FROZEN_TROLL_TYPE.get(), FrozenTrollEntity.createAttributes());
         event.put(CAPYBARA_TYPE.get(), Capybara.createAttributes());
+        event.put(SHIVERWOLF_TYPE.get(), Capybara.createAttributes());
 
         event.put(CORBANIAN_MOLLUSK_TYPE.get(), CorbanianMollusk.createAttributes());
         event.put(SMELLY_TYPE.get(), Smelly.createAttributes());
@@ -393,6 +400,9 @@ public class JEntities {
         event.put(MINI_SENTRY_LORD_TYPE.get(), MiniSentryLord.createAttributes());
         event.put(MINI_SENTRY_WALKER_TYPE.get(), MiniSentryWalker.createAttributes());
         event.put(NEUTRAL_SENTRY_STALKER_TYPE.get(), OverworldSentryStalker.createAttributes());
+        event.put(ROBOT_TYPE.get(), Robot.createAttributes());
+        event.put(PET_ROBOT_TYPE.get(), PetRobot.createAttributes());
+        event.put(FERRET_TYPE.get(), Ferret.createAttributes());
     }
 
     @SubscribeEvent
@@ -413,6 +423,11 @@ public class JEntities {
         setCustomSpawn(event, SURFACE_SEER_TYPE, SurfaceSeer::checkSpawn);
         setCustomSpawn(event, BOOM_TYPE, BoomBoom::checkSpawn);
 
+        setDefaultSpawn(event, CLOUD_GHOST_TYPE);
+        setDefaultSpawn(event, STARLIGHT_GOLEM_TYPE);
+        setDefaultSpawn(event, STARLIGHT_TRANSPORTER_TYPE);
+        setDefaultSpawn(event, STARLIGHT_WALKER_TYPE);
+
         setDefaultSpawn(event, SWAMP_FLY_TYPE);
 
         setDefaultMonsterSpawn(event, FLORO_TYPE);
@@ -426,6 +441,9 @@ public class JEntities {
         setDefaultMonsterSpawn(event, SAND_CRAWLER_TYPE);
         setDefaultSpawn(event, JUNGLE_TURTLE_TYPE);
         setDefaultSpawn(event, NEUTRAL_SENTRY_STALKER_TYPE);
+        setDefaultSpawn(event, ROBOT_TYPE);
+        setDefaultSpawn(event, PET_ROBOT_TYPE);
+        setDefaultSpawn(event, FERRET_TYPE);
 
         setDefaultMonsterSpawn(event, WITHERSPINE_TYPE);
         setDefaultSpawn(event, HELL_TURTLE_TYPE);
@@ -436,7 +454,7 @@ public class JEntities {
         setDefaultMonsterSpawn(event, HELL_SERPENT_TYPE);
         setDefaultMonsterSpawn(event, OKOLOO_TYPE);
 
-        setDefaultMonsterSpawn(event, FLAME_LOTUS_TYPE);
+        setDefaultSpawn(event, FLAME_LOTUS_TYPE);
         setDefaultMonsterSpawn(event, BURNING_LIGHT_TYPE);
         setDefaultMonsterSpawn(event, MAGMA_BLAZE_TYPE);
         setDefaultMonsterSpawn(event, FRIGHTENER_TYPE);
@@ -458,26 +476,23 @@ public class JEntities {
 
         setDefaultSpawn(event, ESKIMO_TYPE);
         setDefaultMonsterSpawn(event, ICE_GOLEM_TYPE);
-        setDefaultMonsterSpawn(event, FROZEN_TROLL_TYPE);
+        setDefaultSpawn(event, FROZEN_TROLL_TYPE);
         setDefaultMonsterSpawn(event, FROZEN_FROSTBITER_TYPE);
         setDefaultMonsterSpawn(event, PERMAFRAUST_TYPE);
         setDefaultMonsterSpawn(event, SHIVERING_BUSHWALKER_TYPE);
         setDefaultMonsterSpawn(event, SHIVERING_SHRIEKER_TYPE);
-        setDefaultMonsterSpawn(event, CAPYBARA_TYPE);
+        setDefaultSpawn(event, CAPYBARA_TYPE);
+        setDefaultSpawn(event, SHIVERWOLF_TYPE);
 
-        setDefaultMonsterSpawn(event, CLOUD_GHOST_TYPE);
         setDefaultSpawn(event, STARLIGHT_BLACKSMITH_TYPE);
         setDefaultSpawn(event, STARLIGHT_VILLAGER_TYPE);
-        setDefaultMonsterSpawn(event, STARLIGHT_GOLEM_TYPE);
-        setDefaultMonsterSpawn(event, STARLIGHT_TRANSPORTER_TYPE);
-        setDefaultMonsterSpawn(event, STARLIGHT_WALKER_TYPE);
-        setDefaultMonsterSpawn(event, AERO_LOTUS_TYPE);
+        setDefaultSpawn(event, AERO_LOTUS_TYPE);
 
         setDefaultSpawn(event, GREEN_TORDO_TYPE);
         setDefaultSpawn(event, RED_TORDO_TYPE);
         setDefaultSpawn(event, HOODED_TYPE);
         setDefaultSpawn(event, OVERGROWN_MERCHANT_TYPE);
-        setDefaultMonsterSpawn(event, CORBANIAN_MOLLUSK_TYPE);
+        setDefaultSpawn(event, CORBANIAN_MOLLUSK_TYPE);
         setDefaultMonsterSpawn(event, LEAF_BLOWER_TYPE);
         setDefaultMonsterSpawn(event, NATURE_MAGE_TYPE);
         setDefaultMonsterSpawn(event, SMELLY_TYPE);

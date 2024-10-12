@@ -1,6 +1,11 @@
 package net.jitl.core.init.internal;
 
 import net.jitl.core.init.JITL;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.Music;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -103,6 +108,14 @@ public class JSounds {
     public static final RegistryObject<SoundEvent> EUCA_AMBIENCE = registerSound("music.euca.ambience");
     public static final RegistryObject<SoundEvent> GOLD_PLAINS_MUSIC = registerSound("music.biome.gold_plains");
 
+    public static final RegistryObject<SoundEvent> EUCA_MUSIC = registerSound("music.dim.euca");
+    public static final RegistryObject<SoundEvent> BOIL_MUSIC = registerSound("music.dim.boil");
+    public static final RegistryObject<SoundEvent> CLOUDIA_MUSIC = registerSound("music.dim.cloudia");
+    public static final RegistryObject<SoundEvent> CORBA_MUSIC = registerSound("music.dim.corba");
+    public static final RegistryObject<SoundEvent> DEPTHS_MUSIC = registerSound("music.dim.depths");
+    public static final RegistryObject<SoundEvent> FROZEN_MUSIC = registerSound("music.dim.frozen");
+    public static final RegistryObject<SoundEvent> TERRANIA_MUSIC = registerSound("music.dim.terrania");
+
     public static final RegistryObject<SoundEvent> HAUNT_MUSKIE_2 = registerSound("music.haunt_muskie_2");
     public static final RegistryObject<SoundEvent> SNOWFLAKESSS = registerSound("music.snowflakesss");
 
@@ -143,6 +156,10 @@ public class JSounds {
     public static final RegistryObject<SoundEvent> ROBOT = registerSound("entities.robot");
     public static final RegistryObject<SoundEvent> ROBOT_HURT = registerSound("entities.robot_hurt");
     public static final RegistryObject<SoundEvent> ROBOT_DEATH = registerSound("entities.robot_death");
+
+    public static final RegistryObject<SoundEvent> FERRET = registerSound("entities.ferret");
+    public static final RegistryObject<SoundEvent> FERRET_HURT = registerSound("entities.ferret_hurt");
+    public static final RegistryObject<SoundEvent> FERRET_DEATH = registerSound("entities.ferret_death");
 
     public static final RegistryObject<SoundEvent> SPIKED_BEAST = registerSound("entities.spiked_beast");
     public static final RegistryObject<SoundEvent> SPIKED_BEAST_HURT = registerSound("entities.spiked_beast_hurt");

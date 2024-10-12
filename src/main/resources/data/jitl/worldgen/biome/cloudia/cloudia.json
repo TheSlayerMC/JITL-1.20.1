@@ -18,54 +18,61 @@
     }
   },
   "spawners": {
+    "creature": [
+      {
+        "type": "jitl:aero_lotus",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 15
+      }
+    ],
     "monster": [
       {
         "type": "jitl:cloud_ghost",
-        "weight": 1,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 1
       },
       {
         "type": "jitl:sky_eel",
-        "weight": 1,
+        "maxCount": 1,
         "minCount": 1,
-        "maxCount": 1
+        "weight": 1
       },
       {
         "type": "jitl:starlight_golem",
-        "weight": 1,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 1
       },
       {
         "type": "jitl:starlight_transporter",
-        "weight": 1,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
+        "weight": 1
       },
       {
         "type": "jitl:starlight_walker",
-        "weight": 1,
+        "maxCount": 3,
         "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "jitl:aero_lotus",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
+        "weight": 1
       }
     ]
   },
   "spawn_costs": {},
   "carvers": {},
   "features": [
+    [],
+    [],
+    [
+      "jitl:cloudia_terrain"
+    ],
+    [],
     [
       "jitl:blue_cloudia_clouds",
       "jitl:light_blue_cloudia_clouds",
       "jitl:pink_cloudia_clouds",
-      "jitl:cloudia_island",
-      "jitl:cloudia_terrain"
+      "jitl:cloudia_island"
     ]
   ]
 }

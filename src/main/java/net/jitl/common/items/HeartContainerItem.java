@@ -1,7 +1,8 @@
-package net.jitl.common.items.curios;
+package net.jitl.common.items;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
+import net.jitl.common.items.curios.JCurioItem;
 import net.jitl.core.init.JITL;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;

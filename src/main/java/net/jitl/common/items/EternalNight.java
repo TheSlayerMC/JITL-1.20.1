@@ -3,6 +3,7 @@ package net.jitl.common.items;
 import net.jitl.client.ChatUtils;
 import net.jitl.common.capability.essence.PlayerEssenceProvider;
 import net.jitl.common.items.base.JItem;
+import net.jitl.core.config.JCommonConfig;
 import net.jitl.core.helper.IEssenceItem;
 import net.jitl.core.init.internal.JSounds;
 import net.minecraft.ChatFormatting;
@@ -36,16 +37,19 @@ public class EternalNight extends JItem implements IEssenceItem {
     public void releaseUsing(@NotNull ItemStack stack, @NotNull Level world, @NotNull LivingEntity entity, int timeLeft) {
         if(entity instanceof Player player) {
             if(!world.isClientSide) {
-                ServerLevel serverLevel = (ServerLevel)world;
-                player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 2));
-                player.getCapability(PlayerEssenceProvider.PLAYER_ESSENCE).ifPresent(essence -> {
-                    if (essence.consumeEssence(player, 10)) {
-                        serverLevel.setDayTime(18000);
-                        stack.hurtAndBreak(1, player, item -> { });
-                        world.playSound(player, player.getOnPos(), JSounds.STAFF_0.get(), SoundSource.BLOCKS);
-                        ChatUtils.sendColouredTranslatedMessage(player, ChatFormatting.DARK_PURPLE, "jitl.message.item.eternal_night", player.getDisplayName());
-                    }
-                });
+                if (JCommonConfig.ENABLE_ETERNAL_LIGHT.get()) {
+                    ServerLevel serverLevel = (ServerLevel) world;
+                    player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 2));
+                    player.getCapability(PlayerEssenceProvider.PLAYER_ESSENCE).ifPresent(essence -> {
+                        if (essence.consumeEssence(player, 10)) {
+                            serverLevel.setDayTime(18000);
+                            stack.hurtAndBreak(1, player, item -> {
+                            });
+                            world.playSound(player, player.getOnPos(), JSounds.STAFF_0.get(), SoundSource.BLOCKS);
+                            ChatUtils.sendColouredTranslatedMessage(player, ChatFormatting.DARK_PURPLE, "jitl.message.item.eternal_night", player.getDisplayName());
+                        }
+                    });
+                }
             }
         }
     }

@@ -17,7 +17,7 @@ public class JerCompat {
         IMobRegistry mob = jer.getMobRegistry();
 
         if(mob != null) {
-            mob.register(JEntities.BROWN_HONGO_TYPE.get(), JITL.rl("brown_hongo"));
+           // mob.register(JEntities.BROWN_HONGO_TYPE.get().create(jer.getLevel()), JITL.rl("brown_hongo"));
 //            addMob(EnumKnowledge.OVERWORLD, "big_hongo", "Forest like", true, MobStats.BIG_HONGO_HEALTH, MobStats.BIG_HONGO_DAMAGE, "Hongoshrooms");
 //            addMob(EnumKnowledge.OVERWORLD, "medium_hongo", "Forest like", true, MobStats.MEDIUM_HONGO_HEALTH, MobStats.MEDIUM_HONGO_DAMAGE, "Hongoshrooms");
 //            addMob(EnumKnowledge.OVERWORLD, "small_hongo", "Forest like", true, MobStats.SMALL_HONGO_HEALTH, MobStats.SMALL_HONGO_DAMAGE, "Hongoshrooms");

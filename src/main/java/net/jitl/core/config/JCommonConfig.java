@@ -13,6 +13,7 @@ public class JCommonConfig {
 	public static final ForgeConfigSpec.ConfigValue<Integer> GOLD_LOOT_CHANCE;
 	public static final ForgeConfigSpec.ConfigValue<Integer> DIAMOND_LOOT_CHANCE;
 	public static final ForgeConfigSpec.BooleanValue ENABLE_BOOM_SPAWN;
+	public static final ForgeConfigSpec.BooleanValue ENABLE_ETERNAL_LIGHT;
 
 	static {
 		BUILDER.push("Common configs for JITL");
@@ -25,6 +26,7 @@ public class JCommonConfig {
 		DIAMOND_LOOT_CHANCE = BUILDER.comment("Diamond Loot Chance").define("Diamond Loot Chance 1 out of: ", 200);
 
 		ENABLE_BOOM_SPAWN = BUILDER.comment("Can BoomBoom spawn naturally").define("Value: ", true);
+		ENABLE_ETERNAL_LIGHT = BUILDER.comment("Can use Eternal Light to change time to night").define("Value: ", true);
 
 		BUILDER.pop();
 		SPEC = BUILDER.build();

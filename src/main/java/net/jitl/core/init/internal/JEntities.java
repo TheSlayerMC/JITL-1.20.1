@@ -96,8 +96,8 @@ public class JEntities {
     public static final RegistryObject<EntityType<JBoat>> JBOAT_TYPE = registerRawEntity(JBoat::new, "jboat", "Journey Boat", 1.375F, 0.5625F);
     public static final RegistryObject<EntityType<Sentacoin>> SENTACOIN_TYPE = registerRawEntity(Sentacoin::new, "sentacoin", "Sentacoin", 0.1F, 0.1F);
     public static final RegistryObject<EntityType<Sentacoin>> SENTACOIN_BAG_TYPE = registerRawEntity(Sentacoin::new, "sentacoin_bag", "Sentacoin Bag", 0.375F, 0.375F);
-    public static final RegistryObject<EntityType<BossCrystal>> BOSS_CRYSTAL_TYPE = registerEntity(BossCrystal::new, "boss_crystal", "Boss Crystal", 0.5F, 0.5F, OVERWORLD_COLOR, HOSTILE_COLOR);
-    public static final RegistryObject<EntityType<SpiritCrystal>> SPIRIT_CRYSTAL_TYPE = registerEntity(SpiritCrystal::new, "spirit_crystal", "Spirit Crystal", 1F, 2F, CORBA_COLOR, PASSIVE_COLOR);
+    public static final RegistryObject<EntityType<BossCrystal>> BOSS_CRYSTAL_TYPE = registerEntity(BossCrystal::new, "boss_crystal", "Boss Crystal", 0.5F, 0.5F);
+    public static final RegistryObject<EntityType<SpiritCrystal>> SPIRIT_CRYSTAL_TYPE = registerEntity(SpiritCrystal::new, "spirit_crystal", "Spirit Crystal", 1F, 2F);
 
     //BOSS MOBS
     public static final RegistryObject<EntityType<TowerGuardian>> TOWER_GUARDIAN_TYPE = registerEntity(TowerGuardian::new, "tower_guardian", "Tower Guardian", 2F, 3.5F, OVERWORLD_COLOR, BOSS_COLOR);
@@ -246,6 +246,13 @@ public class JEntities {
     private static <T extends Mob> RegistryObject<EntityType<T>> registerEntity(EntityType.EntityFactory<T> factory, String name, String lang, float width, float height, int backgroundColor, int highlightColor, MobCategory category) {
         RegistryObject<EntityType<T>> entity = REGISTRY.register(name, () -> EntityType.Builder.of(factory, category).sized(width, height).build(new ResourceLocation(JITL.MODID, name).toString()));
         JItems.register(name + "_spawn_egg" , lang + " Spawn Egg", () -> new ForgeSpawnEggItem(entity, backgroundColor, highlightColor, JItems.itemProps()), JItems.ItemType.SPAWN_EGG);
+        entityName.add(name);
+        entityLangName.add(lang);
+        return entity;
+    }
+
+    private static <T extends Mob> RegistryObject<EntityType<T>> registerEntity(EntityType.EntityFactory<T> factory, String name, String lang, float width, float height) {
+        RegistryObject<EntityType<T>> entity = REGISTRY.register(name, () -> EntityType.Builder.of(factory, MobCategory.AMBIENT).sized(width, height).build(new ResourceLocation(JITL.MODID, name).toString()));
         entityName.add(name);
         entityLangName.add(lang);
         return entity;

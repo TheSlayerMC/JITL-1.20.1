@@ -97,7 +97,7 @@ public class PlayerEssence {
     }
 
     public void sendPacket(Player player) {
-        if(player != null && player instanceof ServerPlayer) {
+        if(player instanceof ServerPlayer) {
             JNetworkRegistry.INSTANCE.sendTo(new PacketEssenceBar(this), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
         }
     }

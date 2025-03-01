@@ -178,9 +178,9 @@ public class JBlocks {
     public static final RegistryObject<Block> FLAIRIUM_ORE = register("flairium_ore", "Flairium Ore", JBlockProperties.STONE);
     public static final RegistryObject<Block> FLAIRIUM_BLOCK = register("flairium_block", "Flairium Block", JBlockProperties.STONE);
 
-    public static final RegistryObject<Block> VERDITE_ORE = register("verdite_ore", "Verdite Ore", JBlockProperties.STONE);
-    public static final RegistryObject<Block> DEEPSLATE_VERDITE_ORE = register("deepslate_verdite_ore", "Deepslate Verdite Ore", JBlockProperties.STONE);
-    public static final RegistryObject<Block> VERDITE_BLOCK = register("verdite_block", "Verdite Block", JBlockProperties.STONE);
+//    public static final RegistryObject<Block> VERDITE_ORE = register("verdite_ore", "Verdite Ore", JBlockProperties.STONE);
+//    public static final RegistryObject<Block> DEEPSLATE_VERDITE_ORE = register("deepslate_verdite_ore", "Deepslate Verdite Ore", JBlockProperties.STONE);
+//    public static final RegistryObject<Block> VERDITE_BLOCK = register("verdite_block", "Verdite Block", JBlockProperties.STONE);
 
     public static final RegistryObject<Block> ORBADITE_ORE = register("orbadite_ore", "Orbadite Ore", JBlockProperties.STONE);
     public static final RegistryObject<Block> ORBADITE_BLOCK = register("orbadite_block", "Orbadite Block", JBlockProperties.STONE);
@@ -698,22 +698,22 @@ public class JBlocks {
     public static final RegistryObject<Block> TOTEM_SCARED = registerTotemBlock("totem_scared", "Scared Totem");
     
     //OVERWORLD
-    public static final RegistryObject<Block> TOMATO_CROP = registerCropBlock("tomato_crop", "Tomato", 8, TomatoCropBlock::new);
-    public static final RegistryObject<Block> FLORO_PEDAL_CROP = registerCropBlock("floro_pedal_crop", "Floro Pedal", 8, FloroCropBlock::new);
-    public static final RegistryObject<Block> REDCURRANT_BUSH = registerGrowingBushBlock("redcurrant_bush", "Redcurrant Bush", () -> new RedcurrantBushBlock(JBlockProperties.GROWING_BUSH));
-    public static final RegistryObject<Block> BRADBERRY_BUSH = registerGrowingBushBlock("bradberry_bush", "Bradberry Bush", () -> new BradberryBushBlock(JBlockProperties.GROWING_BUSH));
+    public static final RegistryObject<BushBlock> TOMATO_CROP = registerCropBlock("tomato_crop", "Tomato", 8, TomatoCropBlock::new);
+    public static final RegistryObject<BushBlock> FLORO_PEDAL_CROP = registerCropBlock("floro_pedal_crop", "Floro Pedal", 8, FloroCropBlock::new);
+    public static final RegistryObject<BushBlock> REDCURRANT_BUSH = registerGrowingBushBlock("redcurrant_bush", "Redcurrant Bush", () -> new RedcurrantBushBlock(JBlockProperties.GROWING_BUSH));
+    public static final RegistryObject<BushBlock> BRADBERRY_BUSH = registerGrowingBushBlock("bradberry_bush", "Bradberry Bush", () -> new BradberryBushBlock(JBlockProperties.GROWING_BUSH));
 
     //EUCA
-    public static final RegistryObject<Block> ZATPEDAL_CROP = registerCropBlock("zatpedal_crop", "Zatpedal", 8, ZatpedalCropBlock::new);
-    public static final RegistryObject<Block> SPINEBERRY_CROP = registerCropBlock("spineberry_crop", "Spineberry", 8, SpineberryCropBlock::new);
+    public static final RegistryObject<BushBlock> ZATPEDAL_CROP = registerCropBlock("zatpedal_crop", "Zatpedal", 8, ZatpedalCropBlock::new);
+    public static final RegistryObject<BushBlock> SPINEBERRY_CROP = registerCropBlock("spineberry_crop", "Spineberry", 8, SpineberryCropBlock::new);
 
     //DEPTHS
-    public static final RegistryObject<Block> CRAKEBULB_CROP = registerCropBlock("crakebulb_crop", "Crakebulb", 4, CrakebulbCropBlock::new);
-    public static final RegistryObject<Block> CRACKENCANE_CROP = registerCropBlock("crackencane_crop", "Crackencane", 8, CrackencanesCropBlock::new);
+    public static final RegistryObject<BushBlock> CRAKEBULB_CROP = registerCropBlock("crakebulb_crop", "Crakebulb", 4, CrakebulbCropBlock::new);
+    public static final RegistryObject<BushBlock> CRACKENCANE_CROP = registerCropBlock("crackencane_crop", "Crackencane", 8, CrackencanesCropBlock::new);
 
     //CORBA
-    public static final RegistryObject<Block> CORVEGGIES_CROP = registerCropBlock("corveggies_crop", "Corveggies", 3, CorveggieCropBlock::new);
-    public static final RegistryObject<Block> GLOWA_CROP = registerCropBlock("glowa_crop", "Glowa", 4, GlowaCropBlock::new);
+    public static final RegistryObject<BushBlock> CORVEGGIES_CROP = registerCropBlock("corveggies_crop", "Corveggies", 3, CorveggieCropBlock::new);
+    public static final RegistryObject<BushBlock> GLOWA_CROP = registerCropBlock("glowa_crop", "Glowa", 4, GlowaCropBlock::new);
 
     //CLOUDIA
     public static final RegistryObject<Block> AIRROOT_MELON = registerModeledBlock("airroot_melon", "Airroot Melon", () -> new Block(JBlockProperties.WOOD));
@@ -1005,10 +1005,10 @@ public class JBlocks {
         return block1;
     }
 
-    public static RegistryObject<Block> registerGrowingBushBlock(String name, String translatedName, Supplier<Block> block) {
+    public static RegistryObject<BushBlock> registerGrowingBushBlock(String name, String translatedName, Supplier<BushBlock> block) {
         bushBlockName.add(name);
         bushLangName.add(translatedName);
-        RegistryObject<Block> block1 = BLOCKS.register(name, block);
+        RegistryObject<BushBlock> block1 = BLOCKS.register(name, block);
         JItems.registerBlockItem(name, () -> new BlockItem(block1.get(), new Item.Properties()));
         return block1;
     }
@@ -1022,13 +1022,13 @@ public class JBlocks {
         return block1;
     }
 
-    public static RegistryObject<Block> registerCropBlock(String name, String translatedName, int maxStages, Supplier<Block> block) {
+    public static RegistryObject<BushBlock> registerCropBlock(String name, String translatedName, int maxStages, Supplier<BushBlock> block) {
         if(JITL.DEV_MODE)
             new JBlockCropGenerator().generate(name, maxStages);
 
         cropBlockName.add(name);
         cropLangName.add(translatedName);
-        RegistryObject<Block> block1 = BLOCKS.register(name, block);
+        RegistryObject<BushBlock> block1 = BLOCKS.register(name, block);
         JItems.registerBlockItem(name, () -> new BlockItem(block1.get(), new Item.Properties()));
         return block1;
     }

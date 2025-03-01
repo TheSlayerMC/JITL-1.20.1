@@ -3,6 +3,7 @@ package net.jitl.core.data;
 import net.jitl.client.stats.PacketPlayerStats;
 import net.jitl.core.init.JITL;
 import net.jitl.core.init.network.CKeyPressedPacket;
+import net.jitl.core.init.network.PacketUpdateClientPlayerMovement;
 import net.jitl.core.init.network.SBossPacket;
 import net.jitl.core.network.PacketEssenceBar;
 import net.minecraft.resources.ResourceLocation;
@@ -22,5 +23,6 @@ public class JNetworkRegistry {
         INSTANCE.registerMessage(index++, CKeyPressedPacket.class, CKeyPressedPacket::encode, CKeyPressedPacket::new, CKeyPressedPacket::handle);
         INSTANCE.registerMessage(index++, SBossPacket.class, SBossPacket::encode, SBossPacket::new, SBossPacket::handle);
         INSTANCE.registerMessage(index++, PacketPlayerStats.class, PacketPlayerStats::encode, PacketPlayerStats::new, PacketPlayerStats::handle);
+        INSTANCE.registerMessage(index++, PacketUpdateClientPlayerMovement.class, PacketUpdateClientPlayerMovement::encode, PacketUpdateClientPlayerMovement::new, PacketUpdateClientPlayerMovement::handle);
     }
 }

@@ -1,4 +1,4 @@
-package net.jitl.core.helper.compat;
+package net.jitl.core.init.compat;
 
 import net.minecraftforge.fml.ModList;
 

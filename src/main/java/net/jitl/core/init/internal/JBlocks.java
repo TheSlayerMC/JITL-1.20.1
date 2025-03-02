@@ -639,6 +639,18 @@ public class JBlocks {
     public static final RegistryObject<JFenceBlock> SENTERIAN_POST = registerFence("senterian_post", "Senterian Post", false, JBlockProperties.STONE);
     public static final RegistryObject<Block> SENTRY_LOCK = registerRotatableBlock("sentry_lock", "Sentry Lock", LockBlock::new, false);
 
+    public static final RegistryObject<IronBarsBlock> BREAKABLE_SENTERIAN_BARS = registerPaneBlock("breakable_senterian_bars", "Senterian Bars", JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_BRICKS = register("breakable_senterian_bricks", "Senterian Bricks", JBlockProperties.STONE);
+    public static final RegistryObject<StairBlock> BREAKABLE_SENTERIAN_BRICK_STAIRS = registerStairs("breakable_senterian_brick_stairs", "Senterian Brick Stairs", BREAKABLE_SENTERIAN_BRICKS, false, JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_CARVED_ROCK = register("breakable_senterian_carved_rock", "Senterian Carved Rock", JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_FLOOR = register("breakable_senterian_floor", "Senterian Floor", JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_ROCK = register("breakable_senterian_rock", "Senterian Rock", JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_GLASS = register("breakable_senterian_glass", "Senterian Glass", () -> new GlassBlock(JBlockProperties.GLASS), JBlockProperties.GLASS);
+    public static final RegistryObject<JFenceBlock> BREAKABLE_SENTERIAN_POST = registerFence("breakable_senterian_post", "Senterian Post", false, JBlockProperties.STONE);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_GUARDIAN_LAMP = register("breakable_senterian_guardian_lamp", "Senterian Guardian Lamp", JBlockProperties.GLOW_BLOCK);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_LIGHT_LAMP = register("breakable_senterian_light_lamp", "Senterian Light Lamp", JBlockProperties.GLOW_BLOCK);
+    public static final RegistryObject<Block> BREAKABLE_SENTERIAN_MELLOW_LAMP = register("breakable_senterian_mellow_lamp", "Senterian Mellow Lamp", JBlockProperties.GLOW_BLOCK);
+
     public static final RegistryObject<Block> JOURNEY_CHEST = registerChestBlock("journey_chest", "Journey Chest", JChestBlock::new);
     public static final RegistryObject<Block> NETHER_CHEST = registerChestBlock("nether_chest", "Nether Chest", JChestBlock::new);
     public static final RegistryObject<Block> FROZEN_CHEST = registerChestBlock("frozen_chest", "Frozen Chest", JChestBlock::new);

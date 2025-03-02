@@ -151,7 +151,6 @@ public class JRecipeRegistry extends JRecipeProvider {
         addWoodType(consumer, JBlocks.CORBA_LOG, JBlocks.CORBA_PLANKS, JBlocks.CORBA_STAIRS, JBlocks.CORBA_SLAB, JBlocks.CORBA_FENCE, JBlocks.CORBA_FENCE_GATE, JBlocks.CORBA_TRAP_DOOR, JBlocks.CORBA_PRESSURE_PLATE, JBlocks.CORBA_DOOR, JBlocks.CORBA_BUTTON, JItems.CORBA_BOAT);
         addWoodType(consumer, JBlocks.TERRANIAN_LOG, JBlocks.TERRANIAN_PLANKS, JBlocks.TERRANIAN_STAIRS, JBlocks.TERRANIAN_SLAB, JBlocks.TERRANIAN_POST, JBlocks.TERRANIAN_FENCE_GATE, JBlocks.TERRANIAN_TRAP_DOOR, JBlocks.TERRANIAN_PRESSURE_PLATE, JBlocks.TERRANIAN_DOOR, JBlocks.TERRANIAN_BUTTON, JItems.TERRANIAN_BOAT);
         addWoodType(consumer, JBlocks.CLOUDIA_LOG, JBlocks.CLOUDIA_PLANKS, JBlocks.CLOUDIA_STAIRS, JBlocks.CLOUDIA_SLAB, JBlocks.CLOUDIA_FENCE, JBlocks.CLOUDIA_FENCE_GATE, JBlocks.CLOUDIA_TRAP_DOOR, JBlocks.CLOUDIA_PRESSURE_PLATE, JBlocks.CLOUDIA_DOOR, JBlocks.CLOUDIA_BUTTON, JItems.CLOUDIA_BOAT);
-
     }
 
     public void buildQuartzTypes(Consumer<FinishedRecipe> consumer) {

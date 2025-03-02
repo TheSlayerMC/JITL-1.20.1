@@ -28,7 +28,7 @@ public class CloudWalkerAmuletItem extends JCurioItem {
 
                 if(key.isAmuletPressed()) {
                     player.getCapability(PlayerEssenceProvider.PLAYER_ESSENCE).ifPresent(essence -> {
-                        if(essence.consumeEssence(player, 0.15F)) {
+                        if(essence.consumeEssence(player, 0.10F)) {
                             player.fallDistance = 0.0F;
 
                             JNetworkRegistry.INSTANCE.sendTo(new PacketUpdateClientPlayerMovement(PacketUpdateClientPlayerMovement.Operation.ADD, 0.1), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);

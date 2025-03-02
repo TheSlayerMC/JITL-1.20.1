@@ -1,8 +1,10 @@
 package net.jitl.core.init.internal;
 
+import net.jitl.client.gui.screen.SentacoinMerchantScreen;
 import net.jitl.client.gui.screen.SummoningTableScreen;
 import net.jitl.common.block.entity.container.JFurnaceMenu;
 import net.jitl.client.gui.screen.JFurnaceScreen;
+import net.jitl.common.block.entity.container.SentacoinMerchantMenu;
 import net.jitl.common.block.entity.container.SummoningTableContainer;
 import net.jitl.core.helper.internal.EmptyContainer;
 import net.jitl.core.init.JITL;
@@ -20,10 +22,13 @@ public class JContainers {
 
     public static final RegistryObject<MenuType<JFurnaceMenu>> JFURNACE = REGISTRY.register("jfurnace", () -> IForgeMenuType.create((id, inv, data) -> new JFurnaceMenu(id, inv)));
 
+    public static final RegistryObject<MenuType<SentacoinMerchantMenu>> SENTACOIN_MERCHANT = REGISTRY.register("sentacoin_merchant", () -> IForgeMenuType.create(SentacoinMerchantMenu::new));
+
     public static final RegistryObject<MenuType<SummoningTableContainer>> SUMMONING_TABLE = REGISTRY.register("summoning_table", () -> IForgeMenuType.create(SummoningTableContainer::new));
 
     public static void register() {
         MenuScreens.register(JFURNACE.get(), JFurnaceScreen::new);
         MenuScreens.register(SUMMONING_TABLE.get(), SummoningTableScreen::new);
+        MenuScreens.register(SENTACOIN_MERCHANT.get(), SentacoinMerchantScreen::new);
     }
 }

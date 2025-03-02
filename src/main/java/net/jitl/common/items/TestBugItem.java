@@ -32,6 +32,7 @@ public class TestBugItem extends JItem implements IEssenceItem {
             });
             player.getCapability(PlayerStatsProvider.PLAYER_STATS).ifPresent(stats -> {
                 stats.setLevel(EnumKnowledge.OVERWORLD, 100);
+                stats.addSentacoins(1000);
             });
         } else {
             displayPlayerStats(player);

@@ -3,7 +3,7 @@ package net.jitl.client.gui;
 import net.jitl.client.gui.overlay.PlayerStats;
 import net.jitl.core.data.JNetworkRegistry;
 import net.jitl.core.init.JITL;
-import net.jitl.core.init.network.CKeyPressedPacket;
+import net.jitl.core.init.network.PacketPressKey;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,7 +35,7 @@ public class KeyBindHandler {
     }
 
     public static void handleAbilityKeys(boolean amulet, boolean gear) {
-        JNetworkRegistry.INSTANCE.sendToServer(new CKeyPressedPacket(amulet, gear));
+        JNetworkRegistry.INSTANCE.sendToServer(new PacketPressKey(amulet, gear));
     }
 
     @OnlyIn(Dist.CLIENT)

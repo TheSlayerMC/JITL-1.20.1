@@ -87,6 +87,8 @@ public class LangRegistry {
         writeToFile("\"itemGroup.jitl.blocks\" : \"JITL Blocks\",");
         writeToFile("\"itemGroup.jitl.items\" : \"JITL Items\",");
         writeToFile("\"jitl.key.stats\" : \"Player Stats\",");
+        writeToFile("\"jitl.key.amulet\" : \"Use Amulet Effects\",");
+        writeToFile("\"jitl.key.armor\" : \"Use Armor Effects\",");
         writeToFile("\"jitl.key\" : \"JITL Keys\",");
         writeToFile("\"jitl.knowledge.level\" : \"Level Up!\",");
         writeToFile("\"jitl.knowledge.experience\" : \"XP Gain!\",");
@@ -108,6 +110,11 @@ public class LangRegistry {
         writeToFile("\"jitl.sen.knowledge_0\" : \"Ill trade you Overworld knowledge to get in there\",");
         writeToFile("\"jitl.sen.knowledge_1\" : \"See me when you have at least 75 Overworld Knowledge\",");
         writeToFile("\"jitl.sen.unlocked\" : \"I locked it for a reason but goodluck...\",");
+
+        writeToFile("\"jitl.trade.no\" : \"You need more Sentacoins\",");
+
+
+        writeToFile("\"emi.category.jitl.summoning_table\" : \"Summoning Table\",");
 
         writeToFile("\"scroll.jitl.fail\" : \"Can't retrieve entry from scroll, report in Discord (unless this item came from creative tab)\",");
 
@@ -430,7 +437,7 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry.cloudia.mobs.starlight_blacksmith.desc\" : " + "\"Starlight Blacksmith is a trading NPC that lives in one variant of the $(l:jitl:terrania/structures#cloudia_village_1)Cloudia Villages$(/l)\",");
 
         writeToFile("\"structure.senterian.jitl.senterian_altar\" : " + "\"Senterian Altar\",");
-        writeToFile("\"book.jitl.entry.senterian.senterian_altar.desc\" : " + "\"Senterian Altar Room is the biggest room in the dimension, in this room in the middle you will find the Senterian Altars, you can place a Sentry Observer item into them and they will spawn Mini Senterian Mobs, this is the only way to recieve Sentacoins.\",");
+        writeToFile("\"book.jitl.entry.senterian.senterian_altar.desc\" : " + "\"Senterian Altar Room is the biggest room in the dimension, in this room in the middle you will find the Senterian Altars, you can place a Sentry Observer item into them and they will spawn Mini Senterian Mobs, this is the only way to receive Sentacoins.\",");
 
         addMob(EnumKnowledge.OVERWORLD, "brown_hongo", "Forest like", true, MobStats.BIG_HONGO_HEALTH, MobStats.BIG_HONGO_DAMAGE, "Hongoshrooms");
         addMob(EnumKnowledge.OVERWORLD, "big_hongo", "Forest like", true, MobStats.BIG_HONGO_HEALTH, MobStats.BIG_HONGO_DAMAGE, "Hongoshrooms");
@@ -447,7 +454,7 @@ public class LangRegistry {
         addMob(EnumKnowledge.OVERWORLD, "sand_crawler", "Desert like", false, MobStats.SAND_CRAWLER_HEALTH, MobStats.SAND_CRAWLER_DAMAGE, "Sand Blocks");
         addMob(EnumKnowledge.OVERWORLD, "spyclopse", "Desert like", false, MobStats.SPYCLOPS_HEALTH, MobStats.SPYCLOPS_DAMAGE, "Spyclopse Eye");
         addMob(EnumKnowledge.OVERWORLD, "rockite_golem", "Overworld Underground", "NPC Mob, Will trade with you", MobStats.NPC_HEALTH, "");
-        addStructureMob(EnumKnowledge.OVERWORLD, "neutral_sentry_stalker", "$(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)", "NPC Mob, Will trade with you once you reach 100 Overworld Knowledge", true, MobStats.NPC_HEALTH, 0, "");
+        addStructureMob(EnumKnowledge.OVERWORLD, "neutral_sentry_stalker", "$(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)", "NPC Mob, Will trade with you once you reach 75 Overworld Knowledge, Will trade Sentacoins for Breakable versions of Senterian Blocks (Decorational)", true, MobStats.NPC_HEALTH, 0, "");
         addStructureMob(EnumKnowledge.OVERWORLD, "mage", "$(l:jitl:overworld/structures#mage_hut)Mage Hut$(/l)", "NPC Mob, Will trade with you", true, MobStats.NPC_HEALTH, 0, "");
         addMob(EnumKnowledge.OVERWORLD, "robot", "Any Overworld Biome", "Will attack on site", MobStats.ROBOT_HEALTH, "Iron Ingot and Redstone Dust");
         addPet(EnumKnowledge.OVERWORLD, "pet_robot", true, "Obtained from the $(l:jitl:overworld/traders#mage)Mage$(/l)", "Already tamed when spawned, can be healed with Pet Food", MobStats.PET_ROBOT_HEALTH, MobStats.PET_ROBOT_DAMAGE,"");
@@ -639,6 +646,8 @@ public class LangRegistry {
         writeToFile("\"enchantment.jitl.scorching\" : \"Scorching\",");
         writeToFile("\"enchantment.jitl.faithful\" : \"Faithful\",");
 
+        writeToFile("\"jitl.chest.locked\" : \"You need a key to open this\",");
+
         writeToFile("\"jitl.item.desc.flame_coin\" : \"Used to Light JITL Portals\",");
         writeToFile("\"jitl.item.desc.padlock\" : \"Used to lock JITL chests\",");
         writeToFile("\"jitl.item.desc.master_key\" : \"Opens all locked JITL chests\",");
@@ -659,7 +668,7 @@ public class LangRegistry {
         writeToFile("\"jitl.item.desc.lucky_charm\" : \"Adds a chance for a random drop when Mining\",");
         writeToFile("\"jitl.item.desc.death_cap\" : \"Poisons Attacker\",");
         writeToFile("\"jitl.item.desc.skull_decay\" : \"Withers Attacker\",");
-        writeToFile("\"jitl.item.desc.cloud_walker\" : \"Press 'Amulet Key' to hover\",");
+        writeToFile("\"jitl.item.desc.cloud_walker\" : \"Press 'Amulet Key' to hover using Essence\",");
         writeToFile("\"jitl.item.desc.ice_amulet\" : \"Makes you stronger in Cold Biomes\",");
 
         writeToFile("\"jitl.item.desc.sentry_eye\" : \"Inserted into the Senterian Portal Frame\",");

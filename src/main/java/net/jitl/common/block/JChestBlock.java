@@ -237,19 +237,21 @@ public class JChestBlock extends AbstractChestBlock<JChestBlockEntity> implement
     @Override
     public InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         Item heldItem = player.getMainHandItem().getItem();
-        MenuProvider menuprovider = this.getMenuProvider(state, level, pos);
-
-        if(state.getValue(IS_LOCKED)) {
-            return InteractionResult.FAIL;
-        }
-        if(!state.getValue(IS_LOCKED) && heldItem != JItems.PADLOCK.get()) {
-            if(menuprovider != null) {
-                player.openMenu(menuprovider);
-                player.awardStat(Stats.CUSTOM.get(Stats.OPEN_CHEST));
+        if (level.isClientSide) {
+            return InteractionResult.SUCCESS;
+        } else {
+            if(state.getValue(IS_LOCKED)) {
+                player.sendSystemMessage(Component.translatable("jitl.chest.locked"));
+                return InteractionResult.FAIL;
+            } else if(!state.getValue(IS_LOCKED) && heldItem != JItems.PADLOCK.get()){
+                MenuProvider menuprovider = this.getMenuProvider(state, level, pos);
+                if (menuprovider != null) {
+                    player.openMenu(menuprovider);
+                }
+                return InteractionResult.CONSUME;
             }
-
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return InteractionResult.CONSUME;
     }
 
     @Nullable

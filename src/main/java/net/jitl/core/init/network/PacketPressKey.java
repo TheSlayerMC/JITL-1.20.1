@@ -1,24 +1,23 @@
 package net.jitl.core.init.network;
 
 import net.jitl.common.capability.keypressed.PressedKeyCapProvider;
-import net.jitl.common.event.GearAbilityHandler;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class CKeyPressedPacket {
+public class PacketPressKey {
 
     private final boolean isAmulet;
     private final boolean isGear;
 
-    public CKeyPressedPacket(FriendlyByteBuf buf) {
+    public PacketPressKey(FriendlyByteBuf buf) {
         this.isAmulet = buf.readBoolean();
         this.isGear = buf.readBoolean();
     }
 
-    public CKeyPressedPacket(boolean isAmuletPressed, boolean isGearPressed) {
+    public PacketPressKey(boolean isAmuletPressed, boolean isGearPressed) {
         this.isAmulet = isAmuletPressed;
         this.isGear = isGearPressed;
     }

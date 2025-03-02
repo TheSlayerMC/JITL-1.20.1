@@ -38,8 +38,13 @@ public class PlayerStats {
         sentacoins = value;
     }
 
-    public void useSentacoins(int amount) {
-        sentacoins -= amount;
+    public boolean useSentacoins(int amount) {
+        if(sentacoins >= amount) {
+            sentacoins -= amount;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void addSentacoins(int amount) {

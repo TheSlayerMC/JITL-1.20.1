@@ -18,8 +18,8 @@ public class ClientPlayerStats {
         Minecraft.getInstance().player.getCapability(PlayerStatsProvider.PLAYER_STATS).orElseThrow(null).addSentacoins(value);
     }
 
-    public static void useSentacoins(int value) {
-        Minecraft.getInstance().player.getCapability(PlayerStatsProvider.PLAYER_STATS).orElseThrow(null).useSentacoins(value);
+    public static boolean useSentacoins(int value) {
+        return Minecraft.getInstance().player.getCapability(PlayerStatsProvider.PLAYER_STATS).orElseThrow(null).useSentacoins(value);
     }
 
     public static int getSentacoins() {

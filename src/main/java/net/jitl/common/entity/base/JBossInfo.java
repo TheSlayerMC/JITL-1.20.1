@@ -2,7 +2,7 @@ package net.jitl.common.entity.base;
 
 import net.jitl.common.entity.IJourneyBoss;
 import net.jitl.core.data.JNetworkRegistry;
-import net.jitl.core.init.network.SBossPacket;
+import net.jitl.core.init.network.PacketBossBar;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,11 +16,11 @@ public class JBossInfo {
 
     public static void addInfo(ServerPlayer player, ServerBossEvent info, IJourneyBoss boss) {
         info.addPlayer(player);
-        JNetworkRegistry.INSTANCE.sendTo(new SBossPacket(SBossPacket.Operation.ADD, info.getId(), (LivingEntity) boss), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
+        JNetworkRegistry.INSTANCE.sendTo(new PacketBossBar(PacketBossBar.Operation.ADD, info.getId(), (LivingEntity) boss), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
     }
 
     public static void removeInfo(ServerPlayer player, ServerBossEvent info, IJourneyBoss boss) {
         info.removePlayer(player);
-        JNetworkRegistry.INSTANCE.sendTo(new SBossPacket(SBossPacket.Operation.REMOVE, info.getId(), (LivingEntity) boss), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
+        JNetworkRegistry.INSTANCE.sendTo(new PacketBossBar(PacketBossBar.Operation.REMOVE, info.getId(), (LivingEntity) boss), ((ServerPlayer) player).connection.connection, NetworkDirection.PLAY_TO_CLIENT);
     }
 }

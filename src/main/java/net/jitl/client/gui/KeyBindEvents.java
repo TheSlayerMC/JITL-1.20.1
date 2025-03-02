@@ -19,9 +19,9 @@ import org.lwjgl.glfw.GLFW;
 @Mod.EventBusSubscriber(modid = JITL.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class KeyBindEvents {
 
-    public static KeyMapping keyStats = new KeyMapping("Open Journey Stats", KeyConflictContext.IN_GAME, InputConstants.getKey(InputConstants.KEY_J, -1), I18n.get("jitl.key"));
-    public static KeyMapping keyArmor = new KeyMapping("Use Armor Ability", GLFW.GLFW_KEY_C, I18n.get("jitl.key"));
-    public static KeyMapping keyAmulet = new KeyMapping("Use Amulet Ability", GLFW.GLFW_KEY_V, I18n.get("jitl.key"));
+    public static KeyMapping keyStats = new KeyMapping("jitl.key.stats", GLFW.GLFW_KEY_J, I18n.get("jitl.key"));
+    public static KeyMapping keyArmor = new KeyMapping("jitl.key.armor", GLFW.GLFW_KEY_C, I18n.get("jitl.key"));
+    public static KeyMapping keyAmulet = new KeyMapping("jitl.key.amulet", GLFW.GLFW_KEY_V, I18n.get("jitl.key"));
 
     @SubscribeEvent
     public static void onKeyRegister(RegisterKeyMappingsEvent event) {

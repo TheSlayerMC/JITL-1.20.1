@@ -148,7 +148,9 @@ public class BlockRenderTypes {
         cutout.add(JBlocks.CLOUDIA_DOOR.get());
         cutout.add(JBlocks.CLOUDIA_TRAP_DOOR.get());
         cutout.add(JBlocks.SENTERIAN_GLASS.get());
+        cutout.add(JBlocks.BREAKABLE_SENTERIAN_GLASS.get());
         cutout.add(JBlocks.SENTERIAN_BARS.get());
+        cutout.add(JBlocks.BREAKABLE_SENTERIAN_BARS.get());
         cutout.add(JBlocks.SUMMONING_TABLE.get());
         cutout.add(JBlocks.SWAMP_LAMP.get());
 

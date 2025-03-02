@@ -10,19 +10,19 @@ import net.minecraftforge.network.NetworkEvent;
 import java.util.UUID;
 import java.util.function.Supplier;
 
-public class SBossPacket {
+public class PacketBossBar {
 
     private final Operation addOrRemove;
     private final UUID barUUID;
     private final int bossNum;
 
-    public SBossPacket(FriendlyByteBuf buf) {
+    public PacketBossBar(FriendlyByteBuf buf) {
         this.addOrRemove = buf.readEnum(Operation.class);
         this.barUUID = buf.readUUID();
         this.bossNum = buf.readInt();
     }
 
-    public SBossPacket(Operation aor, UUID uuid, Entity boss) {
+    public PacketBossBar(Operation aor, UUID uuid, Entity boss) {
         this.addOrRemove = aor;
         this.barUUID = uuid;
         this.bossNum = boss.getId();

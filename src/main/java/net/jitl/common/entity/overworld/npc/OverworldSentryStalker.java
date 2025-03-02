@@ -2,6 +2,7 @@ package net.jitl.common.entity.overworld.npc;
 
 import net.jitl.client.ChatUtils;
 import net.jitl.client.knowledge.EnumKnowledge;
+import net.jitl.common.block.entity.container.SentacoinMerchantMenu;
 import net.jitl.common.capability.stats.PlayerStatsProvider;
 import net.jitl.common.entity.base.MobStats;
 import net.jitl.core.init.internal.JItems;
@@ -15,6 +16,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
@@ -34,6 +36,8 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
 import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.Objects;
 
 public class OverworldSentryStalker extends PathfinderMob implements GeoEntity, Npc{
 
@@ -157,6 +161,9 @@ public class OverworldSentryStalker extends PathfinderMob implements GeoEntity, 
 
             if (!hasKey()) {
                 ChatUtils.addDialogStyleChat(player, "jitl.sen.unlocked");
+
+                if(!level().isClientSide)
+                    player.openMenu(new SimpleMenuProvider((menu, inven, title) -> new SentacoinMerchantMenu(menu), Objects.requireNonNull(getDisplayName())));
             }
         });
         return super.mobInteract(player, hand);

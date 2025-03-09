@@ -2,6 +2,7 @@ package net.jitl.core.helper;
 
 import net.jitl.core.init.internal.JItems;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -157,6 +158,9 @@ public enum JToolTiers {
 
     DEVELOPER_SWORD(JToolTier.DEVELOPER_SWORD, 1000, 1000-2.4F),
 
+    HAMMER(JToolTier.HAMMER, 0, -2.8F),
+    BATTLE_AXE(JToolTier.BATTLE_AXE, 5, -3F),
+
     THROWING_KNIFE(JToolTier.THROWING_KNIFE, 0, 0)
     ;
 
@@ -273,6 +277,9 @@ public enum JToolTiers {
 
         public static final Tier DEVELOPER_SWORD = new ForgeTier(3, 3000, 8F, 1000F, 25, null, () -> Ingredient.of(Blocks.AIR));
         public static final Tier THROWING_KNIFE = new ForgeTier(2, -1, 3F, 2F, 25, null, () -> Ingredient.of(Blocks.AIR));
+
+        public static final Tier BATTLE_AXE = new ForgeTier(3, 768, 12F, 7F, 15, null, () -> Ingredient.EMPTY);
+        public static final Tier HAMMER = new ForgeTier(3, 642, 8F, 6F, 25, null, () -> Ingredient.EMPTY);
     }
 
     public static class JArmorTier {

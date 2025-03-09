@@ -64,6 +64,7 @@ public class LangRegistry {
         ArrayList<String> basePortalFrameBlockList = new ArrayList<>(JBlocks.basePortalFrameBlockName);
         ArrayList<String> topBottomBlockList = new ArrayList<>(JBlocks.topBottomBlockName);
         ArrayList<String> totemBlockList = new ArrayList<>(JBlocks.totemBlockName);
+        ArrayList<String> dripstoneBlockList = new ArrayList<>(JBlocks.dripstoneBlockName);
 
         ArrayList<String> toolItemList = new ArrayList<>(JItems.toolName);
         ArrayList<String> itemList = new ArrayList<>(JItems.itemName);
@@ -73,6 +74,8 @@ public class LangRegistry {
         ArrayList<String> recordList = new ArrayList<>(JItems.recordName);
         ArrayList<String> modelItemList = new ArrayList<>(JItems.modelName);
         ArrayList<String> recordDescList = new ArrayList<>(JItems.recordDescName);
+        ArrayList<String> gunList = new ArrayList<>(JItems.gunName);
+        ArrayList<String> hammerList = new ArrayList<>(JItems.hammerName);
 
         try {
             if(en_us.exists()) en_us.delete();
@@ -112,7 +115,6 @@ public class LangRegistry {
         writeToFile("\"jitl.sen.unlocked\" : \"I locked it for a reason but goodluck...\",");
 
         writeToFile("\"jitl.trade.no\" : \"You need more Sentacoins\",");
-
 
         writeToFile("\"emi.category.jitl.summoning_table\" : \"Summoning Table\",");
 
@@ -158,6 +160,8 @@ public class LangRegistry {
         writeToFile("\"curios.modifiers.heart_container\" : \"Adds hearts\",");
         writeToFile("\"curios.identifier.catalyst\" : \"Catalyst\",");
         writeToFile("\"curios.modifiers.catalyst\" : \"Adds Essence Storage\",");
+        writeToFile("\"jitl.max_essence\" : \"Max Essence\",");
+        writeToFile("\"jitl.essence_regen_speed\" : \"Essence Regen Speed\",");
 
         writeToFile("\"book.jitl.landing_text\" : " + "\"Welcome $(playername) to Journey Into The Light, any other info needed head over to the $(l:https://discord.com/invite/WhXvz5b)Discord\",");
         writeToFile("\"book.jitl.book_name\" : " + "\"Essentia Bible\",");
@@ -315,6 +319,12 @@ public class LangRegistry {
         writeToFile("\"structure.overworld.jitl.mage_hut\" : " + "\"Mage Hut\",");
         writeToFile("\"book.jitl.entry.overworld.mage_hut.desc\" : " + "\"Found randomly in any Dark Forest Biome, Climb up the top to find and meet the $(l:jitl:overworld/traders#mage)Mage\",");
 
+        writeToFile("\"structure.overworld.jitl.blacksmith\" : " + "\"Blacksmith House\",");
+        writeToFile("\"book.jitl.entry.overworld.blacksmith_house.desc\" : " + "\"Found randomly in any Plains, Meadow, Sunflower Plains, Forest, Flower Forest, Birch Forest and Cherry Grove Biomes, Climb up the top to find and meet the $(l:jitl:overworld/traders#blacksmith)Blacksmith\",");
+
+        writeToFile("\"structure.overworld.jitl.gunsmith\" : " + "\"Gunsmith House\",");
+        writeToFile("\"book.jitl.entry.overworld.gunsmith_house.desc\" : " + "\"Found randomly in any Plains, Meadow, Sunflower Plains, Forest, Flower Forest, Birch Forest and Cherry Grove Biomes, Climb up the top to find and meet the $(l:jitl:overworld/traders#gunsmith)Gunsmith\",");
+
         writeToFile("\"structure.nether.jitl.boil_lock\" : " + "\"Boil Lock\",");
         writeToFile("\"book.jitl.entry.nether.boil_lock.desc\" : " + "\"Unbreakable structure which you need to unlock with a Boiling Lock Key which is found in the Nether Tower. This structure contains the Boiling Point Portal Frames\",");
 
@@ -328,6 +338,7 @@ public class LangRegistry {
         writeToFile("\"book.jitl.entry.nether.okoloo_crypt.desc\" : " + "\"A structure that you place the Broken Okoloo Club into the Pedestal to spawn $(l:jitl:nether/bosses#okoloo)Okoloo\",");
 
         writeToFile("\"book.jitl.entry.overworld.mage.desc\" : " + "\"Mage is a trading NPC that lives up the top of $(l:jitl:overworld/structures#mage_hut)Mage Hut\",");
+        writeToFile("\"book.jitl.entry.overworld.blacksmith.desc\" : " + "\"Blacksmith is a trading NPC that lives up the top of $(l:jitl:overworld/structures#blacksmith_house)Blacksmith House\",");
         writeToFile("\"book.jitl.entry.overworld.neutral_sentry_stalker.desc\" : " + "\"This Sentry Stalker is a bit different to normal... He locked the Senterian Portal away trying to close it away while he finds enough information on the Overworld. While he resides inside of the $(l:jitl:overworld/structures#ancient_tower)Ancient Tower$(/l) he will give the key inside for an exchange\",");
         writeToFile("\"book.jitl.entry.overworld.rockite_golem.desc\" : " + "\"Rockite Golem is a trading NPC and spawns underground randomly\",");
 
@@ -456,6 +467,8 @@ public class LangRegistry {
         addMob(EnumKnowledge.OVERWORLD, "rockite_golem", "Overworld Underground", "NPC Mob, Will trade with you", MobStats.NPC_HEALTH, "");
         addStructureMob(EnumKnowledge.OVERWORLD, "neutral_sentry_stalker", "$(l:jitl:overworld/structures#ancient_structure)Ancient Structure$(/l)", "NPC Mob, Will trade with you once you reach 75 Overworld Knowledge, Will trade Sentacoins for Breakable versions of Senterian Blocks (Decorational)", true, MobStats.NPC_HEALTH, 0, "");
         addStructureMob(EnumKnowledge.OVERWORLD, "mage", "$(l:jitl:overworld/structures#mage_hut)Mage Hut$(/l)", "NPC Mob, Will trade with you", true, MobStats.NPC_HEALTH, 0, "");
+        addStructureMob(EnumKnowledge.OVERWORLD, "blacksmith", "$(l:jitl:overworld/structures#blacksmith_house)Blacksmith House$(/l)", "NPC Mob, Will trade with you", true, MobStats.NPC_HEALTH, 0, "");
+        addStructureMob(EnumKnowledge.OVERWORLD, "gunsmith", "$(l:jitl:overworld/structures#gunsmith_house)Gunsmith House$(/l)", "NPC Mob, Will trade with you", true, MobStats.NPC_HEALTH, 0, "");
         addMob(EnumKnowledge.OVERWORLD, "robot", "Any Overworld Biome", "Will attack on site", MobStats.ROBOT_HEALTH, "Iron Ingot and Redstone Dust");
         addPet(EnumKnowledge.OVERWORLD, "pet_robot", true, "Obtained from the $(l:jitl:overworld/traders#mage)Mage$(/l)", "Already tamed when spawned, can be healed with Pet Food", MobStats.PET_ROBOT_HEALTH, MobStats.PET_ROBOT_DAMAGE,"");
         addPet(EnumKnowledge.OVERWORLD, "ferret", false, "Forest like", "Pet Food", MobStats.FERRET_HEALTH, MobStats.FERRET_DAMAGE,"");
@@ -635,6 +648,41 @@ public class LangRegistry {
         writeToFile("\"jitl.tooltip.celestium_armor.1\" : \"Dashing cancels your vertical movement and increases your horizontal movement\",");
         writeToFile("\"jitl.tooltip.celestium_armor.2\" : \"To recharge this ability, touch the ground at least 2 seconds after previous dash\",");
 
+        writeToFile("\"jitl.tooltip.staff\" : \"Shoots projectile that does x%s Hearts of damage\",");
+        writeToFile("\"jitl.tooltip.hammer\" : \"Shoots a Homing projectile that does x%s Hearts of damage\",");
+        writeToFile("\"jitl.tooltip.cannon\" : \"Shoots a Bouncing projectile that does x%s Hearts of damage\",");
+        writeToFile("\"jitl.tooltip.essence_usage\" : \"Uses %s Essence\",");
+
+        writeToFile("\"jitl.tooltip.teleport\" : \"Teleports to where the Player is looking.\",");
+        writeToFile("\"jitl.uses_remaining\" : \"%s Uses Remaining\",");
+
+        writeToFile("\"jitl.tooltip.staff_of_conjuring\" : \"Poisons Foe on impact\",");
+        writeToFile("\"jitl.tooltip.staff_of_essencia\" : \"Summons Lightening on Foe upon impact\",");
+        writeToFile("\"jitl.tooltip.staff_of_hellstone\" : \"Sets Foe on Fire\",");
+        writeToFile("\"jitl.tooltip.doomsbringer\" : \"Confuses Foe on impact\",");
+        writeToFile("\"jitl.tooltip.overgrown_staff\" : \"Blinds Foe on impact\",");
+        writeToFile("\"jitl.tooltip.staff_of_divinity\" : \"Gives Foe Slow Digging\",");
+        writeToFile("\"jitl.tooltip.staff_of_enlightenment\" : \"Reveals Foe's location on impact\",");
+        writeToFile("\"jitl.tooltip.crystal_staff\" : \"Causes Foe to slow on movement and digging\",");
+        writeToFile("\"jitl.tooltip.staff_of_greenpace\" : \"Harms Foe on impact\",");
+
+        writeToFile("\"jitl.tooltip.spellbinding_hammer\" : \"Summons Lightening on Foe upon impact\",");
+        writeToFile("\"jitl.tooltip.earthen_hammer\" : \"Raises Foe in the air upon impact\",");
+        writeToFile("\"jitl.tooltip.flaming_hammer\" : \"Sets Foe on Fire\",");
+        writeToFile("\"jitl.tooltip.nethic_hammer\" : \"Sets Foe on Fire and Harms\",");
+        writeToFile("\"jitl.tooltip.overgrown_hammer\" : \"Blinds Foe on impact\",");
+        writeToFile("\"jitl.tooltip.rocky_hammer\" : \"Gives Foe slow Digging on impact\",");
+        writeToFile("\"jitl.tooltip.royal_hammer\" : \"Makes Foe slow Moving on impact\",");
+        writeToFile("\"jitl.tooltip.crystallized_hammer\" : \"Reveals Foe's Location and slows\",");
+        writeToFile("\"jitl.tooltip.withic_hammer\" : \"Withers Foe on impact\",");
+
+        writeToFile("\"jitl.tooltip.nether_plasma\" : \"Sets Foe on Fire\",");
+        writeToFile("\"jitl.tooltip.ocean_plasma\" : \"Harms Foe on impact\",");
+        writeToFile("\"jitl.tooltip.forest_plasma\" : \"Blinds Foe on impact\",");
+        writeToFile("\"jitl.tooltip.rock_launcher\" : \"Gives Foe slow Digging on impact\",");
+        writeToFile("\"jitl.tooltip.chaos_cannon\" : \"Raises Foe in the air upon impact\",");
+        writeToFile("\"jitl.tooltip.eye_blaster\" : \"Harms Foe and Sets on Fire on impact\",");
+
         writeToFile("\"jitl.tooltip.uses_remaining\" : \"Uses Remaining\",");
         writeToFile("\"jitl.tooltip.okoloo\" : \"Placed in Okoloo Pedestal\",");
         writeToFile("\"jitl.boss.spawn\" : \"Used to spawn the boss %s\",");
@@ -770,6 +818,9 @@ public class LangRegistry {
         for(int i = 0; i < totemBlockList.size(); i++)
             writeToFile("\"block.jitl." + totemBlockList.get(i) + "\": \"" + JBlocks.totemLangName.get(i) + "\"" + ",");
 
+        for(int i = 0; i < dripstoneBlockList.size(); i++)
+            writeToFile("\"block.jitl." + dripstoneBlockList.get(i) + "\": \"" + JBlocks.dripstoneLangName.get(i) + "\"" + ",");
+
         for(int i = 0; i < terrainBlockList.size(); i++)
             writeToFile("\"block.jitl." + terrainBlockList.get(i) + "\": \"" + JBlocks.terrainLangName.get(i) + "\"" + ",");
 
@@ -865,6 +916,13 @@ public class LangRegistry {
 
         for(int i = 0; i < modelItemList.size(); i++)
             writeToFile("\"item.jitl." + modelItemList.get(i) + "\": \"" + JItems.modelLangName.get(i) + "\"" + ",");
+
+        for(int i = 0; i < gunList.size(); i++)
+            writeToFile("\"item.jitl." + gunList.get(i) + "\": \"" + JItems.gunLangName.get(i) + "\"" + ",");
+
+        for(int i = 0; i < hammerList.size(); i++)
+            writeToFile("\"item.jitl." + hammerList.get(i) + "\": \"" + JItems.hammerLangName.get(i) + "\"" + ",");
+
 
         int j = 0;
         for(int i = 0; i < itemList.size(); i++) {

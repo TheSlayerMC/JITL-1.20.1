@@ -117,6 +117,8 @@ public class JBlocks {
     public static final ArrayList<String> trophyLangName = new ArrayList<>();
     public static final ArrayList<String> totemBlockName = new ArrayList<>();
     public static final ArrayList<String> totemLangName = new ArrayList<>();
+    public static final ArrayList<String> dripstoneBlockName = new ArrayList<>();
+    public static final ArrayList<String> dripstoneLangName = new ArrayList<>();
 
     public static final ArrayList<String> PICKAXE_BLOCKS = new ArrayList<>();
     public static final ArrayList<String> AXE_BLOCKS = new ArrayList<>();
@@ -506,6 +508,18 @@ public class JBlocks {
     public static final RegistryObject<Block> DEPTHS_FURNACE = registerFurnaceBlock("depths_furnace", "Depths Furnace");
     public static final RegistryObject<IronBarsBlock> DEPTHS_GATE = registerPaneBlock("depths_gate", "Depths Gate", JBlockProperties.DUNGEON_BLOCK);
     public static final RegistryObject<Block> DARK_SORCERER_SPAWNER = register("dark_sorcerer_spawner", "Dark Sorcerer Spawner", DarkSorcererSpawnerBlock::new, JBlockProperties.SPAWNER);
+    public static final RegistryObject<Block> POINTED_CRYSTALLIZED_DRIPSTONE = registerDripstoneBlock("crystallized_pointed_dripstone", "Crystallized Dripstone", () -> new CrystallizedDripstoneBlock(JBlockProperties.POINTED_DRIPSTONE.lightLevel((state) -> 6)));
+    public static final RegistryObject<Block> CRYSTALLIZED_DRIPSTONE = register("crystallized_dripstone", "Crystallized Dripstone", JBlockProperties.DRIPSTONE);
+    public static final RegistryObject<Block> DEPTHS_MOSS_BLOCK = register("depths_moss_block", "Depths Moss Block", JBlockProperties.DIRT);
+    public static final RegistryObject<Block> POINTED_DEPTHS_DRIPSTONE = registerDripstoneBlock("depths_pointed_dripstone", "Depths Dripstone", () -> new DepthsDripstoneBlock(JBlockProperties.POINTED_DRIPSTONE));
+    public static final RegistryObject<Block> DEPTHS_DRIPSTONE = register("depths_dripstone", "Depths Dripstone", JBlockProperties.DRIPSTONE);
+    public static final RegistryObject<Block> GREEN_CRYSTAL_SHROOM_BLOCK = registerMushroomBlock("green_crystal_shroom_block", "Green Crystal Shroom", () -> new GlowMushroomBlock(JBlockProperties.GLOW_MUSHROOM_BLOCK));
+    public static final RegistryObject<Block> BLUE_CRYSTAL_SHROOM_BLOCK = registerMushroomBlock("blue_crystal_shroom_block", "Blue Crystal Shroom", () -> new GlowMushroomBlock(JBlockProperties.GLOW_MUSHROOM_BLOCK));
+    public static final RegistryObject<Block> RED_CRYSTAL_SHROOM_BLOCK = registerMushroomBlock("red_crystal_shroom_block", "Red Crystal Shroom", () -> new GlowMushroomBlock(JBlockProperties.GLOW_MUSHROOM_BLOCK));
+    public static final RegistryObject<Block> PURPLE_CRYSTAL_SHROOM_BLOCK = registerMushroomBlock("purple_crystal_shroom_block", "Purple Crystal Shroom", () -> new GlowMushroomBlock(JBlockProperties.GLOW_MUSHROOM_BLOCK));
+    public static final RegistryObject<Block> CRYSTALSHROOM_STEM = registerMushroomBlock("crystalshroom_stem", "Crystalshroom Stem", () -> new GlowMushroomBlock(JBlockProperties.GLOW_MUSHROOM_BLOCK));
+    public static final RegistryObject<Block> SMALL_LIGSHROOM = registerModeledBlock("small_ligshroom", "Small Ligshroom", () -> new TallGrassBlock(JBlockProperties.GLOW_FLOWER));
+    public static final RegistryObject<Block> TALL_LIGSHROOM = registerModeledBlock("tall_ligshroom", "Tall Ligshroom", () -> new TallGrassBlock(JBlockProperties.GLOW_FLOWER));
 
     public static final RegistryObject<Block> CORBA_PORTAL_FRAME = registerEndPortalFrameStyleBlock("corba_portal_frame", "Corba Portal Frame", CorbaPortalFrameBlock::new);
     public static final RegistryObject<Block> CORBA_PORTAL = registerEndPortalStyleBlock("corba_portal", "Corba Portal", CorbaPortalBlock::new);
@@ -1071,6 +1085,15 @@ public class JBlocks {
                 return wood ? 300 : -1;
             }
         });
+        return block1;
+    }
+
+    public static RegistryObject<Block> registerDripstoneBlock(String name, String translatedName, Supplier<Block> block) {
+        addPickaxeableBlocks(name);
+        dripstoneBlockName.add(name);
+        dripstoneLangName.add(translatedName);
+        RegistryObject<Block> block1 = BLOCKS.register(name, block);
+        JItems.registerBlockItem(name, () -> new BlockItem(block1.get(), new Item.Properties()));
         return block1;
     }
 

@@ -7,6 +7,7 @@ import net.jitl.client.ChatUtils;
 import net.jitl.common.entity.base.CurrencyForItemsTrade;
 import net.jitl.common.entity.base.JVillagerEntity;
 import net.jitl.common.entity.base.MobStats;
+import net.jitl.core.init.internal.JBlocks;
 import net.jitl.core.init.internal.JItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -30,7 +31,12 @@ public class AlloyMender extends JVillagerEntity {
 
     private static final Int2ObjectMap<VillagerTrades.ItemListing[]> TRADES = new Int2ObjectOpenHashMap<>(ImmutableMap.of(1, new VillagerTrades.ItemListing[]{
             new CurrencyForItemsTrade(JItems.SHIMMERER_DUST.get(), 64, JItems.METAL_DISK.get(), 1, JItems.ROYAL_BOW.get(), 1, 12, 5),
-            new CurrencyForItemsTrade(JItems.SHIMMERER_DUST.get(), 16, JItems.GOLDER_DUST.get(), 16, JItems.ROYAL_KNIFE.get(), 16, 12, 5)
+            new CurrencyForItemsTrade(JItems.SHIMMERER_DUST.get(), 16, JItems.GOLDER_DUST.get(), 16, JItems.ROYAL_KNIFE.get(), 16, 12, 5),
+            new CurrencyForItemsTrade(JItems.SHIMMERER_DUST.get(), 64, JItems.METAL_DISK.get(), 2, JItems.ROYAL_HAMMER.get(), 1, 12, 5),
+            new CurrencyForItemsTrade(JBlocks.CELESTIUM_BLOCK.get(), 8, JBlocks.MEKYUM_BLOCK.get(), 8, JItems.CELEKIUM_BATTLE_AXE.get(), 1, 12, 5),
+            new CurrencyForItemsTrade(JBlocks.CELESTIUM_BLOCK.get(), 8, JBlocks.KORITE_BLOCK.get(), 8, JItems.CELESTITE_BATTLE_AXE.get(), 1, 12, 5),
+            new CurrencyForItemsTrade(JBlocks.STORON_BLOCK.get(), 8, JBlocks.MEKYUM_BLOCK.get(), 8, JItems.STORUM_BATTLE_AXE.get(), 1, 12, 5),
+            new CurrencyForItemsTrade(JBlocks.STORON_BLOCK.get(), 8, JBlocks.KORITE_BLOCK.get(), 8, JItems.BRONZED_BATTLE_AXE.get(), 1, 12, 5)
     }));
 
     public AlloyMender(EntityType<? extends PathfinderMob> type, Level worldIn) {

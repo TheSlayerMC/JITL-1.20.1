@@ -64,6 +64,8 @@ public class JSounds {
     public static final RegistryObject<SoundEvent> STAFF_0 = registerSound("items.staff.staff_0");
     public static final RegistryObject<SoundEvent> LOOT = registerSound("items.loot");
     public static final RegistryObject<SoundEvent> MINERS_PEARL = registerSound("items.miners_pearl");
+    public static final RegistryObject<SoundEvent> HAMMER = registerSound("items.hammer");
+    public static final RegistryObject<SoundEvent> CANNON = registerSound("items.cannon");
 
     public static final RegistryObject<SoundEvent> HONGO_AMBIENT = registerSound("entities.hongo_ambient");
     public static final RegistryObject<SoundEvent> HONGO_HURT = registerSound("entities.hongo_hurt");

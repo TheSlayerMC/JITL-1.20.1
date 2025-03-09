@@ -53,23 +53,14 @@
   "spawn_costs": {},
   "carvers": {},
   "features": [
-    [],
-    [],
     [
+      "jitl:depths_water",
       "jitl:depths_geode",
-      "jitl:depths_lamp_roof"
-    ],
-    [],
-    [],
-    [],
-    [
+      "jitl:depths_lamp_roof",
       "jitl:flairium_ore",
       "jitl:des_ore",
-      "jitl:depths_lamp_floor"
-    ],
-    [],
-    [],
-    [
+      "jitl:depths_lamp_floor",
+      "jitl:crystal_dripstone",
       "jitl:depths_tree",
       "jitl:depths_veg",
       "jitl:depths_crystal",

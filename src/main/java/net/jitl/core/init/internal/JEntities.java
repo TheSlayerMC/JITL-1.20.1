@@ -27,9 +27,7 @@ import net.jitl.common.entity.misc.Sentacoin;
 import net.jitl.common.entity.nether.*;
 import net.jitl.common.entity.overworld.*;
 import net.jitl.common.entity.overworld.Robot;
-import net.jitl.common.entity.overworld.npc.Mage;
-import net.jitl.common.entity.overworld.npc.OverworldSentryStalker;
-import net.jitl.common.entity.overworld.npc.RockiteGolem;
+import net.jitl.common.entity.overworld.npc.*;
 import net.jitl.common.entity.projectile.*;
 import net.jitl.common.entity.senterian.*;
 import net.jitl.common.entity.terrania.*;
@@ -90,6 +88,29 @@ public class JEntities {
     public static final RegistryObject<EntityType<EssenceArrowEntity>> ESSENCE_ARROW_TYPE = registerProjectile(EssenceArrowEntity::new, "essence_arrow", "Essence Arrow", 0.5F, 0.5F);
     public static final RegistryObject<EntityType<MagicPotEntity>> MAGIC_POT_TYPE = registerProjectile(MagicPotEntity::new, "magic_pot", "Magic Pot", 0.5F, 0.5F);
     public static final RegistryObject<EntityType<FireballEntity>> FIREBALL_TYPE = registerProjectile(FireballEntity::new, "fireball", "Fireball", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<IceballEntity>> ICEBALL_TYPE = registerProjectile(IceballEntity::new, "iceball", "Iceball", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<HellstoneEntity>> HELLSTONE_TYPE = registerProjectile(HellstoneEntity::new, "hellstone", "Hellstone", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<WizardsStarEntity>> WIZARDS_STAR_TYPE = registerProjectile(WizardsStarEntity::new, "wizards_star", "Wizards Star", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<DoomsbringerEntity>> DOOMSBRINGER_TYPE = registerProjectile(DoomsbringerEntity::new, "doomsbringer", "Doomsbringer", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<GreenpaceEntity>> GREENPACE_TYPE = registerProjectile(GreenpaceEntity::new, "greenpace", "Greenpace", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<OvergrownEntity>> OVERGROWN_TYPE = registerProjectile(OvergrownEntity::new, "overgrown", "Overgrown", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<BouncingOvergrownEntity>> BOUNCING_OVERGROWN_TYPE = registerProjectile(BouncingOvergrownEntity::new, "b_overgrown", "Overgrown", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<DivinityEntity>> DIVINITY_TYPE = registerProjectile(DivinityEntity::new, "divinity", "Divinity", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<BouncingDivinityEntity>> BOUNCING_DIVINITY_TYPE = registerProjectile(BouncingDivinityEntity::new, "b_divinity", "Divinity", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<EnlightenmentEntity>> ENLIGHTENMENT_TYPE = registerProjectile(EnlightenmentEntity::new, "enlightenment", "Enlightenment", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<ChaosCannonEntity>> CHAOS_CANNON = registerProjectile(ChaosCannonEntity::new, "chaos", "Chaos", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<SpellbindingEntity>> SPELLBINDING_TYPE = registerProjectile(SpellbindingEntity::new, "spellbinding", "Spellbinding", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<EarthenEntity>> EARTHEN_TYPE = registerProjectile(EarthenEntity::new, "earthen", "Earthen", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<FlamingHammerEntity>> FLAMING_TYPE = registerProjectile(FlamingHammerEntity::new, "flaming", "Flaming", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<NethicEntity>> NETHIC_TYPE = registerProjectile(NethicEntity::new, "nethic", "Nethic", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<OvergrownHammerEntity>> OVERGROWN_HAMMER_TYPE = registerProjectile(OvergrownHammerEntity::new, "overgrown_hammer", "Overgrown Hammer", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<RockyHammerEntity>> ROCKY_HAMMER_TYPE = registerProjectile(RockyHammerEntity::new, "rocky_hammer", "Overgrown Hammer", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<RoyalEntity>> ROYAL_TYPE = registerProjectile(RoyalEntity::new, "royal", "Royal", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<CrystallizedEntity>> CRYSTALLIZED_TYPE = registerProjectile(CrystallizedEntity::new, "crystallized_hammer", "Crystallized", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<WithicEntity>> WITHIC_TYPE = registerProjectile(WithicEntity::new, "withic", "withic", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<NetherPlasmaEntity>> NETHER_PLASMA_TYPE = registerProjectile(NetherPlasmaEntity::new, "nether_plasma", "Nether Plasma", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<OceanPlasmaEntity>> OCEAN_PLASMA_TYPE = registerProjectile(OceanPlasmaEntity::new, "ocean_plasma", "Ocean Plasma", 0.25F, 0.25F);
+    public static final RegistryObject<EntityType<EyeBlasterEntity>> EYE_BLASTER_TYPE = registerProjectile(EyeBlasterEntity::new, "eye_blaster", "Eye Blaster", 0.25F, 0.25F);
 
     //RAW ENTITYS
     public static final RegistryObject<EntityType<EssenciaBoltEntity>> ESSENCIA_BOLT_TYPE = registerRawEntity(EssenciaBoltEntity::new, "essencia_bolt", "Essencia Bolt", 0.25F, 0.25F);
@@ -119,6 +140,8 @@ public class JEntities {
 
     //OVERWORLD MOBS
     public static final RegistryObject<EntityType<Mage>> MAGE_TYPE = registerEntity(Mage::new, "mage", "Mage", 1F, 1.75F, OVERWORLD_COLOR, TRADER_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<Blacksmith>> BLACKSMITH_TYPE = registerEntity(Blacksmith::new, "blacksmith", "Blacksmith", 1F, 2F, OVERWORLD_COLOR, TRADER_COLOR, MobCategory.CREATURE);
+    public static final RegistryObject<EntityType<Gunsmith>> GUNSMITH_TYPE = registerEntity(Gunsmith::new, "gunsmith", "Gunsmith", 1F, 2F, OVERWORLD_COLOR, TRADER_COLOR, MobCategory.CREATURE);
     public static final RegistryObject<EntityType<Floro>> FLORO_TYPE = registerEntity(Floro::new, "floro", "Floro", 1F, 1.75F, OVERWORLD_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<BoomBoom>> BOOM_TYPE = registerEntity(BoomBoom::new, "boomboom", "BoomBoom", 1F, 1.75F, OVERWORLD_COLOR, HOSTILE_COLOR);
     public static final RegistryObject<EntityType<IllagerMech>> ILLAGER_MECH_TYPE = registerEntity(IllagerMech::new, "illager_mech", "Illager Mech", 2F, 3.25F, OVERWORLD_COLOR, HOSTILE_COLOR);
@@ -277,6 +300,8 @@ public class JEntities {
     @SubscribeEvent
     public static void registerAttributes(final EntityAttributeCreationEvent event) {
         event.put(MAGE_TYPE.get(), Mage.createAttributes());
+        event.put(BLACKSMITH_TYPE.get(), Blacksmith.createAttributes());
+        event.put(GUNSMITH_TYPE.get(), Gunsmith.createAttributes());
         event.put(FLORO_TYPE.get(), Floro.createAttributes());
         event.put(BOOM_TYPE.get(), BoomBoom.createAttributes());
         event.put(TOWER_GUARDIAN_TYPE.get(), TowerGuardian.createAttributes());

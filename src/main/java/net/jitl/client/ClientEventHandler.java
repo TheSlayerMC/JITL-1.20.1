@@ -48,7 +48,7 @@ public class ClientEventHandler {
         }
 
         if(ClientGetter.level().dimension() == Dimensions.DEPTHS) {
-            float density = 0.5F;
+            float density = 1F;
             RenderSystem.setShaderFogStart(density);
             RenderSystem.setShaderFogEnd(density * farPlaneDistance);
         }
@@ -57,6 +57,7 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
         event.register(Dimensions.EUCA_EFFECTS, new EucaRenderInfo());
+        event.register(Dimensions.DEPTHS_EFFECTS, new EucaRenderInfo());
         event.register(Dimensions.CORBA_EFFECTS, new CorbaRenderInfo());
         event.register(Dimensions.BOIL_EFFECTS, new BoilRenderInfo());
         event.register(Dimensions.FROZEN_EFFECTS, new FrozenRenderInfo());

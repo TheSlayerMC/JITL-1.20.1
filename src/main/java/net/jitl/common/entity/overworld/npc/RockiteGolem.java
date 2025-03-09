@@ -33,7 +33,14 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 public class RockiteGolem extends JVillagerEntity {
 
     private static final Int2ObjectMap<VillagerTrades.ItemListing[]> TRADES = new Int2ObjectOpenHashMap<>(ImmutableMap.of(1, new VillagerTrades.ItemListing[]{
-            new CurrencyForItemsTrade(JItems.REINFORCED_CRYSTAL_INGOT.get(), 4, Items.BLAZE_POWDER, 8, 99, 5)
+            new CurrencyForItemsTrade(JItems.REINFORCED_CRYSTAL_INGOT.get(), 4, Items.BLAZE_POWDER, 8, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_STONE_INGOT.get(), 4, JItems.BACK_BITER.get(), 1, JItems.CRYSTALLIZED_BATTLE_AXE.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_CRYSTAL_INGOT.get(), 4, JItems.EARTHEN_HAMMER.get(), 1, JItems.CRYSTALLIZED_HAMMER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_STONE_INGOT.get(), 4, JItems.EARTHEN_HAMMER.get(), 1, JItems.ROCKY_HAMMER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_STONE_INGOT.get(), 4, JItems.STONE_CLUMP.get(), 4, JItems.ROCK_LAUNCHER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_CRYSTAL_INGOT.get(), 4, JItems.STAFF_OF_ENLIGHTENMENT.get(), 1, JItems.STAFF_OF_DIVINITY.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_CRYSTAL_INGOT.get(), 4, JItems.STAFF_OF_DIVINITY.get(), 1, JItems.CRYSTAL_STAFF.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.REINFORCED_STONE_INGOT.get(), 4, JItems.BRONZED_BATTLE_AXE.get(), 1, JItems.ROCKY_BATTLE_AXE.get(), 1, 99, 5)
     }));
 
     public RockiteGolem(EntityType<? extends JVillagerEntity> type, Level worldIn) {

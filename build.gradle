@@ -58,8 +58,6 @@ minecraft {
         }
 
         server {
-            args '--nogui'
-
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'

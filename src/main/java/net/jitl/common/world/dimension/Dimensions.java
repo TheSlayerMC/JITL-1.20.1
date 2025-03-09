@@ -32,6 +32,7 @@ public class Dimensions {
 
     public static final ResourceKey<Level> DEPTHS = ResourceKey.create(Registries.DIMENSION, JITL.rl("depths"));
     public static final ResourceKey<DimensionType> DEPTHS_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE, JITL.rl("depths"));
+    public static final ResourceLocation DEPTHS_EFFECTS = JITL.rl("depths");
 
     public static final ResourceKey<Level> CORBA = ResourceKey.create(Registries.DIMENSION, JITL.rl("corba"));
     public static final ResourceKey<DimensionType> CORBA_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE, JITL.rl("corba"));
@@ -87,6 +88,8 @@ public class Dimensions {
         public static final ResourceKey<Biome> FROZEN_WASTES = ResourceKey.create(Registries.BIOME, JITL.rl("frozen/frozen_wastes"));
 
         public static final ResourceKey<Biome> DEPTHS = ResourceKey.create(Registries.BIOME, JITL.rl("depths/depths"));
+        public static final ResourceKey<Biome> DARK_LANDS = ResourceKey.create(Registries.BIOME, JITL.rl("depths/dark_lands"));
+        public static final ResourceKey<Biome> SHROOMLAND = ResourceKey.create(Registries.BIOME, JITL.rl("depths/shroomland"));
 
         public static final ResourceKey<Biome> BOGWEED_FIELDS = ResourceKey.create(Registries.BIOME, JITL.rl("corba/bogweed_fields"));
         public static final ResourceKey<Biome> CORBA_PLAINS = ResourceKey.create(Registries.BIOME, JITL.rl("corba/corba_plains"));

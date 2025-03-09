@@ -153,6 +153,7 @@ public class BlockRenderTypes {
         cutout.add(JBlocks.BREAKABLE_SENTERIAN_BARS.get());
         cutout.add(JBlocks.SUMMONING_TABLE.get());
         cutout.add(JBlocks.SWAMP_LAMP.get());
+        cutout.add(JBlocks.POINTED_DEPTHS_DRIPSTONE.get());
 
         translucent.add(JBlocks.EUCA_PORTAL.get());
         translucent.add(JBlocks.FROZEN_PORTAL.get());
@@ -168,6 +169,14 @@ public class BlockRenderTypes {
         translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_GREEN.get());
         translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_PINK.get());
         translucent.add(JBlocks.FLOOR_DEPTHS_CRYSTAL_YELLOW.get());
+        translucent.add(JBlocks.POINTED_CRYSTALLIZED_DRIPSTONE.get());
+        translucent.add(JBlocks.PURPLE_CRYSTAL_SHROOM_BLOCK.get());
+        translucent.add(JBlocks.RED_CRYSTAL_SHROOM_BLOCK.get());
+        translucent.add(JBlocks.GREEN_CRYSTAL_SHROOM_BLOCK.get());
+        translucent.add(JBlocks.BLUE_CRYSTAL_SHROOM_BLOCK.get());
+        translucent.add(JBlocks.CRYSTALSHROOM_STEM.get());
+        translucent.add(JBlocks.TALL_LIGSHROOM.get());
+        translucent.add(JBlocks.SMALL_LIGSHROOM.get());
 
         for(Block b : cutout) {
             ItemBlockRenderTypes.setRenderLayer(b, RenderType.cutout());

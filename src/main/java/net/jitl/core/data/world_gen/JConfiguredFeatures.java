@@ -25,9 +25,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.util.valueproviders.BiasedToBottomInt;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.util.valueproviders.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HugeMushroomBlock;
@@ -66,6 +64,7 @@ public class JConfiguredFeatures {
     public static final RuleTest NETHER_ORE_REPLACEABLES = new TagMatchTest(JTags.NETHER_ORE_REPLACEABLES);
     public static final RuleTest OVERWORLD_REPLACEABLES = new TagMatchTest(JTags.OVERWORLD_ORE_REPLACEABLES);
     public static final RuleTest OVERWORLD_DEEPSLATE_REPLACEABLES = new TagMatchTest(JTags.DEEPSLATE_ORE_REPLACEABLES);
+    public static final RuleTest BASALT_REPLACEABLES = new TagMatchTest(JTags.BASALT_ORE_REPLACEABLES);
     public static final RuleTest END_REPLACEABLES = new TagMatchTest(JTags.END_STONE);
     public static final RuleTest EUCA_REPLACEABLES = new TagMatchTest(JTags.EUCA_STONE_ORE_REPLACEABLES);
     public static final RuleTest FROZEN_REPLACEABLES = new TagMatchTest(JTags.FROZEN_STONE_ORE_REPLACEABLES);
@@ -89,7 +88,8 @@ public class JConfiguredFeatures {
             WARPED_QUARTZ_ORE = registerKey("warped_quartz_ore"),
             CRIMSON_QUARTZ_ORE = registerKey("crimson_quartz_ore"),
             BLOODCRUST_ORE = registerKey("bloodcrust_ore"),
-            BLOOD_ROCK = registerKey("blood_rock");
+            FIRESTONE_ORE = registerKey("firestone_ore"),
+    BLOOD_ROCK = registerKey("blood_rock");
 
     //END
     public static final ResourceKey<ConfiguredFeature<?, ?>> ENDERILLIUM_ORE = registerKey("enderillium_ore");
@@ -113,6 +113,7 @@ public class JConfiguredFeatures {
             EUCA_PUMPKIN = registerKey("euca_pumpkin");
 
     //DEPTHS
+    //DEPTHS
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEPTHS_LAMP_ROOF = registerKey("depths_lamp_roof"),
             DEPTHS_LAMP_FLOOR = registerKey("depths_lamp_floor"),
             FLAIRIUM_ORE = registerKey("flairium_ore"),
@@ -121,7 +122,17 @@ public class JConfiguredFeatures {
             DEPTHS_TREE = registerKey("depths_tree"),
             DEPTHS_CRYSTAL = registerKey("depths_crystal"),
             FLOOR_DEPTHS_CRYSTAL = registerKey("floor_depths_crystal"),
-            DEPTHS_GEODE = registerKey("depths_geode");
+            DEPTHS_WATER = registerKey("depths_water"),
+            DEPTHS_GEODE = registerKey("depths_geode"),
+            CRYSTAL_DRIPSTONE = registerKey("crystal_dripstone"),
+            DEPTHS_DRIPSTONE = registerKey("depths_dripstone"),
+            DEPTHS_SPIKE = registerKey("depths_spike"),
+            GREEN_CRYSTAL_SHROOM = registerKey("green_crystal_shroom"),
+            BLUE_CRYSTAL_SHROOM = registerKey("blue_crystal_shroom"),
+            RED_CRYSTAL_SHROOM = registerKey("red_crystal_shroom"),
+            PURPLE_CRYSTAL_SHROOM = registerKey("purple_crystal_shroom"),
+            LIGSHROOM = registerKey("ligshroom"),
+            DEPTHS_PILLAR = registerKey("depths_pillar");
 
     //BOIL
     public static final ResourceKey<ConfiguredFeature<?, ?>> VOLCANIC_ROCK = registerKey("volcanic_rock"),
@@ -210,6 +221,7 @@ public class JConfiguredFeatures {
         register(context, BLEEDSTONE, JFeatures.BLEEDSTONE.get(), new NoneFeatureConfiguration());
         register(context, WARPED_QUARTZ_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(NETHER_ORE_REPLACEABLES, JBlocks.WARPED_QUARTZ_ORE.get().defaultBlockState()))).get(), 12));
         register(context, CRIMSON_QUARTZ_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(NETHER_ORE_REPLACEABLES, JBlocks.CRIMSON_QUARTZ_ORE.get().defaultBlockState()))).get(), 12));
+        register(context, FIRESTONE_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(BASALT_REPLACEABLES, JBlocks.FIRESTONE_ORE.get().defaultBlockState()))).get(), 7));
         register(context, BLOODCRUST_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(NETHER_ORE_REPLACEABLES, JBlocks.BLOODCRUST_ORE.get().defaultBlockState()))).get(), 7));
         register(context, BLOOD_ROCK, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(NETHER_ORE_REPLACEABLES, JBlocks.BLOOD_ROCK.get().defaultBlockState()))).get(), 10));
 
@@ -249,6 +261,16 @@ public class JConfiguredFeatures {
         register(context, DES_ORE, Feature.ORE, new OreConfiguration(Suppliers.memoize(() -> List.of(OreConfiguration.target(DEPTHS_REPLACEABLES, JBlocks.DES_ORE.get().defaultBlockState()))).get(), 7));
         register(context, DEPTHS_VEG , Feature.FLOWER, new RandomPatchConfiguration(60, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.DEPTHS_BLUE_FLOWER.get().defaultBlockState(), JBlocks.DEPTHS_FLOWER.get().defaultBlockState()))))));
         register(context, FLOOR_DEPTHS_CRYSTAL , Feature.FLOWER, new RandomPatchConfiguration(60, 4, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.FLOOR_DEPTHS_CRYSTAL_YELLOW.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_PINK.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_GREEN.get().defaultBlockState(), JBlocks.FLOOR_DEPTHS_CRYSTAL_BLUE.get().defaultBlockState()))))));
+        register(context, DEPTHS_WATER, JFeatures.DEPTHS_WATER_GEN.get(), new SpringConfiguration(Fluids.WATER.defaultFluidState(), false, 4, 1, HolderSet.direct(Block::builtInRegistryHolder, JBlocks.DEPTHS_GRASS.get(), JBlocks.DEPTHS_DIRT.get(), JBlocks.DEPTHS_DIRT.get())));
+        register(context, CRYSTAL_DRIPSTONE, JFeatures.CRYSTAL_DRIPSTONE.get(), new DripstoneClusterConfiguration(12, UniformInt.of(3, 6), UniformInt.of(2, 8), 1, 3, UniformInt.of(2, 4), UniformFloat.of(0.3F, 0.7F),  ClampedNormalFloat.of(0.1F, 0.3F, 0.1F, 0.9F), 0.1F, 3, 8));
+        register(context, DEPTHS_SPIKE, JFeatures.DEPTHS_SPIKE.get(), new NoneFeatureConfiguration());
+        register(context, DEPTHS_PILLAR, JFeatures.DEPTHS_PILLAR.get(), new NoneFeatureConfiguration());
+        register(context, DEPTHS_DRIPSTONE, JFeatures.DEPTHS_DRIPSTONE.get(), new DripstoneClusterConfiguration(12, UniformInt.of(3, 6), UniformInt.of(2, 8), 1, 3, UniformInt.of(2, 4), UniformFloat.of(0.3F, 0.7F),  ClampedNormalFloat.of(0.1F, 0.3F, 0.1F, 0.9F), 0.1F, 3, 8));
+        register(context, GREEN_CRYSTAL_SHROOM, Feature.HUGE_BROWN_MUSHROOM, new HugeMushroomFeatureConfiguration(BlockStateProvider.simple(JBlocks.GREEN_CRYSTAL_SHROOM_BLOCK.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.TRUE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), BlockStateProvider.simple(JBlocks.CRYSTALSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.FALSE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), 3));
+        register(context, BLUE_CRYSTAL_SHROOM, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(BlockStateProvider.simple(JBlocks.BLUE_CRYSTAL_SHROOM_BLOCK.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.TRUE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), BlockStateProvider.simple(JBlocks.CRYSTALSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.FALSE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), 3));
+        register(context, RED_CRYSTAL_SHROOM, Feature.HUGE_RED_MUSHROOM, new HugeMushroomFeatureConfiguration(BlockStateProvider.simple(JBlocks.RED_CRYSTAL_SHROOM_BLOCK.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.TRUE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), BlockStateProvider.simple(JBlocks.CRYSTALSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.FALSE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), 3));
+        register(context, PURPLE_CRYSTAL_SHROOM, Feature.HUGE_BROWN_MUSHROOM, new HugeMushroomFeatureConfiguration(BlockStateProvider.simple(JBlocks.PURPLE_CRYSTAL_SHROOM_BLOCK.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.TRUE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), BlockStateProvider.simple(JBlocks.CRYSTALSHROOM_STEM.get().defaultBlockState().setValue(HugeMushroomBlock.UP, Boolean.FALSE).setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)), 3));
+        register(context, LIGSHROOM, Feature.FLOWER, new RandomPatchConfiguration(40, 4, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0, 1.0D), 0.020833334F, List.of(JBlocks.SMALL_LIGSHROOM.get().defaultBlockState(), JBlocks.TALL_LIGSHROOM.get().defaultBlockState()))))));
 
         //BOIL
         register(context, VOLCANIC_ROCK, JFeatures.VOLCANIC_ROCK.get(), new NoneFeatureConfiguration());

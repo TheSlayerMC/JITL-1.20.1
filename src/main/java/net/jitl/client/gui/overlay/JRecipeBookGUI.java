@@ -49,7 +49,6 @@ public class JRecipeBookGUI extends AbstractContainerScreen<EmptyContainer> {
         this.previousButton.visible = true;
         this.nextButton.active = pageNumber != maxPages;
         this.previousButton.active = pageNumber != 0;
-        System.out.println(pageNumber);
     }
 
     protected void flipPage(boolean forward) {
@@ -60,6 +59,7 @@ public class JRecipeBookGUI extends AbstractContainerScreen<EmptyContainer> {
 
     @Override
     protected void renderBg(@NotNull GuiGraphics poseStack, float partialTick, int mouseX, int mouseY) {
+        this.renderBackground(poseStack);
         int x = (this.width - this.imageWidth) / 2;
         int y = (this.height - this.imageHeight) / 2;
         poseStack.pose().pushPose();

@@ -49,6 +49,30 @@ public class RenderEntitys {
         event.registerEntityRenderer(JEntities.MAGIC_BOMB_TYPE.get(), ThrownItemRenderer::new);
         event.registerEntityRenderer(JEntities.ESSENCE_ARROW_TYPE.get(), EssenceArrowRenderer::new);
         event.registerEntityRenderer(JEntities.MAGIC_POT_TYPE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(JEntities.ICEBALL_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/iceball.png")));
+        event.registerEntityRenderer(JEntities.HELLSTONE_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/hellstone.png")));
+        event.registerEntityRenderer(JEntities.WIZARDS_STAR_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/wizards_star.png")));
+        event.registerEntityRenderer(JEntities.DOOMSBRINGER_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/doomsbringer.png")));
+        event.registerEntityRenderer(JEntities.GREENPACE_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/greenpace.png")));
+        event.registerEntityRenderer(JEntities.OVERGROWN_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/overgrown.png")));
+        event.registerEntityRenderer(JEntities.BOUNCING_OVERGROWN_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/overgrown.png")));
+        event.registerEntityRenderer(JEntities.DIVINITY_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/divinity.png")));
+        event.registerEntityRenderer(JEntities.BOUNCING_DIVINITY_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/divinity.png")));
+        event.registerEntityRenderer(JEntities.ENLIGHTENMENT_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/enlightenment.png")));
+        event.registerEntityRenderer(JEntities.CHAOS_CANNON.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/bouncing.png")));
+        event.registerEntityRenderer(JEntities.NETHER_PLASMA_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/nether_plasma.png")));
+        event.registerEntityRenderer(JEntities.OCEAN_PLASMA_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/ocean_plasma.png")));
+        event.registerEntityRenderer(JEntities.EYE_BLASTER_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/eye_blaster.png")));
+        event.registerEntityRenderer(JEntities.SPELLBINDING_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/homing.png")));
+        event.registerEntityRenderer(JEntities.EARTHEN_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/greenpace.png")));
+        event.registerEntityRenderer(JEntities.FLAMING_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/hellstone.png")));
+        event.registerEntityRenderer(JEntities.NETHIC_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/nether_plasma.png")));
+        event.registerEntityRenderer(JEntities.OVERGROWN_HAMMER_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/overgrown.png")));
+        event.registerEntityRenderer(JEntities.ROCKY_HAMMER_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/divinity.png")));
+        event.registerEntityRenderer(JEntities.ROYAL_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/wizards_star.png")));
+        event.registerEntityRenderer(JEntities.CRYSTALLIZED_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/iceball.png")));
+        event.registerEntityRenderer(JEntities.WITHIC_TYPE.get(), manager -> new RenderProjectile<>(manager, JITL.rl("textures/entity/projectile/homing.png")));
+
 
         event.registerEntityRenderer(JEntities.ESSENCIA_BOLT_TYPE.get(), EssenciaBoltRenderer::new);
 
@@ -104,6 +128,8 @@ public class RenderEntitys {
 
     public static void registerAnimationRenderers() {
         EntityRenderers.register(JEntities.MAGE_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("mage", JDimension.OVERWORLD), 0.55F, 1.25F));
+        EntityRenderers.register(JEntities.BLACKSMITH_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("blacksmith", JDimension.OVERWORLD), 0.5F, 1F));
+        EntityRenderers.register(JEntities.GUNSMITH_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("gunsmith", JDimension.OVERWORLD), 0.5F, 1F));
         EntityRenderers.register(JEntities.FLORO_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("floro", JDimension.OVERWORLD), 0.5F, 1.25F));
         EntityRenderers.register(JEntities.BOOM_TYPE.get(), renderer -> new BoomBoomRenderer<>(renderer, new AnimatedMonsterModel<>("boomboom", JDimension.OVERWORLD)));
         EntityRenderers.register(JEntities.BROWN_HONGO_TYPE.get(), renderer -> new AnimatedMonsterRenderer<>(renderer, new AnimatedMonsterModel<>("brown_hongo", JDimension.OVERWORLD), 0.6F));

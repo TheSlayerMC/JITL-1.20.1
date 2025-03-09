@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "e": {
+      "item": "minecraft:ender_pearl"
+    },
+    "s": {
+      "item": "jitl:stone_stick"
+    }
+  },
+  "pattern": [
+    "  e",
+    " s ",
+    "s  "
+  ],
+  "result": {
+    "item": "jitl:staff_base"
+  },
+  "show_notification": true
+}

@@ -9,9 +9,7 @@ import net.jitl.common.world.gen.cloudia.CloudiaLand;
 import net.jitl.common.world.gen.cloudia.CloudiaTerrain;
 import net.jitl.common.world.gen.corba.CorbaSwampTreeFeature;
 import net.jitl.common.world.gen.corba.SwampLilyFeature;
-import net.jitl.common.world.gen.depths.DepthsCrystalFeature;
-import net.jitl.common.world.gen.depths.DepthsLampFeature;
-import net.jitl.common.world.gen.depths.DepthsLampFloorFeature;
+import net.jitl.common.world.gen.depths.*;
 import net.jitl.common.world.gen.euca.BoulderFeature;
 import net.jitl.common.world.gen.euca.EucaBotSpawner;
 import net.jitl.common.world.gen.frozen.FrozenIceSpikeFeature;
@@ -23,6 +21,7 @@ import net.jitl.common.world.gen.senterian.SenterianTerrain;
 import net.jitl.common.world.gen.tree_grower.JourneyTree;
 import net.jitl.common.world.gen.tree_grower.TreeConfig;
 import net.jitl.core.init.JITL;
+import net.jitl.core.init.internal.JBlocks;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.SpringFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
@@ -51,6 +50,11 @@ public class JFeatures {
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> ROOF_DEPTHS_LAMP = REGISTRY.register("depths_lamp_roof", () -> new DepthsLampFeature(NoneFeatureConfiguration.CODEC));
     public static final RegistryObject<Feature<OreConfiguration>> FLOOR_DEPTHS_LAMP = REGISTRY.register("depths_lamp_floor", () -> new DepthsLampFloorFeature(OreConfiguration.CODEC));
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> DEPTHS_CRYSTAL = REGISTRY.register("depths_crystal", () -> new DepthsCrystalFeature(NoneFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<SpringConfiguration>> DEPTHS_WATER_GEN = REGISTRY.register("depths_water_gen", () -> new SpringFeature(SpringConfiguration.CODEC));
+    public static final RegistryObject<Feature<DripstoneClusterConfiguration>> CRYSTAL_DRIPSTONE = REGISTRY.register("crystal_dripstone", () -> new CrystalDripstoneClusterFeature(JBlocks.POINTED_CRYSTALLIZED_DRIPSTONE.get(), JBlocks.CRYSTALLIZED_DRIPSTONE.get(), DripstoneClusterConfiguration.CODEC));
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> DEPTHS_PILLAR = REGISTRY.register("depths_pillar", () -> new DepthsPillarFeature(NoneFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<DripstoneClusterConfiguration>> DEPTHS_DRIPSTONE = REGISTRY.register("depths_dripstone", () -> new CrystalDripstoneClusterFeature(JBlocks.POINTED_DEPTHS_DRIPSTONE.get(), JBlocks.DEPTHS_DRIPSTONE.get(), DripstoneClusterConfiguration.CODEC));
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> DEPTHS_SPIKE = REGISTRY.register("depths_spike", () -> new JSpikeFeature(JBlocks.DEPTHS_DRIPSTONE.get(), NoneFeatureConfiguration.CODEC));
 
     //BOIL
     public static final RegistryObject<Feature<BlockStateConfiguration>> BOULDER = REGISTRY.register("boulder", () -> new BoulderFeature(BlockStateConfiguration.CODEC));

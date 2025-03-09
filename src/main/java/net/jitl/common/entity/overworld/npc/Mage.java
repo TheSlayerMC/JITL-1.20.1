@@ -29,7 +29,6 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 public class Mage extends JVillagerEntity {
 
     private static final Int2ObjectMap<VillagerTrades.ItemListing[]> TRADES = new Int2ObjectOpenHashMap<>(ImmutableMap.of(1, new VillagerTrades.ItemListing[]{
-            //new CurrencyForItemsTrade(JItems.POWDER_OF_ESSENCIA.get(), 32, JItems.LUNIUM_POWDER.get(), 32, 99, 5),
             new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 16, JItems.LOOT_POUCH.get(), 1, 99, 5),
             new CurrencyForItemsTrade(JItems.LUNIUM_POWDER.get(), 8, JItems.SAPPHIRE.get(), 1, 99, 5),
             new CurrencyForItemsTrade(JItems.CRIMSON_QUARTZ.get(), 32, JItems.MEKYUM_INGOT.get(), 16, JItems.PET_ROBOT_SPAWNER.get(), 1, 99, 5),
@@ -40,7 +39,17 @@ public class Mage extends JVillagerEntity {
             new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 16, Items.GHAST_TEAR, 4, 99, 5),
             new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 16, Items.MAGMA_CREAM, 8, 99, 5),
             new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 8, Items.GLOWSTONE_DUST, 4, 99, 5),
-            new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 32, Items.BLAZE_POWDER, 8, 99, 5)
+            new CurrencyForItemsTrade(JItems.SAPPHIRE.get(), 32, Items.BLAZE_POWDER, 8, 99, 5),
+            new CurrencyForItemsTrade(JItems.STONE_STICK.get(), 2, JItems.GREEN_GEM.get(), 10, JItems.EARTHEN_HAMMER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.EARTHEN_HAMMER.get(), 1, JItems.PURPLE_GEM.get(), 16, JItems.SPELLBINDING_HAMMER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.GREEN_GEM.get(), 10, JItems.STAFF_OF_GREENPACE.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.BLOODCRUST_INGOT.get(), 10, JItems.STAFF_OF_HELLSTONE.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.PURPLE_GEM.get(), 10, JItems.DOOMSBRINGER.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.BOTTLE_OF_ESSENCIA.get(), 8, JItems.STAFF_OF_ESSENCIA.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.YELLOW_GEM.get(), 10, JItems.WIZARDS_STAR.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, JItems.BLUE_GEM.get(), 10, JItems.STAFF_OF_ENLIGHTENMENT.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.GREEN_GEM.get(), 1, JItems.STAFF_OF_GREENPACE.get(), 10, JItems.STAFF_OF_CONJURING.get(), 1, 99, 5),
+            new CurrencyForItemsTrade(JItems.STAFF_BASE.get(), 1, Items.ENDER_PEARL, 64, JItems.TELEPORTATION_STAFF.get(), 1, 99, 5)
     }));
 
     public Mage(EntityType<? extends JVillagerEntity> type, Level worldIn) {

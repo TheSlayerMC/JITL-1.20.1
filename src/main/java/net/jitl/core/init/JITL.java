@@ -36,7 +36,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(JITL.MODID)
 public class JITL {
-    public static final String MODID = "jitl", PREFIX = MODID + ":", MOD_VERSION = "2.2.3", MOD_NAME = "Journey Into the Light";
+    public static final String MODID = "jitl", PREFIX = MODID + ":", MOD_VERSION = "2.2.4", MOD_NAME = "Journey Into the Light";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
     public static final boolean DEV_MODE = true;
 
@@ -108,6 +108,7 @@ public class JITL {
             new JBlockEndFrameGenerator().generate();
             new JBlockMushroomGenerator().generate();
             new BlockTotemGenerator().generate();
+            new JBlockDripstoneGenerator().generate();
             new LangRegistry().generate();
         }
 

@@ -43,7 +43,7 @@ public class JerCompat {
             worldGen.register(new ItemStack(JBlocks.CELESTIUM_ORE.get()), new DistributionSquare(7, 7, -64, 128), true, new LootDrop(new ItemStack(JItems.CELESTIUM_GEMSTONE.get()), 1, 5, Conditional.affectedByFortune));
             worldGen.register(new ItemStack(JBlocks.MEKYUM_ORE.get()), new DistributionSquare(7, 7, -64, 128), true, new LootDrop(new ItemStack(JItems.MEKYUM_GEMSTONE.get()), 1, 5, Conditional.affectedByFortune));
             worldGen.register(new ItemStack(JBlocks.STORON_ORE.get()), new DistributionSquare(7, 7, -64, 128), true, new LootDrop(new ItemStack(JItems.STORON_GEMSTONE.get()), 1, 5, Conditional.affectedByFortune));
-            worldGen.register(new ItemStack(JBlocks.ORBADITE_ORE.get()), new DistributionSquare(7, 7, -64, 128), true, new LootDrop(new ItemStack(JItems.RAW_ORBADITE.get()), 1, 5, Conditional.affectedByFortune));
+            worldGen.register(new ItemStack(JBlocks.KORITE_ORE.get()), new DistributionSquare(7, 7, -64, 128), true, new LootDrop(new ItemStack(JItems.RAW_ORBADITE.get()), 1, 5, Conditional.affectedByFortune));
 
             worldGen.register(new ItemStack(JBlocks.RIMESTONE_ORE.get()), new DistributionSquare(12, 7, 0, 256), true, new LootDrop(new ItemStack(JItems.RIMESTONE.get()), 1, 5, Conditional.affectedByFortune));
             worldGen.register(new ItemStack(JBlocks.PERIDOT_ORE.get()), new DistributionSquare(12, 7, 0, 256), true, new LootDrop(new ItemStack(JItems.PERIDOT_GEMSTONE.get()), 1, 5, Conditional.affectedByFortune));
@@ -113,6 +113,12 @@ public class JerCompat {
             chest.registerChest("Terranian Protector Boss Crystal", getBossLootTable("terranian_protector"));
             chest.registerChest("Thunder Bird Boss Crystal", getBossLootTable("thunder_bird"));
             chest.registerChest("Withering Beast Boss Crystal", getBossLootTable("withering_beast"));
+
+            chest.registerChest("Basic Loot Pouch", getLootTable("loot_basic"));
+            chest.registerChest("Gold Loot Pouch", getLootTable("loot_gold"));
+            chest.registerChest("Diamond Loot Pouch", getLootTable("loot_diamond"));
+            chest.registerChest("Frosty Loot Pouch", getLootTable("loot_frosty_gift"));
+            chest.registerChest("Corba Spirit Crystal", getLootTable("spirit_crystal"));
         }
 
         IPlantRegistry plant = jer.getPlantRegistry();
@@ -132,6 +138,10 @@ public class JerCompat {
 
     public static ResourceLocation getChestLootTable(String name){
         return JITL.rl("chests/" + name);
+    }
+
+    public static ResourceLocation getLootTable(String name){
+        return JITL.rl("loot/" + name);
     }
 
     public static ResourceLocation getBossLootTable(String name){

@@ -55,13 +55,35 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 2
+      },
+      {
+        "type": "minecraft:drowned",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 100
+      }
+    ],
+    "water_ambient": [
+      {
+        "type": "minecraft:salmon",
+        "maxCount": 5,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 2
       }
     ]
   },
   "spawn_costs": {},
   "carvers": {},
   "features": [
-    [],
+    ["minecraft:seagrass_normal"],
     [],
     [],
     [],

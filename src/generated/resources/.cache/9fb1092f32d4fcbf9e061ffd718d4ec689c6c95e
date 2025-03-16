@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-09T16:03:14.8483569	Recipes
+// 1.20.1	2025-03-16T12:53:00.469264	Recipes
 28f9abce4e4f1816a0cfd6a2f157e9b89a199122 data/jitl/advancements/recipes/building_blocks/airroot_melon.json
 1fbb6fb2472349aefb66678986ed0ced52a3fd35 data/jitl/advancements/recipes/building_blocks/ashual_block.json
 ff77ded18f2bc968eae334bcc76b078c364db42f data/jitl/advancements/recipes/building_blocks/ash_from_block.json
@@ -149,6 +149,10 @@ eba332e689fc937d1148a0b84b8b61ed6c1631ca data/jitl/advancements/recipes/combat/b
 656cd805cd3274bd84d25f14ef3a977b2a9d8665 data/jitl/advancements/recipes/combat/bloodcrust_leggings.json
 a7305da56cbd8c678e7250c05e2e876bde588b24 data/jitl/advancements/recipes/combat/bloodcrust_shield.json
 f101ec8a1cb538d206128fd8cb1d419a0c3a8586 data/jitl/advancements/recipes/combat/bloodcrust_sword.json
+84471b75ab2801ef708bbc5327bd95f701bd384d data/jitl/advancements/recipes/combat/celestium_boots.json
+a968c6700892eb615fe0f6fb5f0ad3747d0f2d50 data/jitl/advancements/recipes/combat/celestium_chestplate.json
+77ca67a9f9636ed663cc26f3b75d32469a3cf8b8 data/jitl/advancements/recipes/combat/celestium_helmet.json
+54907b56253c1d1b0aefc0f516e4393df373d31d data/jitl/advancements/recipes/combat/celestium_leggings.json
 9e05de655451f4b3a32fa259c70be41477ddf4f5 data/jitl/advancements/recipes/combat/celestium_shield.json
 d268b0e1f219c7ceeb5aad4881f3b2a52d99d4b7 data/jitl/advancements/recipes/combat/celestium_sword.json
 d77f5c96f7d87fd220d8e43eae9e00644f66d679 data/jitl/advancements/recipes/combat/crystal_blade.json
@@ -527,8 +531,12 @@ c30152b6762268c28fb3a9f72bf79fab4e928ebd data/jitl/recipes/carved_blood_rock.jso
 89e200b4d7825633684b37a06fd96b2628c987e1 data/jitl/recipes/cave_dust_2.json
 f165df10d485fe3546b7fc43d5b833e7b556becc data/jitl/recipes/celestium_axe.json
 3e53b2887dfc634e0e905a9edbfdc8b663ec85ca data/jitl/recipes/celestium_block.json
+cc9a4f6166c11f5a8b1b5b3af52291cf0c8ca904 data/jitl/recipes/celestium_boots.json
+9027801bbb5307a19a747751b9ae19125b1769d6 data/jitl/recipes/celestium_chestplate.json
+9532d0188e666cd21b53b3170dc80750f1def853 data/jitl/recipes/celestium_helmet.json
 176d8e2a0a990dd20fa2513d9a2795e3fb4ff525 data/jitl/recipes/celestium_hoe.json
 df394ed4691acc03a35763e5058fd99cafef96bc data/jitl/recipes/celestium_ingot_from_block.json
+d0b086f9c72077a98193a0cd41446517bf2b9852 data/jitl/recipes/celestium_leggings.json
 8d87b4f9b0b778b23f687b102a57714d6a0af149 data/jitl/recipes/celestium_multitool.json
 5dce63b1083ae6ed33dd8e1546e8b24b2f96e110 data/jitl/recipes/celestium_pickaxe.json
 70376bf593252a8df42522439cbabb0fe4d7a57e data/jitl/recipes/celestium_shield.json
